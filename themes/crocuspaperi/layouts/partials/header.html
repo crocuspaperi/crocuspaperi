@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    {{ if eq .URL "/" }}
+    <title>{{ .Title }}</title>
+    <meta property='og:title' content="{{ .Title }}">
+    <meta property="og:type" content="website">
+    {{ else }}
+      {{ if eq .Section "item" }}
+      <title>Item {{ .Title }} - {{ .Site.Title }}</title>
+      <meta property='og:title' content="Item #{{ .Title }} - {{ .Site.Title }}">
+      {{ else }}
+      <title>{{ .Title }} - {{ .Site.Title }}</title>
+      <meta property='og:title' content="{{ .Title }} - {{ .Site.Title }}">
+      {{ end }}
+      <meta property="og:type" content="article">
+    {{ end }}
+
+    <meta property="og:url" content="{{ .Permalink }}">
+
+    {{ if eq .URL "/" }}
+    <meta name="description" content="{{ .Site.Params.home_text }}">
+    {{ else }}
+    <meta name="description" content="{{ .Content }}">
+    {{ end }}
+
+    {{ if (eq .Section "category") or (eq .Section "item") }}
+    <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}thumbnail.jpg">
+    {{ else if eq .URL "/" }}
+    <meta property="og:image" content="{{ $.Site.BaseURL }}images/home/main.jpg">
+    {{ else }}
+    <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}/main.jpg">
+    {{ end }}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/favicon.png" />
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header class="header row">
+      <div class="three offset-by-one columns">
+        <a href="/">
+          <img src="/images/logo.png" alt="{{ .Site.Title }} logo" class="logo" />
+        </a>
+      </div>
+
+      <div class="five offset-by-two columns">
+        <nav class="top-menu">
+          <ul>
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/category/">Works</a>
+            </li>
+            <li>
+              <a href="/about/">About</a>
+            </li>
+            <li>
+              <a href="https://crocuspaperi.tumblr.com" target="_blank">Blog</a>
+            </li>
+            <li>
+              <a href="/printables/">Freebies</a>
+            </li>
+            <li>
+              <a href="/contact/">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+

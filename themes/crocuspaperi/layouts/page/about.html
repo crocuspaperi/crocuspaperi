@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+
+<main role="main" class="row landing about">
+  <div class="ten offset-by-one columns">
+    <div class="home-image-box">
+      <img src="/images/about/main.jpg" alt="Irina" class="u-max-full-width" />
+    </div>
+
+    <div class="description narrow">
+      {{ .Content }}
+    </div>
+
+    <div class="partners">
+      <h3>Partners</h3>
+      {{ range .Params.partners }}
+      <a href="{{ .link }}" class="partner" target="_blank">
+        <img src="/images/about/partners/{{ .image }}" alt="{{ .name }}" />
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

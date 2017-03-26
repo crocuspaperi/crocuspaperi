@@ -1,0 +1,37 @@
+{{ partial "header.html" . }}
+
+<section class="row landing">
+  <div class="ten offset-by-one columns">
+    <div class="home-image-box">
+      <img src="/images/home/main.jpg" alt="Wedding table" class="u-max-full-width" />
+      {{ with .Site.Params.home_image_copyright }}
+      <div class="home-image-copyright">{{ . }}</div>
+      {{ end }}
+    </div>
+
+    <div class="description">
+      <p>{{ .Site.Params.home_text | safeHTML }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="categories">
+  <div class="ten offset-by-one columns main-flex">
+    {{ range where .Data.Pages "Section" "category" }}
+      <div>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">
+          <div class="image-box">
+            <div class="image" style="background-image: url('/images{{ .RelPermalink }}thumbnail.jpg')">
+            </div>
+          </div>
+
+          <h4>{{ .Title }}</h4>
+        </a>
+
+        <div class="description">{{ .Content }}</div>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,31 @@
+{{ partial "header.html" . }}
+
+<main role="main" class="landing row">
+  <div class="ten offset-by-one columns">
+    <div class="description narrow">
+      <p>{{ .Content }}</p>
+    </div>
+
+    <h3 class="category-title">{{ .Title }}</h3>
+  </div>
+</section>
+
+<section class="items">
+  {{ $all := where .Site.Pages.ByTitle "Section" "item" }}
+  {{ $items := where $all "Params.category" .Params.name }}
+  <div class="row">
+    <div class="ten offset-by-one columns">
+      {{ range $items }}
+        <div class="item-box">
+          <div class="item-content">
+            <a href="{{ .Permalink }}">
+              <img src="/images{{ .RelPermalink}}thumbnail.jpg" alt="{{ .Title }} item thumbnail" class="u-max-full-width" />
+            </a>
+          </div>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}

@@ -1,0 +1,43 @@
+# ===========================
+# DO NOT EDIT
+# ===========================
+baseurl = "https://crocuspaperi.com/"
+languageCode = "en-us"
+theme = "crocuspaperi"
+
+# =============================
+# YOU CAN EDIT SETTINGS BELOW
+# =============================
+
+# Page title (sets ending of a browser tab title)
+title = "Crocus Paperi"
+
+[params]
+
+# Email address (used in contact form and also shown
+# on contact page next to the form)
+email = "crocus.paperi@outlook.com"
+
+# Y-tunnus (used on the contact page)
+business_id = "2691611-3"
+
+# Text under the picture on the home page
+home_text = "Welcome to my watercolor world.  <br/>"
+
+# Image copyright
+home_image_copyright = "Photo by Ksenia Lopyreva 2016"
+
+# Facebook page (ending in page url)
+facebook = "crocuspaperi"
+
+# Instagram username
+instagram = "crocus.paperi"
+
+# Google analytics number
+google_analytics = "UA-67742736-2"
+
+# Behance username
+behance = "malinovoevino"
+
+# Freepik username
+freepik = "irikul"

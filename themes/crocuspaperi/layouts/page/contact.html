@@ -1,0 +1,82 @@
+{{ partial "header.html" . }}
+
+<section class="landing row">
+  <div class="ten offset-by-one columns">
+    <div class="home-image-box">
+      <img src="/images/contact/main.jpg" alt="Thank you" class="u-max-full-width" />
+    </div>
+
+    <div class="description narrow">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+<main role="main" class="contact">
+  <div class="form">
+    <form id="contactForm" method="POST" action="//formspree.io/{{ .Site.Params.email }}">
+      <div class="row">
+        <div class="five offset-by-two columns">
+          <div class="row">
+            <div class="one-half column">
+              <input type="text" class="u-full-width" placeholder="Name" id="name" name="name" />
+            </div>
+
+            <div class="one-half column">
+              <input type="email" class="u-full-width" placeholder="Email" id="email" name="email" required />
+            </div>
+          </div>
+
+          <textarea class="u-full-width" placeholder="Message" id="message" name="message" required></textarea>
+
+          <input type="hidden" name="_next" value="{{ .Permalink }}#sent" />
+          <input type="submit" id="submit" class="button" value="Send" />
+
+          <div id="msgSuccess" id="#sent" class="msg-success">
+            {{ .Params.form_success }}
+          </div>
+          <div id="msgError" class="msg-error">
+            {{ .Params.form_error }}
+          </div>
+        </div>
+
+        <div class="five columns">
+          <ul>
+            {{ with.Site.Params.phone }}
+              <li>{{ . }}</li>
+            {{ end }}
+            {{ with.Site.Params.email }}
+            <li>
+              <a href="mailto:{{ . }}">{{ . }}</a>
+            </li>
+            {{ end }}
+            {{ with.Site.Params.business_id }}
+            <li>Y-tunnus <strong>{{ . }}</strong></li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+
+</section>
+
+<script async>
+;(function (w, d) {
+  w.onload = function () {
+    var successEl = d.querySelector('#msgSuccess');
+
+
+    if(location.hash.slice(1) === 'sent') {
+      successEl.style.display = 'inline-block';
+      setTimeout(function () {
+        window.scrollTo(0, successEl.offsetTop);
+      }, 10);
+    }
+
+    location.hash = '';
+  };
+})(window, document);
+</script>
+
+{{ partial "footer.html" . }}

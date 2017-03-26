@@ -1,0 +1,46 @@
+{{ partial "header.html" . }}
+
+<section class="row landing">
+  <div class="ten offset-by-one columns">
+    <div class="description">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+<section class="categories printables">
+  <div class="ten offset-by-one columns main-flex">
+    {{ range .Params.printables }}
+      <div>
+        <a href="{{ .link }}" target="_blank" title="Download {{ .name }}" data-label="{{ .name }}">
+          <div class="image-box">
+            <div class="image printables-image" style="background-image: url('/images/printables/{{ .image }}')">
+            </div>
+          </div>
+
+          <h4>{{ .name }}</h4>
+        </a>
+
+        <div class="description">{{ .description }}</div>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+<script async>
+;(function () {
+  var links = document.querySelectorAll('.main-flex > div > a');
+  [].slice.apply(links).forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      ga('send', {
+        hitType: 'event',
+        eventCategory: 'Printables',
+        eventAction: 'opened',
+        eventLabel: link.dataset.label
+      });
+    });
+  });
+})();
+</script>
+
+{{ partial "footer.html" . }}

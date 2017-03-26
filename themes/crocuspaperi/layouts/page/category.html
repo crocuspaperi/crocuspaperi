@@ -1,0 +1,22 @@
+{{ partial "header.html" . }}
+
+<section class="categories">
+  <div class="ten offset-by-one columns main-flex">
+    {{ range where .Site.Pages "Section" "category" }}
+      <div>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">
+          <div class="image-box">
+            <div class="image" style="background-image: url('/images{{ .RelPermalink }}thumbnail.jpg')">
+            </div>
+          </div>
+
+          <h4>{{ .Title }}</h4>
+        </a>
+
+        <div class="description">{{ .Content }}</div>
+      </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
