@@ -316,3 +316,12 @@ body {
   display: inline-block;
   margin: 0.5rem 0.5rem;
 }
+
+.about h4,
+.about h5 {
+  color: #777;
+}
+
+.about h4 {
+  margin-top: 2rem;
+}
