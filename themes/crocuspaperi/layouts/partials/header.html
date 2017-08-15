@@ -50,22 +50,22 @@
       <div class="five offset-by-two columns">
         <nav class="top-menu">
           <ul>
-            <li>
+            <li {{if .IsHome }} class="active"{{end}}>
               <a href="/">Home</a>
             </li>
-            <li>
+            <li {{if eq .URL "/category" }} class="active"{{end}}>
               <a href="/category/">Works</a>
             </li>
-            <li>
+            <li {{if eq .URL "/about" }} class="active"{{end}}>
               <a href="/about/">About</a>
             </li>
             <li>
               <a href="https://crocuspaperi.tumblr.com" target="_blank">Blog</a>
             </li>
-            <li>
+            <li {{if eq .URL "/printables" }} class="active"{{end}}>
               <a href="/printables/">Freebies</a>
             </li>
-            <li>
+            <li {{if eq .URL "/contact" }} class="active"{{end}}>
               <a href="/contact/">Contact</a>
             </li>
           </ul>
