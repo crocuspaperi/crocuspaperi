@@ -19,7 +19,7 @@ name = "other"
 weight = 2
 +++
 
-Greeting cards, notebooks, calendars and other stationary items.
+Greeting cards, notebooks, calendars and other stationery items.
 ```
 
 * **date** is a date when category was created (**NOT USED** but better to keep it)
@@ -40,7 +40,7 @@ Category images are in `static/images/category/` folder.
 2. And save it with a desired category name
 3. Then edit category by modifying the contents of that file
 
-### How to edit an exisiting category
+### How to edit an existing category
 
 1. Just edit that goddamn file according to category specifications
 
