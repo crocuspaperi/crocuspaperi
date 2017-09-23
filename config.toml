@@ -26,8 +26,13 @@ business_id = "2691611-3"
 # Text under the picture on the home page
 home_text = "I create watercolor and line art illustrations and design wedding stationery, postcards and branding materials with my drawings. Here you can see my works, read about my services and pricing and download some freebies."
 
-# Image copyright
-home_image_copyright = "Photo by Ksenia Lopyreva 2016"
+# List of images to be displayed on the home page in slider
+# Images should be placed under static/images/home/slider/ folder
+home_slider_images = [
+  "one.jpg",
+  "two.jpg",
+  "three.jpg"
+]
 
 # Facebook page (ending in page url)
 facebook = "crocuspaperi"

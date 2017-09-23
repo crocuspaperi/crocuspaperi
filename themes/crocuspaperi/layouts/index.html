@@ -2,35 +2,43 @@
 
 <section class="row landing">
   <div class="ten offset-by-one columns">
-    <div class="home-image-box">
-      <img src="/images/home/main.jpg" alt="Wedding table" class="u-max-full-width" />
-      {{ with .Site.Params.home_image_copyright }}
-      <div class="home-image-copyright">{{ . }}</div>
+    <div id="slider1" class="csslider infinity inside">
+      {{ range $i, $e := .Site.Params.home_slider_images }}
+      <input type="radio" name="slides" id="slides_{{ add $i 1 }}" {{if eq $i 0 }} checked{{end}} />
       {{ end }}
-    </div>
 
-    <div class="description">
-      <p>{{ .Site.Params.home_text | safeHTML }}</p>
+      <ul>
+        {{ range .Site.Params.home_slider_images }}
+        <li>
+          <img src="/images/home/slider/{{ . }}" class="u-max-full-width" />
+        </li>
+        {{ end }}
+      </ul>
+
+      <div class="arrows">
+        {{ range $i, $e := .Site.Params.home_slider_images }}
+        <div>
+          <label for="slides_{{ add $i 1 }}"></label>
+        </div>
+        {{ end }}
+      </div>
+
+      <div class="navigation">
+        <div>
+          {{ range $i, $e := .Site.Params.home_slider_images }}
+          <label for="slides_{{ add $i 1 }}"></label>
+          {{ end }}
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="categories">
-  <div class="ten offset-by-one columns main-flex">
-    {{ range where .Data.Pages "Section" "category" }}
-      <div>
-        <a href="{{ .Permalink }}" title="{{ .Title }}">
-          <div class="image-box">
-            <div class="image" style="background-image: url('/images{{ .RelPermalink }}thumbnail.jpg')">
-            </div>
-          </div>
-
-          <h4>{{ .Title }}</h4>
-        </a>
-
-        <div class="description">{{ .Content }}</div>
-      </div>
-    {{ end }}
+<section class="row landing">
+  <div class="ten offset-by-one columns">
+    <div class="description">
+      <p>{{ .Site.Params.home_text | safeHTML }}</p>
+    </div>
   </div>
 </section>
 

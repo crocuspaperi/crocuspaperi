@@ -21,6 +21,7 @@
 
     {{ if eq .URL "/" }}
     <meta name="description" content="{{ .Site.Params.home_text }}">
+    <link rel="stylesheet" href="/css/csslider.css">
     {{ else }}
     <meta name="description" content="{{ .Content }}">
     {{ end }}

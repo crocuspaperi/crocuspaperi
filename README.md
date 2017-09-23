@@ -16,6 +16,7 @@
   - [Printables](#printables)
   - [Main configuration file](#main-configuration-file)
   - [Top menu](#top-menu)
+  - [Home page slider](#home-page-slider)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -164,3 +165,8 @@ menu items in between `<!-- MENU -->` comments. Most of the items look like:
 ```
 
 Remember to change both `/about` occurencies to the new path.
+
+## Home page slider
+
+Add/remove images from the `home_slider_images` list in `config.toml` file.
+Images should be placed under `static/images/home/slider/` folder.

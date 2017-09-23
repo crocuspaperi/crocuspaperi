@@ -61,14 +61,6 @@ body {
   max-width: 700px;
 }
 
-.landing .home-image-copyright {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  font-size: 1.1rem;
-  color: #666;
-}
-
 .landing .description {
   margin: 2.5rem 0;
   text-align: center;
@@ -80,10 +72,6 @@ body {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.landing .category-title {
-  margin-bottom: 0;
 }
 
 .categories .main-flex {
@@ -329,3 +317,8 @@ body {
 .about h4 {
   margin-top: 2rem;
 }
+
+/**
+ * Slider
+ * see csslider.css file
+ */
