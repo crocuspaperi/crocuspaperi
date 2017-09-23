@@ -1,3 +1,24 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [Crocus paperi web site](#crocus-paperi-web-site)
+  - [Category](#category)
+    - [Category specifications](#category-specifications)
+    - [Category images](#category-images)
+    - [How to add a new category](#how-to-add-a-new-category)
+    - [How to edit an existing category](#how-to-edit-an-existing-category)
+  - [Item](#item)
+    - [Item specifications](#item-specifications)
+    - [Item images](#item-images)
+    - [How to add a new item](#how-to-add-a-new-item)
+    - [How to edit an exisiting item](#how-to-edit-an-exisiting-item)
+  - [Printables](#printables)
+  - [Main configuration file](#main-configuration-file)
+  - [Top menu](#top-menu)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # Crocus paperi web site
 
 
@@ -129,3 +150,17 @@ You can edit:
 * instagram username
 
 in the main configuration file `config.toml`.
+
+
+## Top menu
+
+Go to `themes/crocuspaperi/layouts/partials/header.html` file. Find list of
+menu items in between `<!-- MENU -->` comments. Most of the items look like:
+
+```
+<li {{if eq .URL "/about" }} class="active"{{end}}>
+  <a href="/about">About</a>
+</li>
+```
+
+Remember to change both `/about` occurencies to the new path.
