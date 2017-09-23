@@ -5,6 +5,8 @@ baseurl = "https://crocuspaperi.com/"
 languageCode = "en-us"
 theme = "crocuspaperi"
 
+DefaultContentLanguage = "en"
+
 # =============================
 # YOU CAN EDIT SETTINGS BELOW
 # =============================
