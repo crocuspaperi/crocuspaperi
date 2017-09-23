@@ -29,9 +29,9 @@ home_text = "I create watercolor and line art illustrations and design wedding s
 # List of images to be displayed on the home page in slider
 # Images should be placed under static/images/home/slider/ folder
 home_slider_images = [
-  "one.jpg",
-  "two.jpg",
-  "three.jpg"
+  "1.jpg",
+  "2.jpg",
+  "3.jpg"
 ]
 
 # Facebook page (ending in page url)
