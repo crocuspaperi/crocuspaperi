@@ -260,7 +260,7 @@ body {
 }
 
 .footer .links {
-  width: 14rem;
+  width: 18rem;
   margin: 2rem auto 1rem;
   box-sizing: border-box;
 }
@@ -298,6 +298,10 @@ body {
 
 .icon-freepik:hover {
   color: #286EBB;
+}
+
+.icon-tumblr:hover {
+  color: #36465D;
 }
 
 .about .description {
