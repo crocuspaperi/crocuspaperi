@@ -56,11 +56,6 @@ body {
   position: relative;
 }
 
-.about .home-image-box {
-  margin: 0 auto;
-  max-width: 700px;
-}
-
 .landing .description {
   margin: 2.5rem 0;
   text-align: center;
@@ -316,6 +311,10 @@ body {
 
 .about h4 {
   margin-top: 2rem;
+}
+
+.space-after {
+  margin-bottom: 4rem;
 }
 
 /**
