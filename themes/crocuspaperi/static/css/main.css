@@ -321,3 +321,27 @@ body {
  * Slider
  * see csslider.css file
  */
+
+.csslider .shop {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.csslider .shop a {
+  color: #777;
+  padding: 20px 30px;
+  font-size: 25px;
+  background-color: rgba(255,255,255,0.7);
+  z-index: 11;
+  transition: background-color 0.15s;
+  text-decoration: none;
+}
+
+.csslider .shop a:hover {
+  background-color: rgba(255,255,255,1.0);
+  text-decoration: underline;
+}

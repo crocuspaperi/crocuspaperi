@@ -56,7 +56,7 @@
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="http://shop.crocuspaperi.com/" target="_blank">Shop</a>
+              <a href="{{ .Site.Params.shop }}" target="_blank">Shop</a>
             </li>
             <li {{if eq .URL "/category" }} class="active"{{end}}>
               <a href="/category">Portfolio</a>

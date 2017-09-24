@@ -7,10 +7,17 @@
       <input type="radio" name="slides" id="slides_{{ add $i 1 }}" {{if eq $i 0 }} checked{{end}} />
       {{ end }}
 
+      {{ $shop := .Site.Params.shop }}
+
       <ul>
-        {{ range .Site.Params.home_slider_images }}
+        {{ range $i, $e := .Site.Params.home_slider_images }}
         <li>
-          <img src="/images/home/slider/{{ . }}" class="u-max-full-width" />
+          <img src="/images/home/slider/{{ $e }}" class="u-max-full-width" />
+          {{ if eq $i 0 }}
+          <div class="shop">
+            <a href="{{ $shop }}" target="_blank">Shop here</a>
+          </div>
+          {{ end }}
         </li>
         {{ end }}
       </ul>
