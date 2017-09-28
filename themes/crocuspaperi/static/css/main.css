@@ -12,11 +12,11 @@ body {
 .header .logo {
   margin: 1.7rem 0 0;
   width: 100%;
-  max-width: 220px;
+  max-width: 320px;
 }
 
 .top-menu ul {
-  margin: 2.4rem 0 0;
+  margin: 4.4rem 0 0;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
@@ -41,10 +41,6 @@ body {
 }
 
 @media (max-width: 550px) {
-  .top-menu ul {
-    margin-top: 0;
-  }
-
   .top-menu li {
     margin-bottom: 0.4rem;
   }
