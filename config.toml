@@ -16,7 +16,6 @@ DefaultContentLanguage = "en"
 # Page title (sets ending of a browser tab title)
 title = "Crocus Paperi"
 
-[languages.en.params]
 # Email address (used in contact form and also shown
 # on contact page next to the form)
 email = "irina@crocuspaperi.com"
@@ -93,7 +92,6 @@ weight = 7
 # Page title (sets ending of a browser tab title)
 title = "Crocus Paperi"
 
-[languages.fi.params]
 # Email address (used in contact form and also shown
 # on contact page next to the form)
 email = "irina@crocuspaperi.com"
