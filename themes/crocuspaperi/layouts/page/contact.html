@@ -19,18 +19,18 @@
         <div class="five offset-by-two columns">
           <div class="row">
             <div class="one-half column">
-              <input type="text" class="u-full-width" placeholder="Name" id="name" name="name" />
+              <input type="text" class="u-full-width" placeholder="{{ i18n "name" }}" id="name" name="name" />
             </div>
 
             <div class="one-half column">
-              <input type="email" class="u-full-width" placeholder="Email" id="email" name="email" required />
+              <input type="email" class="u-full-width" placeholder="{{ i18n "email" }}" id="email" name="email" required />
             </div>
           </div>
 
-          <textarea class="u-full-width" placeholder="Message" id="message" name="message" required></textarea>
+          <textarea class="u-full-width" placeholder="{{ i18n "message" }}" id="message" name="message" required></textarea>
 
           <input type="hidden" name="_next" value="{{ .Permalink }}#sent" />
-          <input type="submit" id="submit" class="button" value="Send" />
+          <input type="submit" id="submit" class="button" value="{{ i18n "send" }}" />
 
           <div id="msgSuccess" id="#sent" class="msg-success">
             {{ .Params.form_success }}

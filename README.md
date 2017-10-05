@@ -29,6 +29,7 @@ Categories are located in `content/category` folder.
 Each file in that folder corresponds to the url `www.crocuspaperi.com/category/<file name>`.
 
 Ex: `content/category/wedding.md` is `www.crocuspaperi.com/category/wedding/`.
+Ex: `content/category/wedding.fi.md` is `www.crocuspaperi.com/fi/category/wedding/`.
 
 ### Category specifications
 
@@ -62,9 +63,11 @@ Category images are in `static/images/category/` folder.
 2. And save it with a desired category name
 3. Then edit category by modifying the contents of that file
 
+Remember to create category files for both English and Finnish versions.
+
 ### How to edit an existing category
 
-1. Just edit that goddamn file according to category specifications
+1. Just edit category file according to category specifications
 
 
 ## Item
@@ -73,6 +76,7 @@ Items are located in `content/item/` folder.
 Each file in that folder corresponds to the url `www.crocuspaperi.com/item/<file name>`.
 
 Ex: `content/item/1.md` is `www.crocuspaperi.com/item/1/`.
+Ex: `content/item/1.fi.md` is `www.crocuspaperi.com/fi/item/1/`.
 
 ### Item specifications
 
@@ -115,9 +119,11 @@ Item images are in `static/images/item/` folder.
 2. And save it with a desired item name
 3. Then edit item by modifying the contents of that file
 
+Remember to create item files for both English and Finnish versions.
+
 ### How to edit an exisiting item
 
-1. Just edit that goddamn file according to item specifications
+1. Just edit item file according to item specifications
 
 ## Printables
 
@@ -149,24 +155,23 @@ You can edit:
 * description on the home page
 * facebook page
 * instagram username
+* home page slider images
 
 in the main configuration file `config.toml`.
 
 
 ## Top menu
 
-Go to `themes/crocuspaperi/layouts/partials/header.html` file. Find list of
-menu items in between `<!-- MENU -->` comments. Most of the items look like:
+You can edit menu in `config.toml` file.
 
-```
-<li {{if eq .URL "/about" }} class="active"{{end}}>
-  <a href="/about">About</a>
-</li>
-```
-
-Remember to change both `/about` occurencies to the new path.
 
 ## Home page slider
 
 Add/remove images from the `home_slider_images` list in `config.toml` file.
 Images should be placed under `static/images/home/slider/` folder.
+
+
+## Translations
+
+Some texts are translated though translation files located in `i18n/en.toml`
+and `i18n/fi.toml`.

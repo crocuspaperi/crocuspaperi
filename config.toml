@@ -2,7 +2,6 @@
 # DO NOT EDIT
 # ===========================
 baseurl = "https://crocuspaperi.com/"
-languageCode = "en-us"
 theme = "crocuspaperi"
 
 DefaultContentLanguage = "en"
@@ -11,20 +10,19 @@ DefaultContentLanguage = "en"
 # YOU CAN EDIT SETTINGS BELOW
 # =============================
 
+[languages]
+
+[languages.en]
 # Page title (sets ending of a browser tab title)
 title = "Crocus Paperi"
 
-[params]
-
+[languages.en.params]
 # Email address (used in contact form and also shown
 # on contact page next to the form)
 email = "irina@crocuspaperi.com"
 
 # Y-tunnus (used on the contact page)
 business_id = "2691611-3"
-
-# Text under the picture on the home page
-home_text = "I create watercolor and line art illustrations and design wedding stationery, postcards and branding materials with my drawings. Here you can see my works, read about my services and pricing and download some freebies."
 
 # List of images to be displayed on the home page in slider
 # Images should be placed under static/images/home/slider/ folder
@@ -54,3 +52,115 @@ tumblr = "crocuspaperi"
 
 # Shop link
 shop = "http://shop.crocuspaperi.com/"
+
+[[languages.en.menu.main]]
+url    = "/"
+name   = "Home"
+weight = 1
+
+[[languages.en.menu.main]]
+url    = "http://shop.crocuspaperi.com/"
+name   = "Shop"
+weight = 2
+
+[[languages.en.menu.main]]
+url    = "/category"
+name   = "Portfolio"
+weight = 3
+
+[[languages.en.menu.main]]
+url    = "/pricing"
+name   = "Pricing"
+weight = 4
+
+[[languages.en.menu.main]]
+url    = "/about"
+name   = "About"
+weight = 5
+
+[[languages.en.menu.main]]
+url    = "/printables"
+name   = "Freebies"
+weight = 6
+
+[[languages.en.menu.main]]
+url    = "/contact"
+name   = "Contact"
+weight = 7
+
+
+[languages.fi]
+# Page title (sets ending of a browser tab title)
+title = "Crocus Paperi"
+
+[languages.fi.params]
+# Email address (used in contact form and also shown
+# on contact page next to the form)
+email = "irina@crocuspaperi.com"
+
+# Y-tunnus (used on the contact page)
+business_id = "2691611-3"
+
+# List of images to be displayed on the home page in slider
+# Images should be placed under static/images/home/slider/ folder
+home_slider_images = [
+  "1.jpg",
+  "2.jpg",
+  "3.jpg"
+]
+
+# Facebook page (ending in page url)
+facebook = "crocuspaperi"
+
+# Instagram username
+instagram = "crocus.paperi"
+
+# Google analytics number
+google_analytics = "UA-67742736-2"
+
+# Behance username
+behance = "malinovoevino"
+
+# Freepik username
+freepik = "irikul"
+
+# Tumblr username
+tumblr = "crocuspaperi"
+
+# Shop link
+shop = "http://shop.crocuspaperi.com/"
+
+[[languages.fi.menu.main]]
+url    = "/"
+name   = "Etusivu"
+weight = 1
+
+[[languages.fi.menu.main]]
+url    = "http://shop.crocuspaperi.com/"
+name   = "Kauppa"
+weight = 2
+
+[[languages.fi.menu.main]]
+url    = "/category"
+name   = "Portfolio"
+weight = 3
+
+[[languages.fi.menu.main]]
+url    = "/pricing"
+name   = "Hinnasto"
+weight = 4
+
+[[languages.fi.menu.main]]
+url    = "/about"
+name   = "Minusta"
+weight = 5
+
+[[languages.fi.menu.main]]
+url    = "/printables"
+name   = "Freebiet"
+weight = 6
+
+[[languages.fi.menu.main]]
+url    = "/contact"
+name   = "Yhteys"
+weight = 7

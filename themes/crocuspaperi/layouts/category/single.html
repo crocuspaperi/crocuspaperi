@@ -19,7 +19,11 @@
         <div class="item-box">
           <div class="item-content">
             <a href="{{ .Permalink }}">
-              <img src="/images{{ .RelPermalink}}thumbnail.jpg" alt="{{ .Title }} item thumbnail" class="u-max-full-width" />
+              {{ if eq .Lang "en" }}
+              <img src="/images{{ .RelPermalink }}thumbnail.jpg" alt="{{ .Title }} item thumbnail" class="u-max-full-width" />
+              {{ else }}
+              <img src="/images{{ substr .RelPermalink 3 }}thumbnail.jpg" alt="{{ .Title }} item thumbnail" class="u-max-full-width" />
+              {{ end }}
             </a>
           </div>
         </div>

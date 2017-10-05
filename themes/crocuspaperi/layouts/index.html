@@ -15,7 +15,7 @@
           <img src="/images/home/slider/{{ $e }}" class="u-max-full-width" />
           {{ if eq $i 0 }}
           <div class="shop">
-            <a href="{{ $shop }}" target="_blank">Shop here</a>
+            <a href="{{ $shop }}" target="_blank">{{ i18n "shop_now" }}</a>
           </div>
           {{ end }}
         </li>
@@ -44,7 +44,7 @@
 <section class="row landing">
   <div class="ten offset-by-one columns">
     <div class="description">
-      <p>{{ .Site.Params.home_text | safeHTML }}</p>
+      <p>{{ i18n "home_text" }}</p>
     </div>
   </div>
 </section>

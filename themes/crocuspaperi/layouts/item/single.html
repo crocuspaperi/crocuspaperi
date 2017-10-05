@@ -19,7 +19,11 @@
         {{ end }}
       </div>
 
+      {{ if eq .Lang "en" }}
       <img src="/images{{ .RelPermalink }}full.jpg" alt="{{ .Title }} item" class="u-max-full-width" />
+      {{ else }}
+      <img src="/images{{ substr .RelPermalink 3 }}full.jpg" alt="{{ .Title }} item" class="u-max-full-width" />
+      {{ end }}
     </div>
   </div>
 

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    {{ if eq .URL "/" }}
+    {{if .IsHome }}
     <title>{{ .Title }}</title>
     <meta property='og:title' content="{{ .Title }}">
     <meta property="og:type" content="website">
@@ -19,7 +19,7 @@
 
     <meta property="og:url" content="{{ .Permalink }}">
 
-    {{ if eq .URL "/" }}
+    {{if .IsHome }}
     <meta name="description" content="{{ .Site.Params.home_text }}">
     <link rel="stylesheet" href="/css/csslider.css">
     {{ else }}
@@ -28,7 +28,7 @@
 
     {{ if (eq .Section "category") or (eq .Section "item") }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}thumbnail.jpg">
-    {{ else if eq .URL "/" }}
+    {{ else if .IsHome }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}images/home/main.jpg">
     {{ else }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}/main.jpg">
@@ -48,33 +48,26 @@
         </a>
       </div>
 
-      <div class="five offset-by-one columns">
+      <div class="five offset-by-one columns menu-box">
+        <div class="languages-switch">
+          <li>
+            <span>{{ .Site.Language }}</span>
+          </li>
+          {{ range .Translations }}
+          <li>
+            |<a href="{{ .Permalink }}">{{ .Lang }}</a>
+          </li>
+          {{ end }}
+        </div>
         <nav class="top-menu">
-          <!-- MENU -->
           <ul>
-            <li {{if .IsHome }} class="active"{{end}}>
-              <a href="/">Home</a>
+            {{- $currentPage := . -}}
+            {{ range .Site.Menus.main -}}
+            <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+              <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
             </li>
-            <li>
-              <a href="{{ .Site.Params.shop }}" target="_blank">Shop</a>
-            </li>
-            <li {{if eq .URL "/category" }} class="active"{{end}}>
-              <a href="/category">Portfolio</a>
-            </li>
-            <li {{if eq .URL "/pricing" }} class="active"{{end}}>
-              <a href="/pricing">Pricing</a>
-            </li>
-            <li {{if eq .URL "/about" }} class="active"{{end}}>
-              <a href="/about">About</a>
-            </li>
-            <li {{if eq .URL "/printables" }} class="active"{{end}}>
-              <a href="/printables">Freebies</a>
-            </li>
-            <li {{if eq .URL "/contact" }} class="active"{{end}}>
-              <a href="/contact">Contact</a>
-            </li>
+            {{- end }}
           </ul>
-          <!-- MENU end -->
         </nav>
       </div>
     </header>

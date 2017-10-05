@@ -15,8 +15,45 @@ body {
   max-width: 320px;
 }
 
+.menu-box {
+  position: relative;
+}
+
+.languages-switch {
+  position: absolute;
+  right: 0;
+  top: 0.2rem;
+  display: flex;
+}
+
+.languages-switch {
+  list-style-type: none;
+}
+
+.languages-switch > li {
+  margin: 0;
+}
+
+.languages-switch > li > a {
+  color: #000;
+  text-decoration: none;
+}
+
+.languages-switch > li > span {
+  font-weight: 600;
+}
+
+.languages-switch > li > span,
+.languages-switch > li > a {
+  padding: 0.5rem 0.3rem;
+}
+
+.languages-switch > li > a:hover {
+  text-decoration: underline;
+}
+
 .top-menu ul {
-  margin: 4.4rem 0 0;
+  margin: 3.5rem 0 0;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
