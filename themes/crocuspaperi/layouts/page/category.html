@@ -9,6 +9,8 @@
 
   <div class="ten offset-by-one columns main-flex">
     {{ range where .Site.Pages "Section" "category" }}
+      {{ if eq .Title "Categories" }}
+      {{ else }}
       <div>
         <a href="{{ .Permalink }}" title="{{ .Title }}">
           <div class="image-box">
@@ -21,6 +23,7 @@
 
         <div class="description">{{ .Content }}</div>
       </div>
+      {{ end }}
     {{ end }}
   </div>
 </section>
