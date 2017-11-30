@@ -1,6 +1,6 @@
 +++
 date = "2016-02-21T11:54:11+02:00"
-title = "Wedding stationery"
+title = "Wedding"
 name = "wedding"
 weight = 1
 +++
