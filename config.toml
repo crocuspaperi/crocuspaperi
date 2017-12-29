@@ -50,7 +50,7 @@ freepik = "irikul"
 tumblr = "crocuspaperi"
 
 # Shop link
-shop = "http://shop.crocuspaperi.com/"
+shop = "http://crocuspaperi.bigcartel.com/"
 
 [[languages.en.menu.main]]
 url    = "/"
@@ -58,7 +58,7 @@ name   = "Home"
 weight = 1
 
 [[languages.en.menu.main]]
-url    = "http://shop.crocuspaperi.com/"
+url    = "http://crocuspaperi.bigcartel.com//"
 name   = "Shop"
 weight = 2
 
@@ -126,7 +126,7 @@ freepik = "irikul"
 tumblr = "crocuspaperi"
 
 # Shop link
-shop = "http://shop.crocuspaperi.com/"
+shop = "http://crocuspaperi.bigcartel.com/"
 
 [[languages.fi.menu.main]]
 url    = "/"
@@ -134,7 +134,7 @@ name   = "Etusivu"
 weight = 1
 
 [[languages.fi.menu.main]]
-url    = "http://shop.crocuspaperi.com/"
+url    = "http://crocuspaperi.bigcartel.com/"
 name   = "Kauppa"
 weight = 2
 
