@@ -332,6 +332,11 @@ body {
   margin-bottom: 2px;
 }
 
+.about .partners > p {
+  margin-top: 1.5rem;
+  font-size: 2rem;
+}
+
 .about .partners .partner {
   display: inline-block;
   margin: 0.5rem 0.5rem;

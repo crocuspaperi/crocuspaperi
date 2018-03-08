@@ -5,4 +5,4 @@ name = "cards-and-prints"
 weight = 3
 +++
 
-Prints and cards from my illustrations
+Prints and cards with botanical and floral illustrations

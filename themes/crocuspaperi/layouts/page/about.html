@@ -12,6 +12,9 @@
 
     <div class="partners">
       <h3>{{ i18n "partners" }}</h3>
+
+      <p>{{ (i18n "partners_intro") | safeHTML }}</p>
+
       {{ range .Params.partners }}
       <a href="{{ .link }}" class="partner" target="_blank">
         <img src="/images/about/partners/{{ .image }}" alt="{{ .name }}" />
