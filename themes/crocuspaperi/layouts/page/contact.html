@@ -66,7 +66,6 @@
   w.onload = function () {
     var successEl = d.querySelector('#msgSuccess');
 
-
     if(location.hash.slice(1) === 'sent') {
       successEl.style.display = 'inline-block';
       setTimeout(function () {
@@ -75,6 +74,16 @@
     }
 
     location.hash = '';
+
+    document.querySelector('#submit').addEventListener('click', function (e) {
+      if (ga) {
+        ga('send', {
+          hitType: 'event',
+          eventCategory: 'Email',
+          eventAction: 'send'
+        });
+      }
+    }, false);
   };
 })(window, document);
 </script>
