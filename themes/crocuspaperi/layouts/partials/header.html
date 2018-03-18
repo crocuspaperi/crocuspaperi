@@ -20,10 +20,10 @@
     <meta property="og:url" content="{{ .Permalink }}">
 
     {{if .IsHome }}
-    <meta name="description" content="{{ .Site.Params.home_text }}">
+    <meta name="description" content="{{ i18n "home_text" }}">
     <link rel="stylesheet" href="/css/csslider.css">
     {{ else }}
-    <meta name="description" content="{{ .Content }}">
+    <meta name="description" content="{{ truncate 400 .Content }}">
     {{ end }}
 
     {{ if (eq .Section "category") or (eq .Section "item") }}
