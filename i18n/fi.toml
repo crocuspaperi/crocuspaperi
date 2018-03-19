@@ -1,6 +1,6 @@
 # Text under the picture on the home page
 [home_text]
-other = "Luon akvarelli- ja viivapiirustukset ja suunittelen hääpapereita, postikortteja ja brändäysmateriaaleja kuvituksillani. Täältä näet teokseni, luet palveluistani ja hinnoittelustani ja voit myös ladata joitain ilmaisbonuksia."
+other = "Teen akvarelli- ja viivapiirustuksia ja suunnittelen hääpaperitavaroita, postikortteja ja brändäysmateriaaleja kuvituksillani Täältä saat tietoa teoksistani, palveluistani ja hinnoittelustani, ja voit myös ladata joitain ilmaisnäytteitä."
 
 [shop_now]
 other = "Osta nyt"
@@ -18,7 +18,7 @@ other = "Viestisi"
 other = "Lähetä viesti"
 
 [partners]
-other = "Yhteistyökumppanit"
+other = "Yhteistyötahot"
 
 [partners_intro]
-other = "My partner companies offer my clients exclusive deals and discounts. Click <a href=\"https://www.instagram.com/p/Bf8n849jSjX/?taken-by=crocus.paperi\">here</a> for details."
+other = "Crocus Paperin yhteistyöyritykset tarjoavat asiakkailleni etuja ja alennuksia. Klikkaa <a href=\"https://www.instagram.com/p/Bf8n849jSjX/?taken-by=crocus.paperi\">linkkiä</a> saadaksesi lisätietoja."

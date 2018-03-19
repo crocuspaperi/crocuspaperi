@@ -5,4 +5,4 @@ name = "branding"
 weight = 1
 +++
 
-Logot, käyntikortit ja mainosmateriaalit luoville yrityksille
+Logot, käyntikortit ja mainosmateriaalit yrityksille
