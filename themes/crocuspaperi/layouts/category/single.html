@@ -3,7 +3,11 @@
 <main role="main" class="landing row">
   <div class="ten offset-by-one columns">
     <div class="description narrow">
+      <p>{{ .Params.summary }}</p>
+
+      {{ if .Content }}
       <p>{{ .Content }}</p>
+      {{ end }}
     </div>
 
     <h3 class="category-title">{{ .Title }}</h3>
