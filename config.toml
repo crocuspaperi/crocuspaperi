@@ -58,32 +58,32 @@ name   = "Home"
 weight = 1
 
 [[languages.en.menu.main]]
-url    = "http://crocuspaperi.bigcartel.com//"
+url    = "http://crocuspaperi.bigcartel.com/"
 name   = "Shop"
 weight = 2
 
 [[languages.en.menu.main]]
-url    = "/category"
+url    = "/category/"
 name   = "Portfolio"
 weight = 3
 
 [[languages.en.menu.main]]
-url    = "/pricing"
+url    = "/pricing/"
 name   = "Pricing"
 weight = 4
 
 [[languages.en.menu.main]]
-url    = "/about"
+url    = "/about/"
 name   = "About"
 weight = 5
 
 [[languages.en.menu.main]]
-url    = "/printables"
+url    = "/printables/"
 name   = "Freebies"
 weight = 6
 
 [[languages.en.menu.main]]
-url    = "/contact"
+url    = "/contact/"
 name   = "Contact"
 weight = 7
 
@@ -139,26 +139,26 @@ name   = "Kauppa"
 weight = 2
 
 [[languages.fi.menu.main]]
-url    = "/category"
+url    = "/category/"
 name   = "Portfolio"
 weight = 3
 
 [[languages.fi.menu.main]]
-url    = "/pricing"
+url    = "/pricing/"
 name   = "Hinnasto"
 weight = 4
 
 [[languages.fi.menu.main]]
-url    = "/about"
+url    = "/about/"
 name   = "Minusta"
 weight = 5
 
 [[languages.fi.menu.main]]
-url    = "/printables"
+url    = "/printables/"
 name   = "Freebies"
 weight = 6
 
 [[languages.fi.menu.main]]
-url    = "/contact"
+url    = "/contact/"
 name   = "Yhteys"
 weight = 7

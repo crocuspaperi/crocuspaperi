@@ -26,16 +26,19 @@
     <meta name="description" content="{{ truncate 400 .Content }}">
     {{ end }}
 
-    {{ if (eq .Section "category") or (eq .Section "item") }}
+    {{ if (eq .Section "category") }}
+    <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}thumbnail.jpg">
+    {{ else if (eq .Section "item") }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}thumbnail.jpg">
     {{ else if .IsHome }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}images/home/main.jpg">
     {{ else }}
-    <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}/main.jpg">
+    <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}main.jpg">
     {{ end }}
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="/favicon.png" />
+    <link rel="canonical" href="{{ .Permalink }}" />
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/skeleton.css">
     <link rel="stylesheet" href="/css/main.css">
