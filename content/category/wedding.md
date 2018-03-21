@@ -5,4 +5,6 @@ name = "wedding"
 weight = 1
 +++
 
-Invitations and other paper goods for your special day
+<p>Invitations and other paper goods for your special day</p>
+
+<p>To order your wedding stationery or request budget estimates please use this <a href="https://docs.google.com/forms/d/e/1FAIpQLSfiL65eOwKq49z9CtHWbhxkpfUfmYeyegf8INOtvqsL-Llx7Q/viewform?usp=sf_link">form</a>.</p>
