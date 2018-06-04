@@ -1,0 +1,46 @@
+# Global defaults
+
+# Default design type selected (value should be one of available design types)
+defaultDesignType = "Custom"
+
+# Default delivery selected (value should be one of available deliveries)
+defaultDelivery = "Pick-up"
+
+# Design Types (format: designTypes."<design type>")
+# Total price will be calculated as design type price * amount of variants
+[designTypes."Custom"]
+price = 100
+
+[designTypes."Predesigned"]
+price = 50
+
+
+# Product variants (format: products."<product name>".variants."<variant name>")
+# Price is per single item (if 50 items cost 20 EUR then price will be 20/50 = 0.4).
+# There are two price types:
+#    * perProduct (e.g. Name card)
+#    * perAmount (e.g. Guestbook)
+[products."Name card".variants."Folded"]
+price = 0.6
+priceType = "perProduct"
+
+[products."Name card".variants."Round corners"]
+price = 2
+priceType = "perProduct"
+
+[products."Name card".variants."Tag"]
+price = 1.8
+priceType = "perProduct"
+
+[products."Guestbook".variants."30x20"]
+price = 69
+priceType = "perAmount"
+
+
+# Delivery options (format: delivery."<delivery name>")
+# Delivery price will be added to the total order price.
+[delivery."Post"]
+price =  10
+
+[delivery."Pick-up"]
+price =  0

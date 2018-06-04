@@ -17,6 +17,11 @@
   - [Main configuration file](#main-configuration-file)
   - [Top menu](#top-menu)
   - [Home page slider](#home-page-slider)
+  - [Translations](#translations)
+  - [Static Pages (Distinct Pages)](#static-pages-distinct-pages)
+    - [How to add a new page](#how-to-add-a-new-page)
+  - [Calculator](#calculator)
+    - [Translations](#translations-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -125,6 +130,7 @@ Remember to create item files for both English and Finnish versions.
 
 1. Just edit item file according to item specifications
 
+
 ## Printables
 
 Printables page description is located in `content/page/printables.html`.
@@ -175,3 +181,23 @@ Images should be placed under `static/images/home/slider/` folder.
 
 Some texts are translated though translation files located in `i18n/en.toml`
 and `i18n/fi.toml`.
+
+
+## Static Pages (Distinct Pages)
+
+### How to add a new page
+
+1. Add page layout to `themes/crocuspaperi/layouts/page/<new-page>.html`
+2. Add page content to `content/page/<new-page>.html`
+   (keep the same date as on other pages)
+3. Add page content in Finnish to `content/page/<new-page>.fi.html`
+
+
+## Calculator
+
+Calculator configuration can be found in `data/calculator.toml` file.
+
+### Translations
+
+Calculator translations can be found in `content/page/calculator.html` and
+`content/page/calculator.fi.html` files.

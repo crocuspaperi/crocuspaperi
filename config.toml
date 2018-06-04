@@ -1,7 +1,7 @@
 # ===========================
 # DO NOT EDIT
 # ===========================
-baseurl = "https://crocuspaperi.com/"
+baseurl = "https://www.crocuspaperi.com/"
 theme = "crocuspaperi"
 
 DefaultContentLanguage = "en"

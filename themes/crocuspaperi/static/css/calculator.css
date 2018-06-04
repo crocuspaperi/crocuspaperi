@@ -1,0 +1,59 @@
+.calculator {}
+
+.calculator ul {
+  list-style-type: none;
+}
+
+.calculator input {
+  margin: 0;
+}
+
+.radio-picker span {
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 5px 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.radio-picker input {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.radio-picker input:checked ~ span {
+  background-color: #a7d4a7;
+}
+
+.products label {
+  padding: 5px 10px;
+  border: 1px solid #eee;
+}
+
+.products input {
+  margin-right: 10px;
+}
+
+.printing {}
+
+.printing-products {}
+
+.printing-products > li {
+  border-bottom: 1px solid #eee;
+}
+
+.printing-products > li:last-child {
+  border: 0;
+}
+
+.printing-variants input {
+  width: 60px;
+  padding: 2px 6px;
+}
+
+.printing-variants input {
+  margin-right: 10px;
+}
+
+.calculator-total-price {}

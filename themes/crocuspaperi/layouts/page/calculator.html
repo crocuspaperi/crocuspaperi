@@ -1,0 +1,125 @@
+{{ partial "header.html" . }}
+
+<section class="landing row">
+  <div class="ten offset-by-one columns calculator" id="calculator">
+    <h2>Calculator</h2>
+
+    <ul>
+      <li>
+        <radio-picker
+          label="Design Types"
+          index="1"
+          :options="designTypes.options"
+          v-model="pickedDesignType">
+        </radio-picker>
+      </li>
+
+      <li>
+        <products
+          label="Products"
+          index="2"
+          :options="products.options"
+          :value="pickedProducts"
+          @input="toggleProduct($event)">
+        </products>
+      </li>
+
+      <li>
+        <printing
+          label="Printing"
+          index="3"
+          :picked-products="pickedProducts"
+          @input="toggleVariant($event)">
+        </products>
+      </li>
+
+      <li>
+        <radio-picker
+          label="Delivery"
+          index="4"
+          :options="delivery.options"
+          v-model="pickedDelivery">
+        </radio-picker>
+      </li>
+    </ul>
+
+    <div class="calculator-total-price">
+      <b>Total price: ~${totalAmount} EUR</b>
+    </div>
+  </div>
+</section>
+
+<script type="text/x-template" id="radio-picker-template">
+  <div class="radio-picker">
+    <b>${ index }. ${ label }: </b>
+
+    <ul>
+      <li v-for="option in options">
+        <label>
+          <input
+            type="radio"
+            :name="label"
+            :value="option"
+            :checked="option === value"
+            @input="$emit('input', $event.target.value)" />
+          <span>${ option }</span>
+        </label>
+      </li>
+    </ul>
+  </div>
+</script>
+
+<script type="text/x-template" id="products-template">
+  <div class="products">
+    <b>${ index }. ${ label }: </b>
+
+    <ul>
+      <li v-for="option in options">
+        <label>
+          <input
+            type="checkbox"
+            :name="label"
+            :value="option"
+            @input="$emit('input', $event.target.value)" />
+          ${ option }
+        </label>
+      </li>
+    </ul>
+  </div>
+</script>
+
+<script type="text/x-template" id="printing-template">
+  <div class="printing">
+    <b>${ index }. ${ label }: </b>
+
+    <ul class="printing-products">
+      <li v-for="product in pickedProducts">
+        <label>${ product }</label>
+
+        <ul class="printing-variants">
+          <li v-for="variant, name in variants(product)">
+            <label>
+              <input
+                type="number"
+                value="0"
+                @input="$emit('input', { product: product, variant: name, value: $event.target.value })"
+                min="0" />
+              ${ name }
+            </label>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</script>
+
+<script>
+  var calculatorConfig = Object.freeze({{ .Site.Data.calculator }});
+</script>
+
+<!-- development version, includes helpful console warnings -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
+<script src="/js/calculator.js"></script>
+
+{{ partial "footer.html" . }}
