@@ -26,7 +26,19 @@
   background-color: #a7d4a7;
 }
 
+.products li,
+.printing-variants li {
+  display: flex;
+}
+
+.products li > i,
+.printing-variants li > i {
+  min-width: 80px;
+  padding: 5px 10px 5px 0;
+}
+
 .products label {
+  width: 100%;
   padding: 5px 10px;
   border: 1px solid #eee;
 }

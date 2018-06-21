@@ -8,20 +8,96 @@
 
   var config = calculatorConfig;
 
+  /**
+   * Radio picker component. Used for design type and delivery type selections.
+   */
   Vue.component('radio-picker', {
-    props: ['label', 'index', 'options', 'value', 'checked'],
+    props: {
+      label: {
+        type: String,
+        required: true,
+      },
+      index: {
+        type: [String, Number],
+        required: true,
+      },
+      options: {
+        type: Array,
+        required: true,
+      },
+      value: {
+        type: String,
+        required: true,
+      },
+      totalPrice: {
+        type: Number,
+        default: 0,
+      },
+      priceText: String,
+    },
     template: '#radio-picker-template'
   });
 
+  /**
+   * Products component. Used for selecting products.
+   */
   Vue.component('products', {
-    props: ['label', 'index', 'options', 'value'],
+    props: {
+      label: {
+        type: String,
+        required: true,
+      },
+      index: {
+        type: [String, Number],
+        required: true,
+      },
+      options: {
+        type: Array,
+        required: true,
+      },
+      designPrice: {
+        type: Function,
+        required: true,
+      },
+      designPriceTotal: {
+        type: Number,
+        required: true,
+      },
+    },
     template: '#products-template'
   });
 
+  /**
+   * Printing component. Used for selecting variants and their amounts.
+   */
   Vue.component('printing', {
-    props: ['label', 'index', 'pickedProducts'],
+    props: {
+      label: {
+        type: String,
+        required: true,
+      },
+      index: {
+        type: [String, Number],
+        required: true,
+      },
+      pickedProducts: {
+        type: Array,
+        required: true,
+      },
+      printingPrice: {
+        type: Function,
+        required: true,
+      },
+      printingPriceTotal: {
+        type: Number,
+        required: true,
+      },
+    },
     template: '#printing-template',
     methods: {
+      /**
+       * List all available variants for a given product
+       */
       variants: function (product) {
         if (!config.products.hasOwnProperty(product)) {
           return [];
@@ -32,79 +108,138 @@
     }
   });
 
-  var data = {
-    pickedDesignType: config.defaultDesignType,
+  /**
+   * Main application state
+   */
+  var state = {
     designTypes: {
+      picked: config.defaultDesignType,
       options: Object.keys(config.designTypes)
     },
-    pickedProducts: [],
     products: {
+      picked: [],
       options: Object.keys(config.products)
     },
-    pickedVariants: [],
-    pickedDelivery: config.defaultDelivery,
+    variants: {
+      picked: [],
+    },
     delivery: {
+      picked: config.defaultDelivery,
       options: Object.keys(config.delivery)
     },
   };
 
+  /**
+   * Main calculator application
+   */
   var app = new Vue({
     el: '#calculator',
-    data: data,
+    data: state,
     computed: {
-      totalAmount: function () {
-        var variantsCost = this.pickedVariants.reduce(function (acc, el) {
-          var variant = config.products[el.product].variants[el.variant];
-          var total = calculateTotalPrice(el.value, variant.price, variant.priceType);
-          return acc + total;
+      /**
+       * Calculate total design price
+       */
+      designPriceTotal: function () {
+        return this.products.picked.reduce(function (acc, p) {
+          return acc + app.designPrice(p);
         }, 0);
+      },
 
-        var designTotal = 0;
-        if (this.pickedDesignType) {
-          var designPrice = config.designTypes[this.pickedDesignType].price;
-          designTotal = designPrice * this.pickedVariants.length;
-        }
+      /**
+       * Calculate total printing price
+       */
+      printingPriceTotal: function () {
+        return this.variants.picked.reduce(function (acc, v) {
+          return acc + app.printingPrice(v.product, v.variant);
+        }, 0);
+      },
 
-        var deliveryTotal = 0;
-        if (this.pickedDelivery) {
-          deliveryTotal = config.delivery[this.pickedDelivery].price;
-        }
+      /**
+       * Calculate total delivery price
+       */
+      deliveryPriceTotal: function () {
+        return config.delivery[this.delivery.picked].price;
+      },
 
-        return variantsCost + designTotal + deliveryTotal;
+      /**
+       * Calculate total order price
+       */
+      totalPrice: function () {
+        return this.printingPriceTotal + this.designPriceTotal + this.deliveryPriceTotal;
       }
     },
     methods: {
-      toggleProduct: function (product) {
-        var index = this.pickedProducts.indexOf(product);
+      /**
+       * Calculate price for a given product
+       */
+      designPrice: function (product) {
+        var index = this.products.picked.indexOf(product);
         if (index === -1) {
-          this.pickedProducts.push(product);
+          return 0;
+        }
+
+        return config.designTypes[this.designTypes.picked].price;
+      },
+
+      /**
+       * Calculate price for a given product and variant
+       */
+      printingPrice: function (product, variant) {
+        var found = this.variants.picked.filter(function (v) {
+          return v.product === product && v.variant === variant;
+        });
+
+        var price = found.reduce(function (acc, v) {
+          // Find printing costs for this variant
+          var variant = config.products[v.product].variants[v.variant];
+          return acc + calculateTotalPrice(v.value, variant.price, variant.priceType);
+        }, 0);
+
+        return Math.ceil(price);
+      },
+
+      /**
+       * Check/uncheck the product
+       */
+      toggleProduct: function (product) {
+        var index = this.products.picked.indexOf(product);
+        if (index === -1) {
+          this.products.picked.push(product);
         } else {
           // Remove product
-          this.pickedProducts.splice(index, 1);
+          this.products.picked.splice(index, 1);
           // Remove picked variants from that product
-          this.pickedVariants = this.pickedVariants.filter(function (el) {
+          this.variants.picked = this.variants.picked.filter(function (el) {
             return el.product !== product;
           });
         }
       },
-      toggleVariant: function (d) {
-        var existing = this.pickedVariants.filter(function (el) {
+
+      /**
+       * Choose the amount to print for a variant
+       */
+      chooseVariant: function (d) {
+        var existing = this.variants.picked.filter(function (el) {
           return el.product === d.product && el.variant === d.variant;
         });
 
         if (existing.length) {
           // If this variant is already picked, remove
-          this.pickedVariants.splice(this.pickedVariants.indexOf(existing[0]), 1);
+          this.variants.picked.splice(this.variants.picked.indexOf(existing[0]), 1);
         }
 
+        // Pick only variants with valid positive amounts
         d.value = parseInt(d.value, 10);
-        if (!isNaN(d.value)) {
-          this.pickedVariants.push(d);
+        if (!isNaN(d.value) && d.value > 0) {
+          this.variants.picked.push(d);
         }
       }
     }
   });
 
+  /**
+   * Calculate total printing price
+   */
   function calculateTotalPrice(amount, price, priceType) {
     switch (priceType) {
       case 'perProduct':
@@ -115,17 +250,22 @@
     }
   }
 
+  /**
+   * Calculate total printing price when variant's price type is per product
+   */
   function totalPricePerProduct(amount, price) {
-    // If amount is less than 20 then use higher price
     if (amount < 20) {
       amount = 20
     }
-    // else use price per amount
+
     return totalPricePerAmount(amount, price);
   }
 
+  /**
+   * Calculate total printing price when variant's price type is per amount.
+   * Uses linear function.
+   */
   function totalPricePerAmount(amount, price) {
-    // Just use linear function
     return amount * price;
   }
 

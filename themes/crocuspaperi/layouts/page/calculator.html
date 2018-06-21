@@ -10,7 +10,7 @@
           label="Design Types"
           index="1"
           :options="designTypes.options"
-          v-model="pickedDesignType">
+          v-model="designTypes.picked">
         </radio-picker>
       </li>
 
@@ -19,7 +19,8 @@
           label="Products"
           index="2"
           :options="products.options"
-          :value="pickedProducts"
+          :design-price="designPrice"
+          :design-price-total="designPriceTotal"
           @input="toggleProduct($event)">
         </products>
       </li>
@@ -28,8 +29,10 @@
         <printing
           label="Printing"
           index="3"
-          :picked-products="pickedProducts"
-          @input="toggleVariant($event)">
+          :picked-products="products.picked"
+          :printing-price="printingPrice"
+          :printing-price-total="printingPriceTotal"
+          @input="chooseVariant($event)">
         </products>
       </li>
 
@@ -38,13 +41,15 @@
           label="Delivery"
           index="4"
           :options="delivery.options"
-          v-model="pickedDelivery">
+          :total-price="deliveryPriceTotal"
+          price-text="Delivery price"
+          v-model="delivery.picked">
         </radio-picker>
       </li>
     </ul>
 
     <div class="calculator-total-price">
-      <b>Total price: ~${totalAmount} EUR</b>
+      <b>Total price: ~${totalPrice} EUR</b>
     </div>
   </div>
 </section>
@@ -66,6 +71,10 @@
         </label>
       </li>
     </ul>
+
+    <div v-if="priceText" class="radio-picker-total-price">
+      <b>${ priceText }: ${ totalPrice } EUR</b>
+    </div>
   </div>
 </script>
 
@@ -75,6 +84,7 @@
 
     <ul>
       <li v-for="option in options">
+        <i>${ designPrice(option) } EUR</i>
         <label>
           <input
             type="checkbox"
@@ -85,6 +95,10 @@
         </label>
       </li>
     </ul>
+
+    <div class="calculator-total-price">
+      <b>Design price: ${ designPriceTotal } EUR</b>
+    </div>
   </div>
 </script>
 
@@ -98,6 +112,7 @@
 
         <ul class="printing-variants">
           <li v-for="variant, name in variants(product)">
+            <i>${ printingPrice(product, name) } EUR</i>
             <label>
               <input
                 type="number"
@@ -110,6 +125,10 @@
         </ul>
       </li>
     </ul>
+
+    <div class="printing-total-price">
+      <b>Printing price: ${ printingPriceTotal } EUR</b>
+    </div>
   </div>
 </script>
 
@@ -118,7 +137,7 @@
 </script>
 
 <!-- development version, includes helpful console warnings -->
-<!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+<!-- <script src="/js/vue-dev.min.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.min.js"></script>
 <script src="/js/calculator.js"></script>
 
