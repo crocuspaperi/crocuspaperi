@@ -10,6 +10,7 @@
           label="Design Types"
           index="1"
           :options="designTypes.options"
+          description="<ul><li>* Template (choose a design from a collection of existing templates. Fonts, colour of the font, colors of certain illustrations can be changed and adapted to your preferences. If you need several elements, they won't be exactly the same. The floral arrangements and other illustrations will be changed to create multiple designs.)</li><li>* Custom (I create a new design with new illustrations based on your ideas and the overall style of your wedding)</li></ul>"
           v-model="designTypes.picked">
         </radio-picker>
       </li>
@@ -19,30 +20,46 @@
           label="Products"
           index="2"
           :options="products.options"
-          :design-price="designPrice"
           :design-price-total="designPriceTotal"
+          description="(Choose which products you'll need. The design price depends on the amount of products.)"
           @input="toggleProduct($event)">
         </products>
       </li>
 
       <li>
-        <printing
+        <variants
           label="Printing"
           index="3"
           :picked-products="products.picked"
-          :printing-price="printingPrice"
-          :printing-price-total="printingPriceTotal"
+          :price="printingPrice"
+          :price-total="printingPriceTotal"
+          description="(Choose the amount of copies for printing. Pricing price is stated for standard paper. I use White Cotton 300g by default. It's thick and it has soft textured surface. All the other papers are called 'Fancy'. All Fancy papers have the same price, samples are here)"
+          price-text="Printing price"
           @input="chooseVariant($event)">
-        </products>
+        </variants>
+      </li>
+
+      <li>
+        <variants
+          label="Additional products"
+          index="4"
+          :picked-products="additionalProducts.options"
+          :price="additionalProductsPrice"
+          :price-total="additionalProductsPriceTotal"
+          price-text="Additional products price"
+          :additional="true"
+          @input="chooseAdditionalProduct($event)">
+        </variants>
       </li>
 
       <li>
         <radio-picker
           label="Delivery"
-          index="4"
+          index="5"
           :options="delivery.options"
           :total-price="deliveryPriceTotal"
           price-text="Delivery price"
+          description="<ul><li>* Pick up (in Kukkakauppa, Fredrikinkatu 16. Work hours & details here)</li><li>* Post (depends on the weight of the package)</li></ul>"
           v-model="delivery.picked">
         </radio-picker>
       </li>
@@ -72,6 +89,9 @@
       </li>
     </ul>
 
+    <div v-if="description" class="radio-picker-description" v-html="description">
+    </div>
+
     <div v-if="priceText" class="radio-picker-total-price">
       <b>${ priceText }: ${ totalPrice } EUR</b>
     </div>
@@ -81,10 +101,11 @@
 <script type="text/x-template" id="products-template">
   <div class="products">
     <b>${ index }. ${ label }: </b>
+    <div v-if="description" class="products-description" v-html="description">
+    </div>
 
     <ul>
       <li v-for="option in options">
-        <i>${ designPrice(option) } EUR</i>
         <label>
           <input
             type="checkbox"
@@ -102,17 +123,20 @@
   </div>
 </script>
 
-<script type="text/x-template" id="printing-template">
-  <div class="printing">
+<script type="text/x-template" id="variants-template">
+  <div class="variants">
     <b>${ index }. ${ label }: </b>
 
-    <ul class="printing-products">
+    <div v-if="description" class="variants-description" v-html="description">
+    </div>
+
+    <ul class="variants-products">
       <li v-for="product in pickedProducts">
         <label>${ product }</label>
 
-        <ul class="printing-variants">
+        <ul class="variants-variants">
           <li v-for="variant, name in variants(product)">
-            <i>${ printingPrice(product, name) } EUR</i>
+            <i>${ price(product, name) } EUR</i>
             <label>
               <input
                 type="number"
@@ -126,8 +150,8 @@
       </li>
     </ul>
 
-    <div class="printing-total-price">
-      <b>Printing price: ${ printingPriceTotal } EUR</b>
+    <div class="variants-total-price">
+      <b>${ priceText }: ${ priceTotal } EUR</b>
     </div>
   </div>
 </script>

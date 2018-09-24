@@ -34,6 +34,7 @@
         default: 0,
       },
       priceText: String,
+      description: String,
     },
     template: '#radio-picker-template'
   });
@@ -55,14 +56,11 @@
         type: Array,
         required: true,
       },
-      designPrice: {
-        type: Function,
-        required: true,
-      },
       designPriceTotal: {
         type: Number,
         required: true,
       },
+      description: String,
     },
     template: '#products-template'
   });
@@ -70,7 +68,7 @@
   /**
    * Printing component. Used for selecting variants and their amounts.
    */
-  Vue.component('printing', {
+  Vue.component('variants', {
     props: {
       label: {
         type: String,
@@ -84,26 +82,35 @@
         type: Array,
         required: true,
       },
-      printingPrice: {
+      price: {
         type: Function,
         required: true,
       },
-      printingPriceTotal: {
+      priceTotal: {
         type: Number,
         required: true,
       },
+      description: String,
+      additional: Boolean,
+      priceText: {
+        type: String,
+        required: true,
+      },
     },
-    template: '#printing-template',
+    template: '#variants-template',
     methods: {
       /**
        * List all available variants for a given product
        */
       variants: function (product) {
-        if (!config.products.hasOwnProperty(product)) {
+        var products = this.additional
+          ? config.additionalProducts
+          : config.products;
+        if (!products.hasOwnProperty(product)) {
           return [];
         }
 
-        return config.products[product].variants;
+        return products[product].variants;
       }
     }
   });
@@ -123,6 +130,10 @@
     variants: {
       picked: [],
     },
+    additionalProducts: {
+      picked: [],
+      options: Object.keys(config.additionalProducts)
+    },
     delivery: {
       picked: config.defaultDelivery,
       options: Object.keys(config.delivery)
@@ -140,9 +151,17 @@
        * Calculate total design price
        */
       designPriceTotal: function () {
-        return this.products.picked.reduce(function (acc, p) {
-          return acc + app.designPrice(p);
-        }, 0);
+        var amount = this.products.picked.length;
+        if (amount === 0) {
+          return 0;
+        }
+
+        var coef = Math.ceil(amount / 2) - 1;
+
+        var basePrice = this.designTypeConf.price;
+        var stepPrice = this.designTypeConf.stepPrice;
+
+        return basePrice + stepPrice * coef;
       },
 
       /**
@@ -151,6 +170,15 @@
       printingPriceTotal: function () {
         return this.variants.picked.reduce(function (acc, v) {
           return acc + app.printingPrice(v.product, v.variant);
+        }, 0);
+      },
+
+      /**
+       * Calculate total additional products price
+       */
+      additionalProductsPriceTotal: function () {
+        return this.additionalProducts.picked.reduce(function (acc, v) {
+          return acc + app.additionalProductsPrice(v.product, v.variant);
         }, 0);
       },
 
@@ -165,37 +193,44 @@
        * Calculate total order price
        */
       totalPrice: function () {
-        return this.printingPriceTotal + this.designPriceTotal + this.deliveryPriceTotal;
-      }
-    },
-    methods: {
-      /**
-       * Calculate price for a given product
-       */
-      designPrice: function (product) {
-        var index = this.products.picked.indexOf(product);
-        if (index === -1) {
-          return 0;
-        }
-
-        return config.designTypes[this.designTypes.picked].price;
+        return (
+          this.printingPriceTotal
+          + this.designPriceTotal
+          + this.additionalProductsPriceTotal
+          + this.deliveryPriceTotal
+        );
       },
 
       /**
-       * Calculate price for a given product and variant
+       * Return configuration of selected design type
+       */
+      designTypeConf: function () {
+        return config.designTypes[this.designTypes.picked];
+      },
+    },
+    methods: {
+      /**
+       * Calculate printing price for a given product and variant
        */
       printingPrice: function (product, variant) {
-        var found = this.variants.picked.filter(function (v) {
-          return v.product === product && v.variant === variant;
-        });
+        return variantPriceGeneric(
+          this.variants,
+          config.products,
+          product,
+          variant
+        );
+      },
 
-        var price = found.reduce(function (acc, v) {
-          // Find printing costs for this variant
-          var variant = config.products[v.product].variants[v.variant];
-          return acc + calculateTotalPrice(v.value, variant.price, variant.priceType);
-        }, 0);
-
-        return Math.ceil(price);
+      /**
+       * Calculate additional product price for a given product and variant
+       */
+      additionalProductsPrice: function (product, variant) {
+        return variantPriceGeneric(
+          this.additionalProducts,
+          config.additionalProducts,
+          product,
+          variant
+        );
       },
 
       /**
@@ -219,23 +254,60 @@
        * Choose the amount to print for a variant
        */
       chooseVariant: function (d) {
-        var existing = this.variants.picked.filter(function (el) {
-          return el.product === d.product && el.variant === d.variant;
-        });
+        chooseVariantGeneric(this.variants, d);
+      },
 
-        if (existing.length) {
-          // If this variant is already picked, remove
-          this.variants.picked.splice(this.variants.picked.indexOf(existing[0]), 1);
-        }
-
-        // Pick only variants with valid positive amounts
-        d.value = parseInt(d.value, 10);
-        if (!isNaN(d.value) && d.value > 0) {
-          this.variants.picked.push(d);
-        }
+      /**
+       * Choose the amount of additional product
+       */
+      chooseAdditionalProduct: function (d) {
+        chooseVariantGeneric(this.additionalProducts, d);
       }
     }
   });
+
+  /**
+   * Allow choosing product and additional product variants
+   */
+  function chooseVariantGeneric(variants, d) {
+      var existing = variants.picked.filter(function (el) {
+        return el.product === d.product && el.variant === d.variant;
+      });
+
+      if (existing.length) {
+        // If this variant is already picked, remove
+        variants.picked.splice(
+          variants.picked.indexOf(existing[0]),
+          1
+        );
+      }
+
+      // Pick only variants with valid positive amounts
+      d.value = parseInt(d.value, 10);
+      if (!isNaN(d.value) && d.value > 0) {
+        variants.picked.push(d);
+      }
+  }
+
+  /**
+   * Allow calculating variant price for printing and additional products
+   */
+  function variantPriceGeneric(variants, productConf, product, variant) {
+    var found = variants.picked.filter(function (v) {
+      return v.product === product && v.variant === variant;
+    });
+
+    var price = found.reduce(function (acc, v) {
+      // Find costs for this variant
+      var variant = productConf[v.product].variants[v.variant];
+      return (
+        acc
+        + calculateTotalPrice(v.value, variant.price, variant.priceType)
+      );
+    }, 0);
+
+    return Math.ceil(price);
+  }
 
   /**
    * Calculate total printing price
@@ -254,8 +326,8 @@
    * Calculate total printing price when variant's price type is per product
    */
   function totalPricePerProduct(amount, price) {
-    if (amount < 20) {
-      amount = 20
+    if (amount < 10) {
+      amount = 10
     }
 
     return totalPricePerAmount(amount, price);

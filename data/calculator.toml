@@ -1,3 +1,4 @@
+#####################################################################
 # Global defaults
 
 # Default design type selected (value should be one of available design types)
@@ -6,17 +7,24 @@ defaultDesignType = "Custom"
 # Default delivery selected (value should be one of available deliveries)
 defaultDelivery = "Pick-up"
 
+
+#####################################################################
 # Design Types (format: designTypes."<design type>")
-# Total price will be calculated as design type price * amount of variants
+# Total price will be calculated as:
+#    base price + round(amount) * step price
 [designTypes."Custom"]
-price = 159
+price = 289
+stepPrice = 30
 
 [designTypes."Predesigned"]
-price = 119
+price = 189
+stepPrice = 30
 
 
+#####################################################################
 # Product variants (format: products."<product name>".variants."<variant name>")
-# Price is per single item (if 50 items cost 20 EUR then price will be 20/50 = 0.4).
+# Price is per single item
+#    (if 50 items cost 20 EUR then price will be 20/50 = 0.4).
 # There are two price types:
 #    * perProduct (e.g. Name card)
 #    * perAmount (e.g. Guestbook)
@@ -75,33 +83,37 @@ priceType = "perProduct"
 
 [products."Guestbook".variants."30x20"]
 price = 69
-priceType = "perProduct"
+priceType = "perAmount"
 
 [products."Guestbook".variants."20x20"]
 price = 59
-priceType = "perProduct"
+priceType = "perAmount"
 
-[products."Envelope".variants."A6 (for Save the Date/Thank you card)"]
+
+#####################################################################
+# Additional products (configuration is the same as for products section)
+[additionalProducts."Envelope".variants."A6 (for Save the Date/Thank you card)"]
 price = 0.60
 priceType = "perProduct"
 
-[products."Envelope".variants."125x175 (for Invitation)"]
+[additionalProducts."Envelope".variants."125x175 (for Invitation)"]
 price = 0.80
 priceType = "perProduct"
 
-[products."Wax seals".variants."Bronze"]
+[additionalProducts."Wax seals".variants."Bronze"]
 price = 1.10
 priceType = "perProduct"
 
-[products."Wax seals".variants."Green"]
+[additionalProducts."Wax seals".variants."Green"]
 price = 1.10
 priceType = "perProduct"
 
-[products."Wax seals".variants."White"]
+[additionalProducts."Wax seals".variants."White"]
 price = 1.10
 priceType = "perProduct"
 
 
+#####################################################################
 # Delivery options (format: delivery."<delivery name>")
 # Delivery price will be added to the total order price.
 [delivery."Post"]
