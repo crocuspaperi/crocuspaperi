@@ -199,5 +199,5 @@ Calculator configuration can be found in `data/calculator.toml` file.
 
 ### Translations
 
-Calculator translations can be found in `content/page/calculator.html` and
-`content/page/calculator.fi.html` files.
+Calculator translations can be found in `i18n/en.toml` and
+`i18n/fi.toml` files.
