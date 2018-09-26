@@ -62,3 +62,6 @@ other = """
   <li>* Pick up (in Kukkakauppa, Fredrikinkatu 16. Work hours & details here)</li>
   <li>* Post (depends on the weight of the package)</li>
 </ul>"""
+
+[calculator_transcript_title]
+other = "Here is your order. Send it to me via email."

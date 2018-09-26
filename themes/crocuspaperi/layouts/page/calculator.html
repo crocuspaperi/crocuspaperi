@@ -17,7 +17,7 @@
 
       <li>
         <products
-          label="{{ i18n "calculator_products_desc" }}"
+          label="{{ i18n "calculator_products_title" }}"
           index="2"
           :options="products.options"
           :design-price-total="designPriceTotal"
@@ -68,6 +68,8 @@
     <div class="calculator-total-price">
       <b>Total price: ~${totalPrice} EUR</b>
     </div>
+
+    <transcript :details="transcript"></transcript>
   </div>
 </section>
 
@@ -153,6 +155,18 @@
     <div class="variants-total-price">
       <b>${ priceText }: ${ priceTotal } EUR</b>
     </div>
+  </div>
+</script>
+
+<script type="text/x-template" id="transcript-template">
+  <div class="transcript">
+    <div class="transcript-description">
+      {{ i18n "calculator_transcript_title" }}
+    </div>
+
+    <textarea
+      onfocus="var t = this; setTimeout(function () { t.select(); }, 10);"
+      readonly>${ details }</textarea>
   </div>
 </script>
 

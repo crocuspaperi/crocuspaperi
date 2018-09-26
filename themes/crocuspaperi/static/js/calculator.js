@@ -116,6 +116,19 @@
   });
 
   /**
+   * Transcript component. Used to display the order details.
+   */
+  Vue.component('transcript', {
+    props: {
+      details: {
+        type: String,
+        required: true,
+      }
+    },
+    template: '#transcript-template'
+  });
+
+  /**
    * Main application state
    */
   var state = {
@@ -206,6 +219,61 @@
        */
       designTypeConf: function () {
         return config.designTypes[this.designTypes.picked];
+      },
+
+      /**
+       * Return order transcript to be used in the email
+       */
+      transcript: function () {
+        // Design type
+        var designType = [
+          'Design type:',
+          this.designTypes.picked
+        ].join(' ');
+
+        // Products
+        var productItems = this.products.picked.map(function (p) {
+          return '  * ' + p;
+        });
+        var products = [
+          'Products: (' + this.designPriceTotal + ' EUR)'
+        ].concat(productItems);
+
+        // Printing
+        var printingItems = this.variants.picked.map(variantPrintLineGeneric);
+        var printing = [
+          'Printing: (' + this.printingPriceTotal + ' EUR)'
+        ].concat(printingItems);
+
+        // Additional products
+        var additionalProductItems = this.additionalProducts.picked
+          .map(variantPrintLineGeneric);
+        var additionalProducts = [
+          'Additional products: (' + this.additionalProductsPriceTotal + ' EUR)'
+        ].concat(additionalProductItems);
+
+        // Delivery
+        var delivery = [
+          'Delivery:',
+          this.delivery.picked,
+          '(' + this.deliveryPriceTotal + ' EUR)'
+        ].join(' ');
+
+        // Total price
+        var total = [
+          'Total price:',
+          this.totalPrice,
+          'EUR'
+        ].join(' ');
+
+        // Result
+        var lines = [designType]
+          .concat(products)
+          .concat(printing)
+          .concat(additionalProducts)
+          .concat([delivery])
+          .concat(['', total]);
+        return lines.join('\n');
       },
     },
     methods: {
@@ -307,6 +375,20 @@
     }, 0);
 
     return Math.ceil(price);
+  }
+
+  /**
+   * Used to print a variant line in the transcript
+   */
+  function variantPrintLineGeneric(v) {
+    return [
+      ' ',
+      '*',
+      '(' + v.value + ')',
+      v.product,
+      '—',
+      v.variant
+    ].join(' ');
   }
 
   /**
