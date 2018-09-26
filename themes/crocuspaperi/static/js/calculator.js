@@ -125,7 +125,18 @@
         required: true,
       }
     },
-    template: '#transcript-template'
+    template: '#transcript-template',
+    methods: {
+      selectText: function (e) {
+        // In case browser doesn't support this API
+        try {
+          var range = document.createRange();
+          range.selectNode(e.target);
+          window.getSelection().removeAllRanges();
+          window.getSelection().addRange(range);
+        } catch (e) {}
+      }
+    }
   });
 
   /**
@@ -227,7 +238,7 @@
       transcript: function () {
         // Design type
         var designType = [
-          'Design type:',
+          '<b>Design type:</b>',
           this.designTypes.picked
         ].join(' ');
 
@@ -236,32 +247,33 @@
           return '  * ' + p;
         });
         var products = [
-          'Products: (' + this.designPriceTotal + ' EUR)'
+          '<b>Products:</b> (' + this.designPriceTotal + ' EUR)'
         ].concat(productItems);
 
         // Printing
         var printingItems = this.variants.picked.map(variantPrintLineGeneric);
         var printing = [
-          'Printing: (' + this.printingPriceTotal + ' EUR)'
+          '<b>Printing:</b> (' + this.printingPriceTotal + ' EUR)'
         ].concat(printingItems);
 
         // Additional products
         var additionalProductItems = this.additionalProducts.picked
           .map(variantPrintLineGeneric);
         var additionalProducts = [
-          'Additional products: (' + this.additionalProductsPriceTotal + ' EUR)'
+          '<b>Additional products:</b> ('
+            + this.additionalProductsPriceTotal + ' EUR)'
         ].concat(additionalProductItems);
 
         // Delivery
         var delivery = [
-          'Delivery:',
+          '<b>Delivery:</b>',
           this.delivery.picked,
           '(' + this.deliveryPriceTotal + ' EUR)'
         ].join(' ');
 
         // Total price
         var total = [
-          'Total price:',
+          '<b>Total price:</b>',
           this.totalPrice,
           'EUR'
         ].join(' ');
@@ -273,7 +285,7 @@
           .concat(additionalProducts)
           .concat([delivery])
           .concat(['', total]);
-        return lines.join('\n');
+        return lines.join('<br />');
       },
     },
     methods: {
@@ -384,7 +396,7 @@
     return [
       ' ',
       '*',
-      '(' + v.value + ')',
+      '<i>(' + v.value + ')</i>',
       v.product,
       '—',
       v.variant

@@ -164,9 +164,8 @@
       {{ i18n "calculator_transcript_title" }}
     </div>
 
-    <textarea
-      onfocus="var t = this; setTimeout(function () { t.select(); }, 10);"
-      readonly>${ details }</textarea>
+    <div class="transcript-details" v-on:click="selectText" v-html="details">
+    </div>
   </div>
 </script>
 
