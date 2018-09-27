@@ -29,39 +29,39 @@ other = "My partner companies offer my clients exclusive deals and discounts. Cl
 other = "Calculator"
 
 [calculator_design_type_title]
-other = "Design Types"
+other = "DESIGN TYPE"
 
 [calculator_design_type_desc]
 other = """
 <ul>
-  <li>* Template (choose a design from a collection of existing templates. Fonts, colour of the font, colors of certain illustrations can be changed and adapted to your preferences. If you need several elements, they won't be exactly the same. The floral arrangements and other illustrations will be changed to create multiple designs.)</li>
-  <li>* Custom (I create a new design with new illustrations based on your ideas and the overall style of your wedding)</li>
+  <li>* Pre-designed (A design from <a href="https://www.dropbox.com/home/elements_templates">my collection of templates</a>. Fonts, colour of the font, colors of flowers/leaves can be changed and adapted to your preferences. If you need several products, they won't be exactly the same. Floral arrangements and other illustrations will be changed to create a new look for each product.)</li>
+  <li>* Custom (A completely new design with new illustrations. If you need several products, they won't be exactly the same. Floral arrangements and other illustrations will be changed to create a new look for each product.)</li>
 </ul>"""
 
 [calculator_products_title]
-other = "Products"
+other = "PRODUCTS"
 
 [calculator_products_desc]
-other = "(Choose which products you'll need. The design price depends on the amount of products.)"
+other = "Which products do you need? The design price depends on the amount of products."
 
 [calculator_variants_title]
-other = "Printing"
+other = "PRINTING"
 
 [calculator_variants_desc]
-other = "(Choose the amount of copies for printing. Pricing price is stated for standard paper. I use White Cotton 300g by default. It's thick and it has soft textured surface. All the other papers are called 'Fancy'. All Fancy papers have the same price, samples are here)"
+other = "How many copies are we printing? I print on white, ivory and cream matte and textured papers. Printing price is the same for all papers. You can request to receive paper samples by post or see them at a personal meeting."
 
 [calculator_additional_products_title]
-other = "Additional products"
+other = "ADDITIONAL PRODUCTS"
 
 [calculator_delivery_title]
-other = "Delivery"
+other = "DELIVERY"
 
 [calculator_delivery_desc]
 other = """
 <ul>
-  <li>* Pick up (in Kukkakauppa, Fredrikinkatu 16. Work hours & details here)</li>
+  <li>* Pick up (in Kukkakauppa Floranna, Runeberginkatu 30, Helsinki. Work hours & details <a href="http://floranna.fi/yhteystiedot/">here</a>)</li>
   <li>* Post (depends on the weight of the package)</li>
 </ul>"""
 
 [calculator_transcript_title]
-other = "Here is your order. Send it to me via email."
+other = "Here are your estimates. You can copy and send it to me together with the info about the wedding, your ideas and style preferences."
