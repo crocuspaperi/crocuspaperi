@@ -382,7 +382,7 @@
       var variant = productConf[v.product].variants[v.variant];
       return (
         acc
-        + calculateTotalPrice(v.value, variant.price, variant.priceType)
+        + calculateTotalPrice(v.value, variant.price)
       );
     }, 0);
 
@@ -406,25 +406,52 @@
   /**
    * Calculate total printing price
    */
-  function calculateTotalPrice(amount, price, priceType) {
-    switch (priceType) {
-      case 'perProduct':
-        return totalPricePerProduct(amount, price);
-      case 'perAmount':
-      default:
-        return totalPricePerAmount(amount, price);
+  function calculateTotalPrice(amount, price) {
+    if (Array.isArray(price)) {
+      return totalPricePerProduct(amount, price);
     }
+
+    return totalPricePerAmount(amount, price);
   }
 
   /**
    * Calculate total printing price when variant's price type is per product
    */
-  function totalPricePerProduct(amount, price) {
-    if (amount < 10) {
-      amount = 10
+  function totalPricePerProduct(amount, prices) {
+    if (amount <= 10) {
+      return prices[0];
     }
 
-    return totalPricePerAmount(amount, price);
+    var group = Math.floor(amount / 50);
+    if (group >= prices.length - 1) {
+      // Always go to the price before the last one
+      group = prices.length - 2;
+    }
+    var nextGroup = group + 1;
+
+    var basePrice = prices[group]; // aka p0
+    var nextBasePrice = prices[nextGroup]; // aka p1
+
+    var baseAmount = group === 0 ? 10 : group * 50; // aka x0
+    var nextBaseAmount = nextGroup * 50;
+
+    // Price is calculated as:
+    //   price = p0 + (amount - x0) * (p1 - p0) / (x1 - x0)
+    // Function is derived from a line function where x is amount/horizontal axis
+    // and p is price/vertical axis
+    // E.g if amount is 20 then
+    //   x0 is 10
+    //   x1 is 50
+    //   p0 is prices[0]
+    //   p1 is prices[1]
+
+    var x0 = baseAmount;
+    var x1 = nextBaseAmount;
+    var p0 = basePrice;
+    var p1 = nextBasePrice;
+
+    var price = Math.ceil(p0 + (amount - x0) * (p1 - p0) / (x1 - x0));
+    return price;
   }
 
   /**
