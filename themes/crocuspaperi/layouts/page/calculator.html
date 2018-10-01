@@ -106,18 +106,20 @@
     <div v-if="description" class="products-description" v-html="description">
     </div>
 
-    <ul>
-      <li v-for="option in options">
-        <label>
-          <input
-            type="checkbox"
-            :name="label"
-            :value="option"
-            @input="$emit('input', $event.target.value)" />
-          ${ option }
-        </label>
-      </li>
-    </ul>
+    <table>
+      <tr v-for="option in options">
+        <td>
+          <label>
+            <input
+              type="checkbox"
+              :name="label"
+              :value="option"
+              @input="$emit('input', $event.target.value)" />
+            ${ option }
+          </label>
+        </td>
+      </tr>
+    </table>
 
     <div class="calculator-total-price">
       <b>Design price: ${ designPriceTotal } EUR</b>

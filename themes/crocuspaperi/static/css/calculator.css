@@ -33,7 +33,6 @@
   background-color: #c9dac8;
 }
 
-.products li,
 .variants-variants li {
   display: flex;
 }
@@ -43,8 +42,16 @@
   padding: 5px 10px 5px 0;
 }
 
+.products table {
+  margin-left: 3rem;
+}
+
+.products td {
+  border: 0;
+  padding: 0.5rem 0 0.5rem;
+}
+
 .products label {
-  width: 100%;
   padding: 5px 10px;
   border: 1px solid #eee;
   cursor: pointer;
