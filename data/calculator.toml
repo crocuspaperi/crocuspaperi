@@ -201,21 +201,30 @@ priceType = "perAmount"
 price = 0.76
 priceType = "perAmount"
 
-[products."zAny other card".variants."One-sided"]
+[products."Any other card".variants."One-sided"]
 price = 1
 priceType = "perAmount"
 
-[products."zAny other card".variants."Double-sided"]
+[products."Any other card".variants."Double-sided"]
 price = 1.3
 priceType = "perAmount"
 
-[products."zAny other card".variants."Folded"]
+[products."Any other card".variants."Folded"]
 price = 1.7
 priceType = "perAmount"
 
-[products."zAny other card".variants."Trifold"]
+[products."Any other card".variants."Trifold"]
 price = 1.8
 priceType = "perAmount"
+
+
+#####################################################################
+# Product ordering (format: products."<product name>")
+# The bigger the weight the lower the product be in the list.
+# For non-specified products here weight is 0. If weight is the same
+# then products are ordered by the name.
+[productOrdering."Any other card"]
+weight = 99
 
 
 #####################################################################

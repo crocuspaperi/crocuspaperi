@@ -149,7 +149,7 @@
     },
     products: {
       picked: [],
-      options: Object.keys(config.products)
+      options: orderProducts(Object.keys(config.products))
     },
     variants: {
       picked: [],
@@ -433,6 +433,30 @@
    */
   function totalPricePerAmount(amount, price) {
     return amount * price;
+  }
+
+  /**
+   * Order products by weight and by name
+   */
+  function orderProducts(products) {
+    function weight(product) {
+      if (config.productOrdering.hasOwnProperty(product)) {
+        return config.productOrdering[product].weight;
+      }
+
+      return 0;
+    }
+
+    return products.sort(function (a, b) {
+      var aWeight = weight(a);
+      var bWeight = weight(b);
+
+      if (aWeight !== bWeight) {
+        return aWeight - bWeight;
+      }
+
+      return a.localeCompare(b);
+    });
   }
 
 })(window, document);
