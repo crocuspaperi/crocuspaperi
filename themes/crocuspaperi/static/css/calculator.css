@@ -2,6 +2,10 @@
   padding: 0 1rem;
 }
 
+.calculator > .description {
+  text-align: left;
+}
+
 .calculator ul {
   list-style-type: none;
 }

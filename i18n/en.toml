@@ -28,6 +28,9 @@ other = "My partner companies offer my clients exclusive deals and discounts. Cl
 [calculator_title]
 other = "Calculator"
 
+[calculator_desc]
+other = "Here you can calculate the design and printing price of your wedding stationery. Logo, business cards and other prices are here."
+
 [calculator_design_type_title]
 other = "DESIGN"
 
@@ -62,6 +65,9 @@ other = """
   <li>* Pick up (in Kukkakauppa Floranna, Runeberginkatu 30, Helsinki. Work hours & details <a href="http://floranna.fi/yhteystiedot/">here</a>)</li>
   <li>* Post</li>
 </ul>"""
+
+[calculator_total_price_desc]
+other = "All prices include Finnish VAT."
 
 [calculator_transcript_title]
 other = "Here are your estimates. You can copy and send it to me together with the info about the wedding, your ideas and style preferences."

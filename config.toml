@@ -68,7 +68,7 @@ name   = "Portfolio"
 weight = 3
 
 [[languages.en.menu.main]]
-url    = "/pricing/"
+url    = "/calculator/"
 name   = "Pricing"
 weight = 4
 

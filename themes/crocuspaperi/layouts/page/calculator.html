@@ -4,6 +4,10 @@
   <div class="ten offset-by-one columns calculator" id="calculator">
     <h2>{{ i18n "calculator_title" }}</h2>
 
+    <div class="description">
+      {{ i18n "calculator_desc" }}
+    </div>
+
     <ul>
       <li>
         <radio-picker
@@ -67,6 +71,10 @@
 
     <div class="calculator-total-price">
       <b>Total price: ~${totalPrice} EUR</b>
+    </div>
+
+    <div class="calculator-price-description">
+      {{ i18n "calculator_total_price_desc" }}
     </div>
 
     <transcript :details="transcript"></transcript>
