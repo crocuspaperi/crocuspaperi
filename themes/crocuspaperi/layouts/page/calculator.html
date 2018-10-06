@@ -93,7 +93,7 @@
             :name="label"
             :value="option"
             :checked="option === value"
-            @input="$emit('input', $event.target.value)" />
+            @click="$emit('input', $event.target.value)" />
           <span>${ option }</span>
         </label>
       </li>
@@ -122,7 +122,7 @@
               type="checkbox"
               :name="label"
               :value="option"
-              @input="$emit('input', $event.target.value)" />
+              @click="$emit('input', $event.target.value)" />
             ${ option }
           </label>
         </td>
