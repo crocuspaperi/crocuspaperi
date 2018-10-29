@@ -13,11 +13,11 @@ defaultDelivery = "Pick-up"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Custom"]
-price = 269
+price = 219
 stepPrice = 30
 
 [designTypes."Pre-designed"]
-price = 169
+price = 119
 stepPrice = 30
 
 
@@ -183,28 +183,28 @@ weight = 99
 #####################################################################
 # Additional products (configuration is the same as for products section)
 [additionalProducts."Envelope".variants."105x148, A6"]
-price = 0.60
+price = 0.40
 
 [additionalProducts."Envelope".variants."125x175"]
-price = 0.70
+price = 0.50
 
 [additionalProducts."Envelope".variants."160x160"]
-price = 0.70
+price = 0.50
 
 [additionalProducts."Envelope".variants."120x180, textured"]
-price = 0.80
+price = 0.60
 
 [additionalProducts."Wax seals".variants."Bronze"]
-price = 1.10
+price = 0.70
 
 [additionalProducts."Wax seals".variants."Forest green"]
-price = 1.10
+price = 0.70
 
 [additionalProducts."Wax seals".variants."White"]
-price = 1.10
+price = 0.70
 
 [additionalProducts."Wax seals".variants."Pastel pink"]
-price = 1.10
+price = 0.70
 
 
 #####################################################################
