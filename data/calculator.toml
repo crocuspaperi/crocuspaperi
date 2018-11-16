@@ -80,6 +80,9 @@ price = [15, 31, 51, 71]
 [products."Name card".variants."Tag"]
 price = [12, 28, 48, 68]
 
+[products."Name card".variants."Wooden"]
+price = 1.20
+
 [products."Name card".variants."Round corners"]
 price = [12, 28, 48, 68]
 
