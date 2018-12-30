@@ -22,3 +22,51 @@ other = "Yhteistyötahot"
 
 [partners_intro]
 other = "Crocus Paperin yhteistyöyritykset tarjoavat asiakkailleni etuja ja alennuksia. Klikkaa <a href=\"https://www.instagram.com/p/Bf8n849jSjX/?taken-by=crocus.paperi\">linkkiä</a> saadaksesi lisätietoja."
+
+# Calculator
+[calculator_title]
+other = "Hinta arvio"
+
+[calculator_desc]
+other = "On this page you can calculate the design and printing prices of your wedding stationery. Logo, business cards and other prices are <a href=\"https://www.dropbox.com/s/x3uqqhlgtime6cl/logo_pricing_hinnasto.pdf?dl=0here\">here</a>."
+
+[calculator_design_type_title]
+other = "DESIGN"
+
+[calculator_design_type_desc]
+other = """
+<ul>
+  <li>* Valmis (A design from <a href="https://drive.google.com/drive/folders/1WFxmNyXOYInq_zHhyKfos6tiRd3rrwkh?usp=sharing">my collection of templates</a>. Fonts, colour of the font, colors of flowers/leaves can be changed and adapted to your preferences. If you need several products, they won't be exactly the same. Floral arrangements and other illustrations will be changed to create a new look for each product.)</li>
+  <li>* Yksilöllinen (A completely new design with new illustrations. If you need several products, they won't be exactly the same. Floral arrangements and other illustrations will be changed to create a new look for each product.)</li>
+</ul>"""
+
+[calculator_products_title]
+other = "TUOTTEET"
+
+[calculator_products_desc]
+other = "Which products do you need? After you choose the products you will see DESIGN PRICE."
+
+[calculator_variants_title]
+other = "TULOSTUS"
+
+[calculator_variants_desc]
+other = "How many copies are we printing? I print on white, ivory and cream matte and textured papers. Printing price is the same for all papers. You can request to receive paper samples <a href=\"https://www.crocuspaperi.com/contact/\">by post</a> or see them at a personal meeting."
+
+[calculator_additional_products_title]
+other = "MUUT TUOTTEET"
+
+[calculator_delivery_title]
+other = "TOIMITUS"
+
+[calculator_delivery_desc]
+other = """
+<ul>
+  <li>* Noutopiste (in Kukkakauppa Floranna, Runeberginkatu 30, Helsinki. Work hours & details <a href="http://floranna.fi/yhteystiedot/">here</a>)</li>
+  <li>* Posti</li>
+</ul>"""
+
+[calculator_total_price_desc]
+other = "Hinnat sis. ALV."
+
+[calculator_transcript_title]
+other = "Here are your estimates. You can copy and send it to me together with the info about the wedding, your ideas and style preferences."
