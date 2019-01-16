@@ -13,11 +13,11 @@ defaultDelivery = "Pick-up"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Custom"]
-price = 219
+price = 229
 stepPrice = 30
 
 [designTypes."Pre-designed"]
-price = 119
+price = 129
 stepPrice = 30
 
 
@@ -160,6 +160,15 @@ price = 49
 
 [products."Wedding wishes cards".variants."One-sided"]
 price = [20, 40, 61, 77]
+
+[products."Thank you card".variants."One-sided"]
+price = [25, 45, 65, 80]
+
+[products."Thank you card".variants."Double-sided"]
+price = [35, 55, 75, 90]
+
+[products."Thank you card".variants."Folded"]
+price = [45, 65, 85, 100]
 
 [products."Any other card".variants."One-sided"]
 price = [25, 45, 65, 80]
