@@ -14,11 +14,11 @@ defaultDelivery = "Pick-up"
 #    base price + round(amount) * step price
 [designTypes."Custom"]
 price = 229
-stepPrice = 30
+stepPrice = 35
 
 [designTypes."Pre-designed"]
 price = 129
-stepPrice = 30
+stepPrice = 35
 
 
 #####################################################################
@@ -152,11 +152,17 @@ price = 15
 [products."Seating chart".variants."A2"]
 price = 19
 
-[products."Guestbook".variants."30x20"]
+[products."Guestbook".variants."30x20, 30 pages"]
 price = 59
 
-[products."Guestbook".variants."20x20"]
+[products."Guestbook".variants."20x20, 30 pages"]
 price = 49
+
+[products."Guestbook".variants."20x20, wooden, 60 pages, ready-made"]
+price = 56
+
+[products."Guestbook".variants."20x20, wooden, 60 pages, custom"]
+price = 65
 
 [products."Wedding wishes cards".variants."One-sided"]
 price = [20, 40, 61, 77]
