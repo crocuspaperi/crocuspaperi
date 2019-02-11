@@ -25,7 +25,7 @@ other = "Crocus Paperin yhteistyöyritykset tarjoavat asiakkailleni etuja ja ale
 
 # Calculator
 [calculator_title]
-other = "Hinta laskuri"
+other = "Hintalaskuri"
 
 [calculator_desc]
 other = "Tällä hintalaskurilla saa laskea hääpaperitarvikkeiden design- ja tulostuskustannusarviot. <a href=\"https://www.dropbox.com/s/x3uqqhlgtime6cl/logo_pricing_hinnasto.pdf?dl=0here\">Täältä</a> löytyy myös logojen, käyntikorttien ja muita hintoja."
@@ -41,7 +41,7 @@ other = """
 </ul>"""
 
 [calculator_design_price]
-other = "Design price"
+other = "Design hinta"
 
 [calculator_products_title]
 other = "Tuotteet"
@@ -53,18 +53,18 @@ other = "Minkälaisia tuotteita kaipaisitte? Valitsekaa tuote niin näette DESIG
 other = "Tulostus"
 
 [calculator_variants_desc]
-other = """Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://www.crocuspaperi.com/contact/">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne.
-<p>FOLIO <br>
-Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä löytyy myös foliota). 
+other = """<p>Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://www.crocuspaperi.com/contact/">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne.</p>
+<p>FOLIO
+<br>Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä löytyy myös foliota). 
 <a href="https://www.dropbox.com/sh/2r7pfcbnq2wtjh2/AABuotZqj5wIhCVAujXa-OrAa?dl=0">Folio näytteet</a>. </br> 
 </p> 
 <li>+ 30 EUR/tuote (folio on etupuolella)</li> <li>+ 45 EUR/tuote (folio on etupuolella ja takapuolella)</li>"""
 
 [calculator_additional_products_title]
-other = "Muut tuotteet"
+other = "Lisätuotteet"
 
 [calculator_additional_products_price]
-other = "Additional products price"
+other = "Lisätuotteiden hinta"
 
 [calculator_delivery_title]
 other = "Toimitus"
@@ -77,10 +77,10 @@ other = """
 </ul>"""
 
 [calculator_delivery_price]
-other = "Delivery price"
+other = "Toimitus hinta"
 
 [calculator_total_price]
-other = "Total price"
+other = "Yhteensä"
 
 [calculator_total_price_desc]
 other = "Hinnat sis. ALV."
@@ -89,4 +89,4 @@ other = "Hinnat sis. ALV."
 other = "Tässä  on kustannusarvionne. Voitte kopioida sen ja lähettää sen minulle häätietojen sekä idoiden ja tyylimieltymysten kera."
 
 [calculator_printing_price]
-other = "Printing price"
+other = "Tulostus hinta"

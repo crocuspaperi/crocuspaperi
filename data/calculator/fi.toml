@@ -13,11 +13,11 @@ defaultDelivery = "Noutopiste"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Valmis"]
-price = 229
+price = 129
 stepPrice = 35
 
 [designTypes."Yksilöllinen"]
-price = 129
+price = 229
 stepPrice = 35
 
 
