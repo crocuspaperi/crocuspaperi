@@ -32,7 +32,7 @@ other = "Price calculator"
 other = "On this page you can calculate the design and printing prices of your wedding stationery. Logo, business cards and other prices are <a href=\"https://www.dropbox.com/s/x3uqqhlgtime6cl/logo_pricing_hinnasto.pdf?dl=0here\">here</a>."
 
 [calculator_design_type_title]
-other = "DESIGN"
+other = "Design"
 
 [calculator_design_type_desc]
 other = """
@@ -41,14 +41,17 @@ other = """
   <li>* Custom (A completely new design with new illustrations. If you need several products, they won't be exactly the same. Floral arrangements and other illustrations will be changed to create a new look for each product.)</li>
 </ul>"""
 
+[calculator_design_price]
+other = "Design price"
+
 [calculator_products_title]
-other = "PRODUCTS"
+other = "Products"
 
 [calculator_products_desc]
 other = "Which products do you need? After you choose the products you will see DESIGN PRICE."
 
 [calculator_variants_title]
-other = "PRINTING"
+other = "Printing"
 
 [calculator_variants_desc]
 other = """
@@ -65,10 +68,13 @@ See available foil types
 """
 
 [calculator_additional_products_title]
-other = "ADDITIONAL PRODUCTS"
+other = "Additional products"
+
+[calculator_additional_products_price]
+other = "Additional products price"
 
 [calculator_delivery_title]
-other = "DELIVERY"
+other = "Delivery"
 
 [calculator_delivery_desc]
 other = """
@@ -77,8 +83,17 @@ other = """
   <li>* Post</li>
 </ul>"""
 
+[calculator_delivery_price]
+other = "Delivery price"
+
+[calculator_total_price]
+other = "Total price"
+
 [calculator_total_price_desc]
 other = "Prices include ALV."
 
 [calculator_transcript_title]
 other = "Here are your estimates. You can copy and send it to me together with the info about the wedding, your ideas and style preferences."
+
+[calculator_printing_price]
+other = "Printing price"

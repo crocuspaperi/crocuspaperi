@@ -144,7 +144,7 @@ name   = "Portfolio"
 weight = 3
 
 [[languages.fi.menu.main]]
-url    = "/pricing/"
+url    = "/calculator/"
 name   = "Hinnasto"
 weight = 4
 

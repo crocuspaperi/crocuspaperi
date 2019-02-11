@@ -38,7 +38,7 @@
           :price="printingPrice"
           :price-total="printingPriceTotal"
           description="{{ i18n "calculator_variants_desc" }}"
-          price-text="Printing price"
+          price-text="{{ i18n "calculator_printing_price" }}"
           @input="chooseVariant($event)">
         </variants>
       </li>
@@ -50,7 +50,7 @@
           :picked-products="additionalProducts.options"
           :price="additionalProductsPrice"
           :price-total="additionalProductsPriceTotal"
-          price-text="Additional products price"
+          price-text="{{ i18n "calculator_additional_products_price" }}"
           :additional="true"
           @input="chooseAdditionalProduct($event)">
         </variants>
@@ -62,7 +62,7 @@
           index="5"
           :options="delivery.options"
           :total-price="deliveryPriceTotal"
-          price-text="Delivery price"
+          price-text="{{ i18n "calculator_delivery_price" }}"
           description="{{ i18n "calculator_delivery_desc" }}"
           v-model="delivery.picked">
         </radio-picker>
@@ -70,20 +70,31 @@
     </ul>
 
     <div class="calculator-total-price">
-      <b>Total price: ~${totalPrice} EUR</b>
+      <b>{{ i18n "calculator_total_price" }}: ~${totalPrice} EUR</b>
     </div>
 
     <div class="calculator-price-description">
       {{ i18n "calculator_total_price_desc" }}
     </div>
 
-    <transcript :details="transcript"></transcript>
+    <transcript
+        :picked-design="designTypes.picked"
+        :design-price-total="designPriceTotal"
+        :picked-products="products.picked"
+        :printing-price-total="printingPriceTotal"
+        :picked-variants="variants.picked"
+        :additional-products-price-total="additionalProductsPriceTotal"
+        :additional-products="additionalProducts.picked"
+        :picked-delivery="delivery.picked"
+        :delivery-price-total="deliveryPriceTotal"
+        :total-price="totalPrice"
+    ></transcript>
   </div>
 </section>
 
 <script type="text/x-template" id="radio-picker-template">
   <div class="radio-picker">
-    <b>${ index }. ${ label }: </b>
+    <h4>${ index }. ${ label }: </h4>
 
     <ul>
       <li v-for="option in options">
@@ -110,7 +121,7 @@
 
 <script type="text/x-template" id="products-template">
   <div class="products">
-    <b>${ index }. ${ label }: </b>
+    <h4>${ index }. ${ label }: </h4>
     <div v-if="description" class="products-description" v-html="description">
     </div>
 
@@ -130,14 +141,14 @@
     </table>
 
     <div class="calculator-total-price">
-      <b>Design price: ${ designPriceTotal } EUR</b>
+      <b>{{ i18n "calculator_design_price" }}: ${ designPriceTotal } EUR</b>
     </div>
   </div>
 </script>
 
 <script type="text/x-template" id="variants-template">
   <div class="variants">
-    <b>${ index }. ${ label }: </b>
+    <h4>${ index }. ${ label }: </h4>
 
     <div v-if="description" class="variants-description" v-html="description">
     </div>
@@ -174,13 +185,55 @@
       {{ i18n "calculator_transcript_title" }}
     </div>
 
-    <div class="transcript-details" v-on:click="selectText" v-html="details">
+    <div class="transcript-details" v-on:click="selectText">
+        <div>
+            <b>{{ i18n "calculator_design_type_title" }}:</b> ${ pickedDesign }
+        </div>
+
+        <div>
+            <b>{{ i18n "calculator_products_title" }}:</b> (${ designPriceTotal } EUR)
+            <ul>
+                <li v-for="product in pickedProducts">
+                    ${ product }
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <b>{{ i18n "calculator_variants_title" }}:</b> (${ printingPriceTotal } EUR)
+            <ul>
+                <li v-for="variant in pickedVariants">
+                    <i>(${ variant.value })</i>
+                    ${ variant.product } -
+                    ${ variant.variant }
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <b>{{ i18n "calculator_additional_products_title" }}:</b> (${ additionalProductsPriceTotal } EUR)
+            <ul>
+                <li v-for="variant in additionalProducts">
+                    <i>(${ variant.value })</i>
+                    ${ variant.product } -
+                    ${ variant.variant }
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <b>{{ i18n "calculator_delivery_title" }}:</b> ${ pickedDelivery } (${ deliveryPriceTotal } EUR)
+        </div>
+
+        <p>
+            <b>{{ i18n "calculator_total_price" }}:</b> ${ totalPrice } EUR
+        </p>
     </div>
   </div>
 </script>
 
 <script>
-  var calculatorConfig = Object.freeze({{ .Site.Data.calculator }});
+ var calculatorConfig = Object.freeze({{ index .Site.Data.calculator .Site.Language.Lang }});
 </script>
 
 <!-- development version, includes helpful console warnings -->

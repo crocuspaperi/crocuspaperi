@@ -31,7 +31,7 @@ other = "Hinta laskuri"
 other = "Tällä hintalaskurilla saa laskea hääpaperitarvikkeiden design- ja tulostuskustannusarviot. <a href=\"https://www.dropbox.com/s/x3uqqhlgtime6cl/logo_pricing_hinnasto.pdf?dl=0here\">Täältä</a> löytyy myös logojen, käyntikorttien ja muita hintoja."
 
 [calculator_design_type_title]
-other = "DESIGN"
+other = "Design"
 
 [calculator_design_type_desc]
 other = """
@@ -40,14 +40,17 @@ other = """
   <li>* Yksilöllinen (Täysin uusi design uudenlaisilla piirustuksilla. Mikäli tilaatte useita tuotteita, jokaisen tuotteen ulkoasu voidaan suunnitella erilaiseksi tekstien ja kuvien asettelulla.)</li>
 </ul>"""
 
+[calculator_design_price]
+other = "Design price"
+
 [calculator_products_title]
-other = "TUOTTEET"
+other = "Tuotteet"
 
 [calculator_products_desc]
 other = "Minkälaisia tuotteita kaipaisitte? Valitsekaa tuote niin näette DESIGN HINNAN."
 
 [calculator_variants_title]
-other = "TULOSTUS"
+other = "Tulostus"
 
 [calculator_variants_desc]
 other = """Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://www.crocuspaperi.com/contact/">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne.
@@ -58,10 +61,13 @@ Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä l�
 <li>+ 30 EUR/tuote (folio on etupuolella)</li> <li>+ 45 EUR/tuote (folio on etupuolella ja takapuolella)</li>"""
 
 [calculator_additional_products_title]
-other = "MUUT TUOTTEET"
+other = "Muut tuotteet"
+
+[calculator_additional_products_price]
+other = "Additional products price"
 
 [calculator_delivery_title]
-other = "TOIMITUS"
+other = "Toimitus"
 
 [calculator_delivery_desc]
 other = """
@@ -70,8 +76,17 @@ other = """
   <li>* Posti</li>
 </ul>"""
 
+[calculator_delivery_price]
+other = "Delivery price"
+
+[calculator_total_price]
+other = "Total price"
+
 [calculator_total_price_desc]
 other = "Hinnat sis. ALV."
 
 [calculator_transcript_title]
 other = "Tässä  on kustannusarvionne. Voitte kopioida sen ja lähettää sen minulle häätietojen sekä idoiden ja tyylimieltymysten kera."
+
+[calculator_printing_price]
+other = "Printing price"

@@ -120,10 +120,16 @@
    */
   Vue.component('transcript', {
     props: {
-      details: {
-        type: String,
-        required: true,
-      }
+      pickedDesign: String,
+      designPriceTotal: Number,
+      pickedProducts: Array,
+      printingPriceTotal: Number,
+      pickedVariants: Array,
+      additionalProductsPriceTotal: Number,
+      additionalProducts: Array,
+      pickedDelivery: String,
+      deliveryPriceTotal: Number,
+      totalPrice: Number,
     },
     template: '#transcript-template',
     methods: {
@@ -131,7 +137,7 @@
         // In case browser doesn't support this API
         try {
           var range = document.createRange();
-          range.selectNode(e.target);
+          range.selectNode(e.currentTarget);
           window.getSelection().removeAllRanges();
           window.getSelection().addRange(range);
         } catch (e) {}
@@ -230,62 +236,6 @@
        */
       designTypeConf: function () {
         return config.designTypes[this.designTypes.picked];
-      },
-
-      /**
-       * Return order transcript to be used in the email
-       */
-      transcript: function () {
-        // Design type
-        var designType = [
-          '<b>Design type:</b>',
-          this.designTypes.picked
-        ].join(' ');
-
-        // Products
-        var productItems = this.products.picked.map(function (p) {
-          return '  * ' + p;
-        });
-        var products = [
-          '<b>Products:</b> (' + this.designPriceTotal + ' EUR)'
-        ].concat(productItems);
-
-        // Printing
-        var printingItems = this.variants.picked.map(variantPrintLineGeneric);
-        var printing = [
-          '<b>Printing:</b> (' + this.printingPriceTotal + ' EUR)'
-        ].concat(printingItems);
-
-        // Additional products
-        var additionalProductItems = this.additionalProducts.picked
-          .map(variantPrintLineGeneric);
-        var additionalProducts = [
-          '<b>Additional products:</b> ('
-            + this.additionalProductsPriceTotal + ' EUR)'
-        ].concat(additionalProductItems);
-
-        // Delivery
-        var delivery = [
-          '<b>Delivery:</b>',
-          this.delivery.picked,
-          '(' + this.deliveryPriceTotal + ' EUR)'
-        ].join(' ');
-
-        // Total price
-        var total = [
-          '<b>Total price:</b>',
-          this.totalPrice,
-          'EUR'
-        ].join(' ');
-
-        // Result
-        var lines = [designType]
-          .concat(products)
-          .concat(printing)
-          .concat(additionalProducts)
-          .concat([delivery])
-          .concat(['', total]);
-        return lines.join('<br />');
       },
     },
     methods: {
@@ -387,20 +337,6 @@
     }, 0);
 
     return Math.ceil(price);
-  }
-
-  /**
-   * Used to print a variant line in the transcript
-   */
-  function variantPrintLineGeneric(v) {
-    return [
-      ' ',
-      '*',
-      '<i>(' + v.value + ')</i>',
-      v.product,
-      '—',
-      v.variant
-    ].join(' ');
   }
 
   /**

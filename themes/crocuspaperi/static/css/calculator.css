@@ -97,3 +97,16 @@
   border-radius: 5px;
   padding: 7px;
 }
+
+.transcript-details ul {
+    margin: 0.3rem 0 0.3rem 1rem;
+}
+
+.transcript-details li {
+    margin: 0;
+    list-style-type: "*";
+}
+
+.transcript-details p {
+    margin: 1rem 0 0.5rem;
+}
