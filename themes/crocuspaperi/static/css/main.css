@@ -19,7 +19,7 @@ body {
 
 .languages-switch {
   position: absolute;
-  right: 0;
+  right: 0.5rem;
   top: 0.7rem;
   display: flex;
 }
@@ -43,7 +43,12 @@ body {
 
 .languages-switch > li > span,
 .languages-switch > li > a {
-  padding: 1rem 0.6rem;
+  padding: 1rem 1rem;
+}
+
+.languages-switch > li > span,
+.languages-switch > li > a {
+    font-size: 2rem;
 }
 
 .languages-switch > li > a:hover {
@@ -51,11 +56,18 @@ body {
 }
 
 .top-menu ul {
-  margin: 4rem 0 0;
+  margin: 4.5rem 0 0;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
+}
+
+@media (max-width: 550px) {
+    .top-menu ul {
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+    }
 }
 
 .top-menu li {
@@ -66,7 +78,7 @@ body {
 .top-menu li a {
   color: inherit;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-decoration: none;
 }
 
