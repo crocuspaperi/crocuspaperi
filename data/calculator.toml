@@ -153,16 +153,16 @@ price = 15
 price = 19
 
 [products."Guestbook".variants."30x20, 30 pages"]
-price = 59
+price = 69
 
 [products."Guestbook".variants."20x20, 30 pages"]
-price = 49
+price = 59
 
 [products."Guestbook".variants."20x20, wooden, 60 pages, ready-made"]
-price = 56
+price = 59
 
 [products."Guestbook".variants."20x20, wooden, 60 pages, custom"]
-price = 65
+price = 69
 
 [products."Wedding wishes cards".variants."One-sided"]
 price = [20, 40, 61, 77]
@@ -201,16 +201,16 @@ weight = 99
 #####################################################################
 # Additional products (configuration is the same as for products section)
 [additionalProducts."Envelope".variants."105x148, A6"]
-price = 0.40
+price = 0.50
 
 [additionalProducts."Envelope".variants."125x175"]
-price = 0.50
+price = 0.60
 
 [additionalProducts."Envelope".variants."160x160"]
-price = 0.50
+price = 0.60
 
 [additionalProducts."Envelope".variants."120x180, textured"]
-price = 0.60
+price = 0.80
 
 [additionalProducts."Wax seals".variants."Bronze"]
 price = 0.70
