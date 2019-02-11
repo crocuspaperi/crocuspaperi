@@ -50,7 +50,12 @@ other = "Minkälaisia tuotteita kaipaisitte? Valitsekaa tuote niin näette DESIG
 other = "TULOSTUS"
 
 [calculator_variants_desc]
-other = """Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://www.crocuspaperi.com/contact/">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne."""
+other = """Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://www.crocuspaperi.com/contact/">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne.
+<p>FOLIO <br>
+Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä löytyy myös foliota). 
+<a href="https://www.dropbox.com/sh/2r7pfcbnq2wtjh2/AABuotZqj5wIhCVAujXa-OrAa?dl=0">Folio näytteet</a>. </br> 
+</p> 
+<li>+ 30 EUR/tuote (folio on etupuolella)</li> <li>+ 45 EUR/tuote (folio on etupuolella ja takapuolella)</li>"""
 
 [calculator_additional_products_title]
 other = "MUUT TUOTTEET"
