@@ -83,8 +83,10 @@
         :picked-products="products.picked"
         :printing-price-total="printingPriceTotal"
         :picked-variants="variants.picked"
+        :picked-variant-price="printingPrice"
         :additional-products-price-total="additionalProductsPriceTotal"
         :additional-products="additionalProducts.picked"
+        :additional-product-price="additionalProductsPrice"
         :picked-delivery="delivery.picked"
         :delivery-price-total="deliveryPriceTotal"
         :total-price="totalPrice"
@@ -206,6 +208,7 @@
                     <i>(${ variant.value })</i>
                     ${ variant.product } -
                     ${ variant.variant }
+                    (${ pickedVariantPrice(variant.product, variant.variant) } EUR)
                 </li>
             </ul>
         </div>
@@ -217,6 +220,7 @@
                     <i>(${ variant.value })</i>
                     ${ variant.product } -
                     ${ variant.variant }
+                    (${ additionalProductPrice(variant.product, variant.variant) } EUR)
                 </li>
             </ul>
         </div>
