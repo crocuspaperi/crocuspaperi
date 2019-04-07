@@ -13,11 +13,11 @@ defaultDelivery = "Pick-up"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Custom"]
-price = 229
+price = 235
 stepPrice = 35
 
 [designTypes."Pre-designed"]
-price = 129
+price = 135
 stepPrice = 35
 
 
@@ -137,6 +137,12 @@ price = [20, 40, 61, 77]
 [products."Stickers".variants."Round"]
 price = [25, 45, 65, 80]
 
+[products."Stickers".variants."Address labels, white"]
+price = [25, 45, 65, 80]
+
+[products."Stickers".variants."Address labels, transparent"]
+price = [25, 45, 65, 80]
+
 [products."Poster/sign".variants."A4"]
 price = 7
 
@@ -146,11 +152,17 @@ price = 15
 [products."Poster/sign".variants."A2"]
 price = 19
 
+[products."Poster/sign".variants."50x70"]
+price = 25
+
 [products."Seating chart".variants."A3"]
 price = 15
 
 [products."Seating chart".variants."A2"]
 price = 19
+
+[products."Seating chart".variants."50x70"]
+price = 25
 
 [products."Guestbook".variants."30x20, 30 pages"]
 price = 69
@@ -159,7 +171,7 @@ price = 69
 price = 59
 
 [products."Guestbook".variants."20x20, wooden, 60 pages, ready-made"]
-price = 59
+price = 57
 
 [products."Guestbook".variants."20x20, wooden, 60 pages, custom"]
 price = 69
@@ -203,9 +215,6 @@ weight = 99
 [additionalProducts."Envelope".variants."105x148, A6"]
 price = 0.50
 
-[additionalProducts."Envelope".variants."125x175"]
-price = 0.60
-
 [additionalProducts."Envelope".variants."160x160"]
 price = 0.60
 
@@ -213,16 +222,28 @@ price = 0.60
 price = 0.80
 
 [additionalProducts."Wax seals".variants."Bronze"]
-price = 0.70
+price = 0.75
 
 [additionalProducts."Wax seals".variants."Forest green"]
-price = 0.70
+price = 0.75
 
 [additionalProducts."Wax seals".variants."White"]
-price = 0.70
+price = 0.75
 
 [additionalProducts."Wax seals".variants."Pastel pink"]
-price = 0.70
+price = 0.75
+
+[additionalProducts."Wax seals".variants."Golden"]
+price = 0.75
+
+[additionalProducts."Wax seals".variants."Silver"]
+price = 0.75
+
+[additionalProducts."Wax seals".variants."Navy blue"]
+price = 0.75
+
+[additionalProducts."Wax seals".variants."Burgundy"]
+price = 0.75
 
 
 #####################################################################

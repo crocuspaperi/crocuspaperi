@@ -13,11 +13,11 @@ defaultDelivery = "Noutopiste"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Valmis"]
-price = 129
+price = 135
 stepPrice = 35
 
 [designTypes."Yksilöllinen"]
-price = 229
+price = 235
 stepPrice = 35
 
 
@@ -137,6 +137,12 @@ price = [20, 40, 61, 77]
 [products."Tarrat".variants."Ympyrä"]
 price = [25, 45, 65, 80]
 
+[products."Tarrat".variants."Osoitetarrat, valkoiset"]
+price = [25, 45, 65, 80]
+
+[products."Tarrat".variants."Osoitetarrat, transparent"]
+price = [25, 45, 65, 80]
+
 [products."Juliste/kyltti".variants."A4"]
 price = 7
 
@@ -146,23 +152,29 @@ price = 15
 [products."Juliste/kyltti".variants."A2"]
 price = 19
 
+[products."Juliste/kyltti".variants."50x70"]
+price = 25
+
 [products."Istumajärjestys".variants."A3"]
 price = 15
 
 [products."Istumajärjestys".variants."A2"]
 price = 19
 
-[products."Vieraskirja".variants."30x20б 30 sivua"]
-price = 59
+[products."Istumajärjestys".variants."50x70"]
+price = 25
+
+[products."Vieraskirja".variants."30x20, 30 sivua"]
+price = 69
 
 [products."Vieraskirja".variants."20x20, 30 sivua"]
-price = 49
+price = 59
 
 [products."Vieraskirja".variants."20x20, puinen, 60 sivua, valmis malli"]
-price = 56
+price = 57
 
 [products."Vieraskirja".variants."20x20, wooden, 60 sivua, yksilöllinen"]
-price = 65
+price = 69
 
 [products."Terveiset hääpärille lappuset".variants."Yksipuolinen"]
 price = [20, 40, 61, 77]
@@ -203,9 +215,6 @@ weight = 99
 [additionalProducts."Kirjekuori".variants."105x148, A6"]
 price = 0.50
 
-[additionalProducts."Kirjekuori".variants."125x175"]
-price = 0.60
-
 [additionalProducts."Kirjekuori".variants."160x160"]
 price = 0.60
 
@@ -213,17 +222,28 @@ price = 0.60
 price = 0.80
 
 [additionalProducts."Vahasinetti".variants."Pronssi"]
-price = 0.70
+price = 0.75
 
 [additionalProducts."Vahasinetti".variants."Vihreä"]
-price = 0.70
+price = 0.75
 
 [additionalProducts."Vahasinetti".variants."Valkoinen"]
-price = 0.70
+price = 0.75
 
 [additionalProducts."Vahasinetti".variants."Vaaleanpunainen"]
-price = 0.70
+price = 0.75
 
+[additionalProducts."Vahasinetti".variants."Kultainen"]
+price = 0.75
+
+[additionalProducts."Vahasinetti".variants."Hopeinen"]
+price = 0.75
+
+[additionalProducts."Vahasinetti".variants."Laivastonsininen"]
+price = 0.75
+
+[additionalProducts."Vahasinetti".variants."Viininpunainen"]
+price = 0.75
 
 #####################################################################
 # Delivery options (format: delivery."<delivery name>")
