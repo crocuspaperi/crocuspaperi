@@ -39,31 +39,37 @@ price = [30, 50, 71, 87]
 price = [40, 60, 81, 97]
 
 [products."Invitation".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Invitation".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Invitation".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
+
+[products."Invitation".variants."Trifold"]
+price = [55, 75, 95, 110]
+
+[products."Invitation".variants."Acrylic (transparent plastic)"]
+price = 5
 
 [products."Info card".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Info card".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Info card".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Info card + map".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Info card + map".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Map".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Table numbers".variants."One-sided"]
 price = [15, 31, 51, 71]
@@ -72,64 +78,64 @@ price = [15, 31, 51, 71]
 price = [19, 35, 55, 75]
 
 [products."Name card".variants."One-sided"]
-price = [10, 26, 46, 66]
+price = [12, 28, 48, 68]
 
 [products."Name card".variants."Folded"]
-price = [15, 31, 51, 71]
+price = [20, 36, 56, 76]
 
 [products."Name card".variants."Tag"]
-price = [12, 28, 48, 68]
+price = [15, 30, 50, 70]
 
 [products."Name card".variants."Wooden"]
-price = 1.20
+price = 1.50
 
 [products."Name card".variants."Round corners"]
-price = [12, 28, 48, 68]
+price = [15, 30, 50, 70]
 
 [products."Menu".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Menu".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Menu".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Program".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Program".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Program".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Menu + program".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Menu + program".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Program".variants."Double-sided (ex. with menu)"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Program".variants."Folded (ex. with menu & other info)"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Church program".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Church program".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Church program".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Bride or Groom game".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Bingo".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Stickers".variants."Square/rectangular"]
 price = [20, 40, 61, 77]
@@ -183,22 +189,22 @@ price = [20, 40, 61, 77]
 price = [25, 45, 65, 80]
 
 [products."Thank you card".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [35, 55, 75, 95]
 
 [products."Thank you card".variants."Folded"]
 price = [45, 65, 85, 100]
 
 [products."Any other card".variants."One-sided"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Any other card".variants."Double-sided"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Any other card".variants."Folded"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Any other card".variants."Trifold"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 110]
 
 
 #####################################################################
@@ -215,11 +221,14 @@ weight = 99
 [additionalProducts."Envelope".variants."105x148, A6"]
 price = 0.50
 
-[additionalProducts."Envelope".variants."160x160"]
+[additionalProducts."Envelope".variants."150x150"]
 price = 0.60
 
-[additionalProducts."Envelope".variants."120x180, textured"]
+[additionalProducts."Envelope".variants."130x184, textured"]
 price = 0.80
+
+[additionalProducts."Envelope".variants."125x175, not textured, 4 colors available, SALE"]
+price = 0.20
 
 [additionalProducts."Wax seals".variants."Bronze"]
 price = 0.75

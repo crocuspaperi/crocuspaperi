@@ -39,31 +39,37 @@ price = [30, 50, 71, 87]
 price = [40, 60, 81, 97]
 
 [products."Kutsu".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Kutsu".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Kutsu".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
+
+[products."Kutsu".variants."Kolmiosainen"]
+price = [55, 75, 95, 110]
+
+[products."Kutsu".variants."Acrylic (transparent plastic)"]
+price = 5
 
 [products."Info kortti".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Info kortti".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Info kortti".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Info kortti + kartta".variants."Kaksipuolinen"]
 price = [35, 55, 75, 90]
 
 [products."Info kortti + kartta".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Kartta".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Pöytänumerot".variants."Yksipuolinen"]
 price = [15, 31, 51, 71]
@@ -72,64 +78,64 @@ price = [15, 31, 51, 71]
 price = [19, 35, 55, 75]
 
 [products."Nimikortti".variants."Yksipuolinen"]
-price = [10, 26, 46, 66]
+price = [12, 28, 48, 68]
 
 [products."Nimikortti".variants."Taitettu"]
-price = [15, 31, 51, 71]
+price = [20, 36, 56, 76]
 
 [products."Nimikortti".variants."Tuotelappu/reiällä"]
-price = [12, 28, 48, 68]
+price = [15, 30, 50, 70]
 
 [products."Nimikortti".variants."Puinen"]
-price = 1.20
+price = 1.50
 
 [products."Nimikortti".variants."Pyöristetyt kulmat"]
-price = [12, 28, 48, 68]
+price = [15, 30, 50, 70]
 
 [products."Menu".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Menu".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Menu".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Ohjelma".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Ohjelma".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Ohjelma".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Menu + ohjelma".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Menu + ohjelma".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Ohjelma".variants."Kaksipuolinen (ex. menun kanssa)"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Ohjelma".variants."Taitettu (ex. menun kanssa)"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Kirkko - ohjelma".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Kirkko - ohjelma".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Kirkko - ohjelma".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Morsian tai sulhanen peli".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Bingo".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Tarrat".variants."Neliö/suorakulmio"]
 price = [20, 40, 61, 77]
@@ -189,16 +195,16 @@ price = [35, 55, 75, 90]
 price = [45, 65, 85, 100]
 
 [products."Muut kortit".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
+price = [27, 47, 67, 82]
 
 [products."Muut kortit".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [37, 57, 77, 92]
 
 [products."Muut kortit".variants."Taitettu"]
-price = [45, 65, 85, 100]
+price = [50, 70, 90, 105]
 
 [products."Muut kortit".variants."Kolmiosainen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 110]
 
 
 #####################################################################
@@ -215,11 +221,14 @@ weight = 99
 [additionalProducts."Kirjekuori".variants."105x148, A6"]
 price = 0.50
 
-[additionalProducts."Kirjekuori".variants."160x160"]
+[additionalProducts."Kirjekuori".variants."150x150"]
 price = 0.60
 
-[additionalProducts."Kirjekuori".variants."120x180, tekstuurinen"]
+[additionalProducts."Kirjekuori".variants."130x184, tekstuurinen"]
 price = 0.80
+
+[additionalProducts."Kirjekuori".variants."125x175, ALE"]
+price = 0.20
 
 [additionalProducts."Vahasinetti".variants."Pronssi"]
 price = 0.75
