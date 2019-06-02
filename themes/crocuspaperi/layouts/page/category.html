@@ -1,12 +1,6 @@
 {{ partial "header.html" . }}
 
 <section class="categories">
-  <div class="ten offset-by-one columns">
-    <div class="home-image-box space-after">
-      <img src="/images/categories/main.jpg" alt="Portfolio" class="u-max-full-width" />
-    </div>
-  </div>
-
   <div class="ten offset-by-one columns main-flex">
     {{ range where .Site.Pages "Section" "category" }}
       {{ if eq .Title "Categories" }}
