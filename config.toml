@@ -78,14 +78,9 @@ name   = "About"
 weight = 5
 
 [[languages.en.menu.main]]
-url    = "/printables/"
-name   = "Freebies"
-weight = 6
-
-[[languages.en.menu.main]]
 url    = "/contact/"
 name   = "Contact"
-weight = 7
+weight = 6
 
 
 [languages.fi]
@@ -154,11 +149,6 @@ name   = "Minusta"
 weight = 5
 
 [[languages.fi.menu.main]]
-url    = "/printables/"
-name   = "Freebies"
-weight = 6
-
-[[languages.fi.menu.main]]
 url    = "/contact/"
 name   = "Yhteys"
-weight = 7
+weight = 6
