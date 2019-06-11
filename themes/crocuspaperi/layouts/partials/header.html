@@ -97,3 +97,13 @@
         </nav>
       </div>
     </header>
+
+    {{ if $.Site.Params.announcement }}
+    <section class="landing">
+      <div class="ten offset-by-one columns">
+        <div class="description">
+        {{ $.Site.Params.announcement | safeHTML }}
+        </div>
+      </div>
+    </section>
+    {{ end }}

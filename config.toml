@@ -52,6 +52,13 @@ tumblr = "crocuspaperi"
 # Shop link
 shop = "http://crocuspaperi.bigcartel.com/"
 
+# Announcement
+announcement = """
+<p>Dear wedding clients, I'm fully booked for summer 2019. I'll be available for new wedding orders from September 2019. For logos and branding I'm available from August 2019.</p>
+
+<p>ONLINE SHOP works normally.</p>
+"""
+
 [[languages.en.menu.main]]
 url    = "/"
 name   = "Home"
@@ -76,11 +83,6 @@ weight = 4
 url    = "/about/"
 name   = "About"
 weight = 5
-
-[[languages.en.menu.main]]
-url    = "/printables/"
-name   = "Freebies"
-weight = 6
 
 [[languages.en.menu.main]]
 url    = "/contact/"
@@ -128,6 +130,13 @@ tumblr = "crocuspaperi"
 # Shop link
 shop = "http://crocuspaperi.bigcartel.com/"
 
+# Announcement
+announcement = """
+<p>Dear wedding clients, I'm fully booked for summer 2019. I'll be available for new wedding orders from September 2019. For logos and branding I'm available from August 2019.</p>
+
+<p>ONLINE SHOP works normally.</p>
+"""
+
 [[languages.fi.menu.main]]
 url    = "/"
 name   = "Etusivu"
@@ -152,11 +161,6 @@ weight = 4
 url    = "/about/"
 name   = "Minusta"
 weight = 5
-
-[[languages.fi.menu.main]]
-url    = "/printables/"
-name   = "Freebies"
-weight = 6
 
 [[languages.fi.menu.main]]
 url    = "/contact/"
