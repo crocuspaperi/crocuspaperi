@@ -45,11 +45,10 @@
       "logo": "{{ $.Site.BaseURL}}images/logo.png",
       "name": "{{ .Title }}",
       "sameAs": [
-        "https://www.facebook.com/{{ $.Site.Params.facebook }}",
         "https://www.instagram.com/{{ $.Site.Params.instagram }}",
+        "https://creativemarket.com/{{ $.Site.Params.creativemarket}}",
         "https://www.behance.net/{{ $.Site.Params.behance }}",
-        "https://www.freepik.com/{{ $.Site.Params.freepik }}",
-        "https://{{ $.Site.Params.tumblr }}.tumblr.com/"
+        "https://www.freepik.com/{{ $.Site.Params.freepik }}"
       ]
     }
     </script>
@@ -97,3 +96,13 @@
         </nav>
       </div>
     </header>
+
+    {{ if $.Site.Params.announcement }}
+    <section class="landing">
+      <div class="ten offset-by-one columns">
+        <div class="description">
+        {{ $.Site.Params.announcement | safeHTML }}
+        </div>
+      </div>
+    </section>
+    {{ end }}

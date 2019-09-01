@@ -318,6 +318,14 @@ body {
   color: #885A4C;
 }
 
+.icon-creative-market {
+    width: 5rem;
+}
+
+.icon-creative-market:hover {
+    color: #8BA651;
+}
+
 .icon-behance:hover {
   color: #0061FF;
 }
