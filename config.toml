@@ -57,9 +57,13 @@ shop = "http://crocuspaperi.bigcartel.com/"
 
 # Announcement
 announcement = """
-<p>Dear wedding clients, I'm fully booked for summer 2019. I'll be available for new wedding orders from September 2019. For logos and branding I'm available from August 2019.</p>
+<p>Currently finishing September weddings and preparing for two wedding fairs in Hyvinkä 7.9 and Helsinki 5.10.</p>
 
-<p>ONLINE SHOP works normally.</p>
+<p>7.10 - 17.10 - on vacation.</p>
+
+<p>Booking for 2020 season is open. Big thanks to all the clients contacting me well in advance😊 Good planning makes our work more relaxed and effective.</p>
+
+<p>Design and printing prices will be slightly raised from 16.9.</p>
 """
 
 [[languages.en.menu.main]]
