@@ -79,7 +79,7 @@ other = "Delivery"
 [calculator_delivery_desc]
 other = """
 <ul>
-  <li>* Pick up (in Kukkakauppa Floranna, Runeberginkatu 30, Helsinki. Work hours & details <a href="http://floranna.fi/yhteystiedot/">here</a>)</li>
+  <li>* Pick up (from Kukkakauppa Floranna, Runeberginkatu 30, Helsinki. Work hours & details <a href="http://floranna.fi/yhteystiedot/">here</a>)</li>
   <li>* Post</li>
 </ul>"""
 

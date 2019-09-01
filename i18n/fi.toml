@@ -86,7 +86,7 @@ other = "Yhteensä"
 other = "Hinnat sis. ALV."
 
 [calculator_transcript_title]
-other = "Tässä  on kustannusarvionne. Voitte kopioida sen ja lähettää sen minulle häätietojen sekä idoiden ja tyylimieltymysten kera."
+other = "Tässä on kustannusarvionne. Voitte kopioida sen ja lähettää sen minulle häätietojen sekä idoiden ja tyylimieltymysten kera."
 
 [calculator_printing_price]
 other = "Tulostus hinta"

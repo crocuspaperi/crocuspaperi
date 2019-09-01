@@ -14,7 +14,7 @@ DefaultContentLanguage = "en"
 
 [languages.en]
 # Page title (sets ending of a browser tab title)
-title = "Crocus Paperi | Wedding invitations/graphic design/illustrations"
+title = "Crocus Paperi | Illustration, graphic design, logos, wedding stationery"
 
 # Email address (used in contact form and also shown
 # on contact page next to the form)
@@ -85,7 +85,7 @@ weight = 6
 
 [languages.fi]
 # Page title (sets ending of a browser tab title)
-title = "Crocus Paperi | Hääkutsut/graafinen suunnittelu/juhlasuunnittelu/piirtaminen"
+title = "Crocus Paperi | Kuvitus, graafinen suunnittelu, logot, paperituotteita häihin"
 
 # Email address (used in contact form and also shown
 # on contact page next to the form)
