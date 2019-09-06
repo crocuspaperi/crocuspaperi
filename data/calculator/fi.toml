@@ -50,9 +50,6 @@ price = [53, 73, 93, 108]
 [products."Kutsu".variants."Kolmiosainen"]
 price = [55, 75, 95, 110]
 
-[products."Kutsu".variants."Acrylic (transparent plastic)"]
-price = 6
-
 [products."Info kortti".variants."Yksipuolinen"]
 price = [30, 50, 70, 85]
 
@@ -81,16 +78,13 @@ price = [19, 35, 55, 75]
 price = [15, 30, 50, 70]
 
 [products."Nimikortti".variants."Taitettu"]
-price = [24, 40, 60, 80]
+price = [22, 40, 60, 80]
 
 [products."Nimikortti".variants."Tuotelappu/reiällä"]
-price = [15, 30, 50, 70]
-
-[products."Nimikortti".variants."Puinen"]
-price = 1.50
+price = [22, 40, 60, 80]
 
 [products."Nimikortti".variants."Pyöristetyt kulmat"]
-price = [15, 30, 50, 70]
+price = [16, 33, 52, 72]
 
 [products."Menu".variants."Yksipuolinen"]
 price = [30, 50, 70, 85]
@@ -135,7 +129,7 @@ price = [53, 73, 93, 108]
 price = [30, 50, 70, 85]
 
 [products."Bingo".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [30, 55, 75, 90]
 
 [products."Tarrat".variants."Neliö/suorakulmio"]
 price = [20, 40, 61, 77]
@@ -219,7 +213,7 @@ weight = 99
 #####################################################################
 # Additional products (configuration is the same as for products section)
 [additionalProducts."Kirjekuori".variants."105x148, A6"]
-price = 0.50
+price = 0.60
 
 [additionalProducts."Envelope".variants."90x140, textured"]
 price = 0.55
