@@ -17,12 +17,6 @@ other = "Viestisi"
 [send]
 other = "Lähetä viesti"
 
-[partners]
-other = "Yhteistyötahot"
-
-[partners_intro]
-other = "Crocus Paperin yhteistyöyritykset tarjoavat asiakkailleni etuja ja alennuksia. Klikkaa <a href=\"https://www.instagram.com/p/Bf8n849jSjX/?taken-by=crocus.paperi\">linkkiä</a> saadaksesi lisätietoja."
-
 # Calculator
 [calculator_title]
 other = "Hintalaskuri"
