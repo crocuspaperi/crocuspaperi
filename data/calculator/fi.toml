@@ -13,11 +13,11 @@ defaultDelivery = "Noutopiste"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Semi-custom"]
-price = 140
+price = 150
 stepPrice = 40
 
 [designTypes."Custom"]
-price = 250
+price = 255
 stepPrice = 40
 
 
