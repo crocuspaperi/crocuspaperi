@@ -12,12 +12,12 @@ defaultDelivery = "Noutopiste"
 # Design Types (format: designTypes."<design type>")
 # Total price will be calculated as:
 #    base price + round(amount) * step price
-[designTypes."Valmis"]
-price = 135
+[designTypes."Semi-custom"]
+price = 140
 stepPrice = 40
 
-[designTypes."Yksilöllinen"]
-price = 240
+[designTypes."Custom"]
+price = 250
 stepPrice = 40
 
 
@@ -51,7 +51,7 @@ price = [53, 73, 93, 108]
 price = [55, 75, 95, 110]
 
 [products."Kutsu".variants."Acrylic (transparent plastic)"]
-price = 5
+price = 6
 
 [products."Info kortti".variants."Yksipuolinen"]
 price = [30, 50, 70, 85]
@@ -63,7 +63,7 @@ price = [40, 60, 80, 95]
 price = [53, 73, 93, 108]
 
 [products."Info kortti + kartta".variants."Kaksipuolinen"]
-price = [35, 55, 75, 90]
+price = [40, 60, 80, 95]
 
 [products."Info kortti + kartta".variants."Taitettu"]
 price = [53, 73, 93, 108]
@@ -78,10 +78,10 @@ price = [15, 31, 51, 71]
 price = [19, 35, 55, 75]
 
 [products."Nimikortti".variants."Yksipuolinen"]
-price = [12, 28, 48, 68]
+price = [15, 30, 50, 70]
 
 [products."Nimikortti".variants."Taitettu"]
-price = [20, 36, 56, 76]
+price = [24, 40, 60, 80]
 
 [products."Nimikortti".variants."Tuotelappu/reiällä"]
 price = [15, 30, 50, 70]

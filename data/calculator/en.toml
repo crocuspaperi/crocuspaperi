@@ -13,11 +13,11 @@ defaultDelivery = "Pick-up"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Custom"]
-price = 240
+price = 250
 stepPrice = 40
 
-[designTypes."Pre-designed"]
-price = 135
+[designTypes."Semi-custom"]
+price = 140
 stepPrice = 40
 
 
@@ -50,9 +50,6 @@ price = [53, 73, 93, 108]
 [products."Invitation".variants."Trifold"]
 price = [55, 75, 95, 110]
 
-[products."Invitation".variants."Acrylic (transparent plastic)"]
-price = 5
-
 [products."Info card".variants."One-sided"]
 price = [30, 50, 70, 85]
 
@@ -78,19 +75,16 @@ price = [15, 31, 51, 71]
 price = [19, 35, 55, 75]
 
 [products."Name card".variants."One-sided"]
-price = [12, 28, 48, 68]
+price = [15, 30, 50, 70]
 
 [products."Name card".variants."Folded"]
-price = [20, 36, 56, 76]
+price = [22, 40, 60, 80]
 
 [products."Name card".variants."Tag"]
-price = [15, 30, 50, 70]
-
-[products."Name card".variants."Wooden"]
-price = 1.50
+price = [22, 40, 60, 80]
 
 [products."Name card".variants."Round corners"]
-price = [15, 30, 50, 70]
+price = [16, 33, 52, 72]
 
 [products."Menu".variants."One-sided"]
 price = [30, 50, 70, 85]
@@ -135,7 +129,7 @@ price = [53, 73, 93, 108]
 price = [30, 50, 70, 85]
 
 [products."Bingo".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [30, 55, 75, 90]
 
 [products."Stickers".variants."Square/rectangular"]
 price = [20, 40, 61, 77]
@@ -219,7 +213,7 @@ weight = 99
 #####################################################################
 # Additional products (configuration is the same as for products section)
 [additionalProducts."Envelope".variants."105x148, A6"]
-price = 0.50
+price = 0.60
 
 [additionalProducts."Envelope".variants."90x140, textured"]
 price = 0.55

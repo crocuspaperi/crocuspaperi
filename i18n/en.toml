@@ -17,13 +17,6 @@ other = "Message"
 [send]
 other = "Send"
 
-[partners]
-other = "Partners"
-
-[partners_intro]
-other = "My partner companies offer my clients exclusive deals and discounts. Click <a href=\"https://www.instagram.com/p/Bf8n849jSjX/?taken-by=crocus.paperi\">here</a> for details."
-
-
 # Calculator
 [calculator_title]
 other = "Price calculator"
