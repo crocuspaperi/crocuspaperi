@@ -231,28 +231,31 @@ price = 0.80
 price = 0.20
 
 [additionalProducts."Wax seals".variants."Bronze"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Wax seals".variants."Forest green"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Wax seals".variants."White"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Wax seals".variants."Pastel pink"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Wax seals".variants."Golden"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Wax seals".variants."Silver"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Wax seals".variants."Navy blue"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Wax seals".variants."Burgundy"]
-price = 0.80
+price = 0.90
+
+[additionalProducts."Wax seals".variants."Costom colour"]
+price = 0.95
 
 
 #####################################################################

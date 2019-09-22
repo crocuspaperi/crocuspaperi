@@ -215,7 +215,7 @@ weight = 99
 [additionalProducts."Kirjekuori".variants."105x148, A6"]
 price = 0.60
 
-[additionalProducts."Envelope".variants."90x140, textured"]
+[additionalProducts."Kirjekuori".variants."90x140, tekstuurinen"]
 price = 0.55
 
 [additionalProducts."Kirjekuori".variants."150x150"]
@@ -231,28 +231,31 @@ price = 0.80
 price = 0.20
 
 [additionalProducts."Vahasinetti".variants."Pronssi"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Vahasinetti".variants."Vihreä"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Vahasinetti".variants."Valkoinen"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Vahasinetti".variants."Vaaleanpunainen"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Vahasinetti".variants."Kultainen"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Vahasinetti".variants."Hopeinen"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Vahasinetti".variants."Laivastonsininen"]
-price = 0.80
+price = 0.90
 
 [additionalProducts."Vahasinetti".variants."Viininpunainen"]
-price = 0.80
+price = 0.90
+
+[additionalProducts."Vahasinetti".variants."Custom colour"]
+price = 0.95
 
 #####################################################################
 # Delivery options (format: delivery."<delivery name>")
