@@ -52,7 +52,7 @@ other = """<p>Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot o
 <br>Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä löytyy myös foliota). 
 <a href="https://www.dropbox.com/sh/2r7pfcbnq2wtjh2/AABuotZqj5wIhCVAujXa-OrAa?dl=0">Folio näytteet</a>. </br> 
 </p> 
-<li>+ 45 EUR/tuote (folio on etupuolella)</li> <li>+ 60 EUR/tuote (folio on etupuolella ja takapuolella)</li>"""
+<li>+ 50 EUR/tuote (folio on etupuolella)</li> <li>+ 70 EUR/tuote (folio on etupuolella ja takapuolella)</li>"""
 
 [calculator_additional_products_title]
 other = "Lisätuotteet"

@@ -13,11 +13,11 @@ defaultDelivery = "Noutopiste"
 # Total price will be calculated as:
 #    base price + round(amount) * step price
 [designTypes."Semi-custom"]
-price = 150
+price = 160
 stepPrice = 40
 
 [designTypes."Custom"]
-price = 255
+price = 270
 stepPrice = 40
 
 
@@ -48,7 +48,7 @@ price = [40, 60, 80, 95]
 price = [53, 73, 93, 108]
 
 [products."Kutsu".variants."Kolmiosainen"]
-price = [55, 75, 95, 110]
+price = [60, 80, 100, 110]
 
 [products."Info kortti".variants."Yksipuolinen"]
 price = [30, 50, 70, 85]
@@ -75,16 +75,16 @@ price = [15, 31, 51, 71]
 price = [19, 35, 55, 75]
 
 [products."Nimikortti".variants."Yksipuolinen"]
-price = [15, 30, 50, 70]
+price = [20, 35, 55, 75]
 
 [products."Nimikortti".variants."Taitettu"]
-price = [22, 40, 60, 80]
+price = [25, 45, 65, 85]
 
 [products."Nimikortti".variants."Tuotelappu/reiällä"]
-price = [22, 40, 60, 80]
+price = [25, 45, 65, 85]
 
 [products."Nimikortti".variants."Pyöristetyt kulmat"]
-price = [16, 33, 52, 72]
+price = [25, 45, 65, 85]
 
 [products."Menu".variants."Yksipuolinen"]
 price = [30, 50, 70, 85]
@@ -144,25 +144,25 @@ price = [25, 45, 65, 80]
 price = [25, 45, 65, 80]
 
 [products."Juliste/kyltti".variants."A4"]
-price = 7
+price = 8
 
 [products."Juliste/kyltti".variants."A3"]
-price = 16
+price = 17
 
 [products."Juliste/kyltti".variants."A2"]
-price = 20
+price = 21
 
 [products."Juliste/kyltti".variants."50x70"]
-price = 26
+price = 27
 
 [products."Istumajärjestys".variants."A3"]
-price = 16
+price = 17
 
 [products."Istumajärjestys".variants."A2"]
-price = 20
+price = 21
 
 [products."Istumajärjestys".variants."50x70"]
-price = 26
+price = 27
 
 [products."Vieraskirja".variants."30x20, 30 sivua"]
 price = 75
@@ -198,7 +198,7 @@ price = [40, 60, 80, 95]
 price = [53, 73, 93, 108]
 
 [products."Muut kortit".variants."Kolmiosainen"]
-price = [55, 75, 95, 110]
+price = [60, 80, 100, 110]
 
 
 #####################################################################
@@ -218,17 +218,11 @@ price = 0.60
 [additionalProducts."Kirjekuori".variants."90x140, tekstuurinen"]
 price = 0.55
 
-[additionalProducts."Kirjekuori".variants."150x150"]
-price = 0.60
-
 [additionalProducts."Kirjekuori".variants."130x184, tekstuurinen"]
 price = 0.80
 
 [additionalProducts."Kirjekuori".variants."120x180, tekstuurinen"]
 price = 0.80
-
-[additionalProducts."Kirjekuori".variants."125x175, ALE"]
-price = 0.20
 
 [additionalProducts."Vahasinetti".variants."Pronssi"]
 price = 0.90
@@ -261,7 +255,7 @@ price = 0.95
 # Delivery options (format: delivery."<delivery name>")
 # Delivery price will be added to the total order price.
 [delivery."Posti"]
-price =  8
+price =  9
 
 [delivery."Noutopiste"]
 price =  0
