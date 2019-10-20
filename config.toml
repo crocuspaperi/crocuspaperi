@@ -57,7 +57,9 @@ shop = "http://crocuspaperi.bigcartel.com/"
 
 # Announcement
 announcement = """
-<p>7.10 - 13.10 on vacation/lomalla</p>
+<div>Now booking spring/summer season 2020</div>
+<div>23.10 - 26.10 - unavailable</div>
+<div>18.11 - 24.11 - unavailable</div>
 """
 
 [[languages.en.menu.main]]
@@ -136,7 +138,9 @@ shop = "http://crocuspaperi.bigcartel.com/"
 
 # Announcement
 announcement = """
-<p>7.10 - 13.10 on vacation/lomalla</p>
+<div>Now booking spring/summer season 2020</div>
+<div>23.10 - 26.10 - unavailable</div>
+<div>18.11 - 24.11 - unavailable</div>
 """
 
 [[languages.fi.menu.main]]
