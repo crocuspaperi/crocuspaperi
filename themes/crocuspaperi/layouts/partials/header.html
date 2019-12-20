@@ -21,10 +21,11 @@
 
     {{if .IsHome }}
     <meta name="description" content="{{ i18n "home_text" }}">
-    <link rel="stylesheet" href="/css/csslider.css">
     {{ else }}
     <meta name="description" content="{{ truncate 400 .Content }}">
     {{ end }}
+
+    <link rel="stylesheet" href="/css/csslider.css">
 
     {{ if (eq .Section "category") }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}images{{ .RelPermalink }}thumbnail.jpg">
