@@ -19,39 +19,11 @@
         {{ end }}
       </div>
 
-      {{ $all := where .Site.Pages.ByTitle "Section" "item" }}
-      {{ $items := where $all "Params.category" .Params.category }}
-
-      <div class="csslider inside">
-        {{ if eq .Lang "en" }}
-        <img src="/images{{ .RelPermalink }}full.jpg" alt="{{ .Title }} item" class="u-max-full-width" />
-        {{ else }}
-        <img src="/images{{ substr .RelPermalink 3 }}full.jpg" alt="{{ .Title }} item" class="u-max-full-width" />
-        {{ end }}
-
-        {{ $currentPage := .Permalink }}
-        {{ $currentPageIndex := 0 }}
-
-        {{ range $i, $e := $items }}
-          {{ if eq $e.Permalink $currentPage }}
-            {{ $currentPageIndex = $i }}
-          {{ end }}
-        {{ end }}
-
-        <div class="navigation">
-            <div>
-                {{ range $i, $e := $items }}
-                  {{ $className := "" }}
-                  {{ if eq $i $currentPageIndex }}
-                    {{ $className = "selected" }}
-                  {{ end }}
-                  <a href="{{ $e.Permalink }}">
-                    <label class="{{ $className }}"></label>
-                  </a>
-                {{ end }}
-            </div>
-        </div>
-      </div>
+      {{ if eq .Lang "en" }}
+      <img src="/images{{ .RelPermalink }}full.jpg" alt="{{ .Title }} item" class="u-max-full-width" />
+      {{ else }}
+      <img src="/images{{ substr .RelPermalink 3 }}full.jpg" alt="{{ .Title }} item" class="u-max-full-width" />
+      {{ end }}
     </div>
   </div>
 
