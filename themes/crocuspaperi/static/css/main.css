@@ -185,7 +185,7 @@ body {
   padding: 0 1rem;
 }
 
-.item table tr td:first-child {
+.item table tr th {
   text-align: right;
   font-weight: 600;
 }

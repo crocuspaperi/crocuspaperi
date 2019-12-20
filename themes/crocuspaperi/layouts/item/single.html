@@ -32,13 +32,12 @@
       <table class="u-full-width">
         <tbody>
           <tr>
-            <td>Item:</td>
-            <td>{{ .Title }}</td>
+            <td colspan="2" style="text-align: center">{{ .Title }}</td>
           </tr>
 
           {{ range .Params.specs }}
             <tr>
-              <td>{{ .key }}</td>
+              <th>{{ .key }}</th>
               <td>{{ .value | safeHTML }}</td>
             </tr>
           {{ end }}
