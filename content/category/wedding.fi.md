@@ -1,9 +1,0 @@
-+++
-date = "2016-02-21T11:54:11+02:00"
-title = "Häät"
-name = "wedding"
-weight = 1
-summary = "Kutsut, save the date kortit, paikkakortit, menu kortit ja muut paperituotteet"
-+++
-
-Käytä tätä <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSe8B_-oxOdNi0qdZicM_QIGTgzR8Xy-VAp1Q5n50s0e2HJJpw/viewform?usp=sf_link">lomaketta</a> saadaksesi hääpaperitavaran budjetin arvioita.

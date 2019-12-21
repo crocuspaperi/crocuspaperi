@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+
+{% block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="/css/csslider.css">
+{% endblock stylesheets %}
+
+{% block opengraph %}
+<meta name="description" content="{{ trans(key='home_text', lang=lang) | striptags | truncate(length=300) }}">
+<meta property="og:type" content="website">
+<meta property="og:image" content="{{ get_url(path='images/logo.png') | safe }}">
+<script type="application/ld+json">
+ {
+     "@context": "http://schema.org",
+     "@type": "Organization",
+     "url": "{{ config.base_url | safe }}",
+     "logo": "{{ config.base_url | safe }}images/logo.png",
+     "name": "{{ config.title }}",
+     "sameAs": [
+         "https://www.instagram.com/{{ config.extra.instagram }}",
+         "https://creativemarket.com/{{ config.extra.creativemarket}}",
+         "https://www.behance.net/{{ config.extra.behance }}",
+         "https://www.freepik.com/{{ config.extra.freepik }}"
+     ]
+ }
+</script>
+{% endblock opengraph %}
+
+{% block content %}
+
+<section class="row landing">
+    <div class="ten offset-by-one columns">
+        <div id="slider1" class="csslider infinity inside">
+            {% set images = config.extra.home_slider_images %}
+
+            {% for image in images %}
+            <input type="radio" name="slides" id="slides_{{ loop.index + 1 }}" {% if loop.first %} checked{% endif %} />
+            {% endfor %}
+
+            <ul>
+                {% for image in images %}
+                <li>
+                    <img src="{{ resize_image(path=image, width=2000, height=1500, op='fit') }}" class="u-max-full-width" />
+                    {% if loop.first %}
+                    <div class="shop">
+                        <a href="{{ config.extra.shop }}" target="_blank">{{ trans(key="shop_now", lang=lang) }}</a>
+                    </div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+
+            <div class="arrows">
+                {% for image in images %}
+                <div>
+                    <label for="slides_{{ loop.index + 1 }}"></label>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="navigation">
+                <div>
+                    {% for image in images %}
+                    <label for="slides_{{ loop.index + 1 }}"></label>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="row landing">
+    <div class="ten offset-by-one columns">
+        <div class="description">
+            {{ trans(key='home_text', lang=lang) | safe }}
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

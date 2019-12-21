@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<main role="main" class="row landing about">
+    <div class="ten offset-by-one columns">
+        <div class="description">
+            {{ page.content | safe }}
+        </div>
+    </div>
+</main>
+{% endblock content %}

@@ -27,6 +27,10 @@
 
 # Crocus paperi web site
 
+## Installation
+
+Site is generated with Zola: https://github.com/getzola/zola
+
 
 ## Category
 
@@ -88,31 +92,11 @@ Ex: `content/item/1.fi.md` is `www.crocuspaperi.com/fi/item/1/`.
 Example item file:
 ```
 +++
-category = "other"
-date = "2016-02-21T17:52:55+02:00"
-title = "1"
-
-[[specs]]
-  key = "Sizes (cm)"
-  value = "TODO: ADD SIZES"
-
-[[specs]]
-  key = "Characteristics"
-  value = "TODO: ADD CHARACTERISTICS"
+title = "my card"
 +++
 ```
 
-* **category** category name this item belongs to
 * **title** item title (shown as *Item number* in the table on the item page)
-* **specs** is a list of table rows, where key is a first column and value is a second column
-
-So for the specs in the example item file the following table will be generated on the item page:
-
-| Key             | Value                     |
-|-----------------|---------------------------|
-| Item number     | 1                         |
-| Sizes (cm)      | TODO: ADD SIZES           |
-| Characteristics | TODO: ADD CHARACTERISTICS |
 
 ### Item images
 
@@ -129,26 +113,6 @@ Remember to create item files for both English and Finnish versions.
 ### How to edit an exisiting item
 
 1. Just edit item file according to item specifications
-
-
-## Printables
-
-Printables page description is located in `content/page/printables.html`.
-
-```
-[[printables]]
-  name = "Something"
-  description = "Long long text"
-  link = "http://www.juhlasuunnitteluilonasi.fi/"
-  image = "ilonasi.png"
-```
-
-* `name` is a printable name shown on the page
-* `description` is a short text under the printable name
-* `link` download link (when images are under static directory use: `link = "/download/original.jpg"`)
-* `image` actual image file name (used for printable image thumbnail)
-
-Place printable thumbnails under `static/images/printables/` directory.
 
 
 ## Main configuration file

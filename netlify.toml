@@ -1,6 +1,9 @@
 [build]
-  command = "hugo version && hugo -v"
-  publish = "public"
+command = "zola build"
+publish = "public"
 
 [context.production.environment]
-  HUGO_VERSION = "0.29"
+ZOLA_VERSION = "0.9.0"
+
+[context.deploy-preview]
+command = "zola build --base-url $DEPLOY_PRIME_URL"

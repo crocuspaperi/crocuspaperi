@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% block opengraph %}
+{{ super() }}
+
+{% for asset in page.assets %}
+{% if asset is matching("thumbnail[.](jpg|jpeg|png)$") %}
+<meta property="og:image" content="{{ get_url(path=asset) | safe }}">
+{% endif %}
+{% endfor %}
+
+{% endblock opengraph %}
+
+{% block content %}
+<main role="main" class="item">
+    <div class="picture row">
+        <div class="eight offset-by-two columns">
+            <div class="back-link">
+                {% set parent = page.ancestors | last %}
+                {% set parent_section = get_section(path=parent) %}
+
+                <a href="{{ parent_section.permalink }}" title="Back to {{ parent_section.title }}">
+                    <svg class="icon slider-btn" id="prev">
+                        <symbol id="icon-arrow-left2" viewBox="0 0 1024 1024">
+                            <title>Previous</title>
+                            <path class="path1" d="M402.746 877.254l-320-320c-24.994-24.992-24.994-65.516 0-90.51l320-320c24.994-24.992 65.516-24.992 90.51 0 24.994 24.994 24.994 65.516 0 90.51l-210.746 210.746h613.49c35.346 0 64 28.654 64 64s-28.654 64-64 64h-613.49l210.746 210.746c12.496 12.496 18.744 28.876 18.744 45.254s-6.248 32.758-18.744 45.254c-24.994 24.994-65.516 24.994-90.51 0z"></path>
+                        </symbol>
+                        <use xlink:href="#icon-arrow-left2"></use>
+                    </svg>
+                </a>
+            </div>
+
+            {% set_global pictures = [] %}
+            {% for asset in page.assets %}
+            {% if asset is matching("full[.](jpg|jpeg|png)$") %}
+            {% set_global pictures = pictures | concat(with=asset) %}
+            {% endif %}
+            {% endfor %}
+
+            {% for picture in pictures %}
+            <img src="{{ get_url(path=picture) }}" alt="{{ page.title }} item" class="u-max-full-width" />
+            {% break %}
+            {% else %}
+            <p style="color: #c00">Missing full image</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="description row">
+        <div class="eight offset-by-two columns">
+            <table class="u-full-width">
+                <tbody>
+                    <tr>
+                        <td style="text-align: center">{{ page.title }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+{% endblock content %}
