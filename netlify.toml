@@ -1,3 +1,4 @@
+# Master
 [build]
 command = "zola build"
 publish = "public"
@@ -5,5 +6,18 @@ publish = "public"
 [context.production.environment]
 ZOLA_VERSION = "0.9.0"
 
+
+# Merge requests
 [context.deploy-preview]
 command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[context.deploy-preview.environment]
+ZOLA_VERSION = "0.9.0"
+
+
+# Branches
+[context.branch-deploy]
+command = "zola build --base-url $DEPLOY_PRIME_URL"
+
+[context.branch-deploy.environment]
+ZOLA_VERSION = "0.9.0"
