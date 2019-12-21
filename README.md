@@ -93,3 +93,9 @@ There are translations in the configuration file for some pages.
 ## Calculator
 
 Calculator configuration can be found in `content/calculator/data.en.toml` and `content/calculator/data.fi.toml` files.
+
+
+## FAQ
+
+* Index files are starting with underscore mean sections or listings.
+* Index files without underscore mean single pages.
