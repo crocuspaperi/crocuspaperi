@@ -7,4 +7,4 @@ help: ## This help.
 
 .PHONY: run
 run: ## Run locally
-	hugo server -w --disableFastRender
+	zola serve --port 1313

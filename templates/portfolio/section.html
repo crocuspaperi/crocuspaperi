@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block opengraph %}
+{{ super() }}
+
+{% for asset in section.assets %}
+{% if asset is matching("thumbnail[.](jpg|jpeg|png)$") %}
+<meta property="og:image" content="{{ get_url(path=asset) | safe }}">
+{% endif %}
+{% endfor %}
+
+{% endblock opengraph %}
+
+{% block content %}
+<main role="main" class="landing row">
+    <div class="ten offset-by-one columns">
+        <div class="description narrow">
+            <p>{{ section.description }}</p>
+
+            {% if section.content %}
+            <p>{{ section.content | safe }}</p>
+            {% endif %}
+        </div>
+
+        <h3 class="category-title">{{ section.title }}</h3>
+    </div>
+</section>
+
+<section class="items">
+    <div class="row">
+        <div class="ten offset-by-one columns">
+            {% for page in section.pages %}
+            <div class="item-box">
+                <div class="item-content">
+                    <a href="{{ page.permalink }}">
+                        {% set_global thumbnails = [] %}
+                        {% for asset in page.assets %}
+                        {% if asset is matching("thumbnail[.](jpg|jpeg|png)$") %}
+                        {% set_global thumbnails = thumbnails | concat(with=asset) %}
+                        {% endif %}
+                        {% endfor %}
+
+                        {% for thumbnail in thumbnails %}
+                        <img src="{{ get_url(path=thumbnail) }}" alt="{{ page.title }} item thumbnail" class="u-max-full-width" />
+                        {% break %}
+                        {% else %}
+                        <p style="color: #c00">Missing thumbnail</p>
+                        {% endfor %}
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock content %}

@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<section class="landing row">
+    <div class="ten offset-by-one columns">
+        <div class="description narrow">
+            {{ page.content | safe }}
+        </div>
+    </div>
+</section>
+
+<main role="main" class="contact">
+    <div class="form">
+        <form id="contactForm" method="POST" action="//formspree.io/{{ config.extra.email }}">
+            <div class="row">
+                <div class="five offset-by-two columns">
+                    <div class="row">
+                        <div class="one-half column">
+                            <input type="text" class="u-full-width" placeholder="{{ trans(key='name', lang=lang) }}" id="name" name="name" />
+                        </div>
+
+                        <div class="one-half column">
+                            <input type="email" class="u-full-width" placeholder="{{ trans(key='email', lang=lang) }}" id="email" name="email" required />
+                        </div>
+                    </div>
+
+                    <textarea class="u-full-width" placeholder="{{ trans(key='message', lang=lang) }}" id="message" name="message" required></textarea>
+
+                    <input type="hidden" name="_next" value="{{ current_url }}#sent" />
+                    <input type="submit" id="submit" class="button" value="{{ trans(key='send', lang=lang) }}" />
+
+                    <div id="msgSuccess" id="#sent" class="msg-success">
+                        {{ page.extra.form_success }}
+                    </div>
+                    <div id="msgError" class="msg-error">
+                        {{ page.extra.form_error }}
+                    </div>
+                </div>
+
+                <div class="five columns">
+                    <ul>
+                        {% if config.extra.email %}
+                        <li>
+                            <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
+                        </li>
+                        {% endif %}
+
+                        {% if config.extra.business_id %}
+                        <li>Y-tunnus <strong>{{ config.extra.business_id }}</strong></li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="landing row">
+    <div class="ten offset-by-one columns">
+        <div class="description narrow">
+            <small>{{ page.extra.terms }}</small>
+        </div>
+    </div>
+</section>
+
+<script async>
+ ;(function (w, d) {
+     w.onload = function () {
+         var successEl = d.querySelector('#msgSuccess');
+
+         if(location.hash.slice(1) === 'sent') {
+             successEl.style.display = 'inline-block';
+             setTimeout(function () {
+                 window.scrollTo(0, successEl.offsetTop);
+             }, 10);
+         }
+
+         location.hash = '';
+
+         document.querySelector('#submit').addEventListener('click', function (e) {
+             if (ga) {
+                 ga('send', {
+                     hitType: 'event',
+                     eventCategory: 'Email',
+                     eventAction: 'send'
+                 });
+             }
+         }, false);
+     };
+ })(window, document);
+</script>
+
+{% endblock content %}

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<section class="categories">
+    <div class="ten offset-by-one columns main-flex">
+        {% for subsection_path in section.subsections %}
+        {% set subsection = get_section(path=subsection_path) %}
+        <div>
+            <a href="{{ subsection.permalink }}" title="{{ subsection.title }}">
+                <div class="image-box">
+                    {% set_global thumbnails = [] %}
+                    {% for asset in subsection.assets %}
+                    {% if asset is matching("thumbnail[.](jpg|jpeg|png)$") %}
+                    {% set_global thumbnails = thumbnails | concat(with=asset) %}
+                    {% endif %}
+                    {% endfor %}
+
+                    {% for thumbnail in thumbnails %}
+                    <div class="image" style="background-image: url('{{ get_url(path='/' ~ thumbnail) }}"')"></div>
+                    {% break %}
+                    {% else %}
+                    <p style="color: #c00">Missing thumbnail</p>
+                    {% endfor %}
+                </div>
+
+                <h4>{{ subsection.title }}</h4>
+            </a>
+
+            <div class="description">{{ subsection.description }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock content %}

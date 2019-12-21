@@ -1,0 +1,265 @@
+{% extends "layout.html" %}
+
+{% block stylesheets %}
+{{ super() }}
+<link rel="stylesheet" href="/css/calculator.css">
+{% endblock stylesheets %}
+
+{% block content %}
+
+<section class="landing row">
+    <div class="ten offset-by-one columns calculator" id="calculator">
+        <h2>{{ trans(key="calculator_title", lang=lang) }}</h2>
+
+        <div class="description">
+            {{ trans(key="calculator_desc", lang=lang) | safe }}
+        </div>
+
+        <ul>
+            <li>
+                <radio-picker
+                    label="{{ trans(key="calculator_design_type_title", lang=lang) }}"
+                    index="1"
+                    :options="designTypes.options"
+                    description="{{ trans(key="calculator_design_type_desc", lang=lang) }}"
+                    v-model="designTypes.picked">
+                </radio-picker>
+            </li>
+
+            <li>
+                <products
+                    label="{{ trans(key="calculator_products_title", lang=lang) }}"
+                    index="2"
+                    :options="products.options"
+                    :design-price-total="designPriceTotal"
+                    description="{{ trans(key="calculator_products_desc", lang=lang) }}"
+                    @input="toggleProduct($event)">
+                </products>
+            </li>
+
+            <li>
+                <variants
+                    label="{{ trans(key="calculator_variants_title", lang=lang) }}"
+                    index="3"
+                    :picked-products="products.picked"
+                    :price="printingPrice"
+                    :price-total="printingPriceTotal"
+                    description="{{ trans(key="calculator_variants_desc", lang=lang) }}"
+                    price-text="{{ trans(key="calculator_printing_price", lang=lang) }}"
+                    @input="chooseVariant($event)">
+                </variants>
+            </li>
+
+            <li>
+                <variants
+                    label="{{ trans(key="calculator_additional_products_title", lang=lang) }}"
+                    index="4"
+                    :picked-products="additionalProducts.options"
+                    :price="additionalProductsPrice"
+                    :price-total="additionalProductsPriceTotal"
+                    price-text="{{ trans(key="calculator_additional_products_price", lang=lang) }}"
+                    :additional="true"
+                    @input="chooseAdditionalProduct($event)">
+                </variants>
+            </li>
+
+            <li>
+                <radio-picker
+                    label="{{ trans(key="calculator_delivery_title", lang=lang) }}"
+                    index="5"
+                    :options="delivery.options"
+                    :total-price="deliveryPriceTotal"
+                    price-text="{{ trans(key="calculator_delivery_price", lang=lang) }}"
+                    description="{{ trans(key="calculator_delivery_desc", lang=lang) }}"
+                    v-model="delivery.picked">
+                </radio-picker>
+            </li>
+        </ul>
+
+        <div class="calculator-total-price">
+            <b>{{ trans(key="calculator_total_price", lang=lang) }}: ~${totalPrice} EUR</b>
+        </div>
+
+        <div class="calculator-price-description">
+            {{ trans(key="calculator_total_price_desc", lang=lang) }}
+        </div>
+
+        <transcript
+            :picked-design="designTypes.picked"
+            :design-price-total="designPriceTotal"
+            :picked-products="products.picked"
+            :printing-price-total="printingPriceTotal"
+            :picked-variants="variants.picked"
+            :picked-variant-price="printingPrice"
+            :additional-products-price-total="additionalProductsPriceTotal"
+            :additional-products="additionalProducts.picked"
+            :additional-product-price="additionalProductsPrice"
+            :picked-delivery="delivery.picked"
+            :delivery-price-total="deliveryPriceTotal"
+            :total-price="totalPrice"
+        ></transcript>
+    </div>
+</section>
+
+<script type="text/x-template" id="radio-picker-template">
+    <div class="radio-picker">
+        <h4>${ index }. ${ label }: </h4>
+
+        <ul>
+            <li v-for="option in options">
+                <label>
+                    <input
+                        type="radio"
+                        :name="label"
+                        :value="option"
+                        :checked="option === value"
+                        @click="$emit('input', $event.target.value)" />
+                    <span>${ option }</span>
+                </label>
+            </li>
+        </ul>
+
+        <div v-if="description" class="radio-picker-description" v-html="description">
+        </div>
+
+        <div v-if="priceText" class="radio-picker-total-price">
+            <b>${ priceText }: ${ totalPrice } EUR</b>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="products-template">
+    <div class="products">
+        <h4>${ index }. ${ label }: </h4>
+        <div v-if="description" class="products-description" v-html="description">
+        </div>
+
+        <table>
+            <tr v-for="option in options">
+                <td>
+                    <label>
+                        <input
+                            type="checkbox"
+                            :name="label"
+                            :value="option"
+                            @click="$emit('input', $event.target.value)" />
+                        ${ option }
+                    </label>
+                </td>
+            </tr>
+        </table>
+
+        <div class="calculator-total-price">
+            <b>{{ trans(key="calculator_design_price", lang=lang) }}: ${ designPriceTotal } EUR</b>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="variants-template">
+    <div class="variants">
+        <h4>${ index }. ${ label }: </h4>
+
+        <div v-if="description" class="variants-description" v-html="description">
+        </div>
+
+        <ul class="variants-products">
+            <li v-for="product in pickedProducts">
+                <label>${ product }</label>
+
+                <ul class="variants-variants">
+                    <li v-for="variant, name in variants(product)">
+                        <i>${ price(product, name) } EUR</i>
+                        <label>
+                            <input
+                                type="number"
+                                value="0"
+                                @input="$emit('input', { product: product, variant: name, value: $event.target.value })"
+                                min="0" />
+                            ${ name }
+                        </label>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="variants-total-price">
+            <b>${ priceText }: ${ priceTotal } EUR</b>
+        </div>
+    </div>
+</script>
+
+<script type="text/x-template" id="transcript-template">
+    <div class="transcript">
+        <div class="transcript-description">
+            {{ trans(key="calculator_transcript_title", lang=lang )}}
+        </div>
+
+        <div class="transcript-details" v-on:click="selectText">
+            <div>
+                <b>{{ trans(key="calculator_design_type_title", lang=lang) }}:</b> ${ pickedDesign }
+            </div>
+
+            <div>
+                <b>{{ trans(key="calculator_products_title", lang=lang) }}:</b> (${ designPriceTotal } EUR)
+                <ul>
+                    <li v-for="product in pickedProducts">
+                        ${ product }
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <b>{{ trans(key="calculator_variants_title", lang=lang) }}:</b> (${ printingPriceTotal } EUR)
+                <ul>
+                    <li v-for="variant in pickedVariants">
+                        <i>(${ variant.value })</i>
+                        ${ variant.product } -
+                        ${ variant.variant }
+                        (${ pickedVariantPrice(variant.product, variant.variant) } EUR)
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <b>{{ trans(key="calculator_additional_products_title", lang=lang) }}:</b> (${ additionalProductsPriceTotal } EUR)
+                <ul>
+                    <li v-for="variant in additionalProducts">
+                        <i>(${ variant.value })</i>
+                        ${ variant.product } -
+                        ${ variant.variant }
+                        (${ additionalProductPrice(variant.product, variant.variant) } EUR)
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <b>{{ trans(key="calculator_delivery_title", lang=lang) }}:</b> ${ pickedDelivery } (${ deliveryPriceTotal } EUR)
+            </div>
+
+            <p>
+                <b>{{ trans(key="calculator_total_price", lang=lang) }}:</b> ${ totalPrice } EUR
+            </p>
+        </div>
+    </div>
+</script>
+
+<script>
+ var calculatorConfig;
+ {% for asset in page.assets %}
+ {% if asset is matching('.*data[.]' ~ lang ~ '[.]toml$') %}
+ {% set data = load_data(path='content/' ~ asset) %}
+ calculatorConfig = Object.freeze({{ data | json_encode | safe }});
+ {% endif %}
+ {% endfor %}
+
+ if (!calculatorConfig) {
+     document.querySelector('#calculator').innerHTML = '<p style="color: #c00">Calculator is not working</p>';
+ }
+</script>
+
+{# development version, includes helpful console warnings #}
+{# <script src="/js/vue-dev.js"></script> #}
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+<script src="/js/calculator.js"></script>
+
+{% endblock content %}
