@@ -97,5 +97,5 @@ Calculator configuration can be found in `content/calculator/data.en.toml` and `
 
 ## FAQ
 
-* Index files are starting with underscore mean sections or listings.
+* Index files starting with underscore mean sections.
 * Index files without underscore mean single pages.
