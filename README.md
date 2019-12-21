@@ -2,166 +2,94 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [Crocus paperi web site](#crocus-paperi-web-site)
-  - [Category](#category)
-    - [Category specifications](#category-specifications)
-    - [Category images](#category-images)
-    - [How to add a new category](#how-to-add-a-new-category)
-    - [How to edit an existing category](#how-to-edit-an-existing-category)
+- [Crocus Paperi website](#crocus-paperi-website)
+  - [Installation](#installation)
+  - [Portfolio](#portfolio)
+    - [Edit existing category](#edit-existing-category)
+    - [Add new category](#add-new-category)
   - [Item](#item)
-    - [Item specifications](#item-specifications)
-    - [Item images](#item-images)
-    - [How to add a new item](#how-to-add-a-new-item)
-    - [How to edit an exisiting item](#how-to-edit-an-exisiting-item)
-  - [Printables](#printables)
+    - [Edit existing item](#edit-existing-item)
+    - [Add new item](#add-new-item)
   - [Main configuration file](#main-configuration-file)
-  - [Top menu](#top-menu)
-  - [Home page slider](#home-page-slider)
-  - [Translations](#translations)
-  - [Static Pages (Distinct Pages)](#static-pages-distinct-pages)
-    - [How to add a new page](#how-to-add-a-new-page)
+    - [Top menu](#top-menu)
+    - [Home page slider](#home-page-slider)
+    - [Translations](#translations)
   - [Calculator](#calculator)
-    - [Translations](#translations-1)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# Crocus paperi web site
+# Crocus Paperi website
+
 
 ## Installation
 
 Site is generated with Zola: https://github.com/getzola/zola
 
 
-## Category
+## Portfolio
 
-Categories are located in `content/category` folder.
-Each file in that folder corresponds to the url `www.crocuspaperi.com/category/<file name>`.
+Portfolio lists available categories. 
 
-Ex: `content/category/wedding.md` is `www.crocuspaperi.com/category/wedding/`.
-Ex: `content/category/wedding.fi.md` is `www.crocuspaperi.com/fi/category/wedding/`.
+### Edit existing category
 
-### Category specifications
+1. Category title and description are in
+    * `content/portfolio/branding/_index.md` 
+    * `content/portfolio/branding/_index.fi.md`
+2. Category thumbnail is in `content/portfolio/branding/thumbnail.jpg` 
 
-Example category file:
-```
-+++
-date = "2016-02-21T11:57:47+02:00"
-title = "Other stationary"
-name = "other"
-weight = 2
-+++
+Categories are sorted by `weight` attribute or if not specified by title/file name.
 
-Greeting cards, notebooks, calendars and other stationery items.
-```
+### Add new category
 
-* **date** is a date when category was created (**NOT USED** but better to keep it)
-* **title** category title (what you see on the web site)
-* **name** category name (make it the same as filename)
-* **weight** category order (the bigger the number the closer to the end of list this category will be)
-* **Post `+++` text**:
-    Everything that is after `+++` is a category description.
-    Could be written in markdown and/or html.
-
-### Category images
-
-Category images are in `static/images/category/` folder.
-
-### How to add a new category
-
-1. Copy any existing file in `content/category/`
-2. And save it with a desired category name
-3. Then edit category by modifying the contents of that file
-
-Remember to create category files for both English and Finnish versions.
-
-### How to edit an existing category
-
-1. Just edit category file according to category specifications
+1. Create new directory e.g `content/portfolio/flowers`
+    * File name defines the url
+    * Title attribute in `_index` files defines the category name on the page
+2. Copy `_index.md` and `_index.fi.md` from another category to `flowers` directory and edit those files accordingly.
+3. Add a thumbnail to `content/portfolio/flowers/thumbnail.jpg`
 
 
 ## Item
 
-Items are located in `content/item/` folder.
-Each file in that folder corresponds to the url `www.crocuspaperi.com/item/<file name>`.
+Each category may contain items.
 
-Ex: `content/item/1.md` is `www.crocuspaperi.com/item/1/`.
-Ex: `content/item/1.fi.md` is `www.crocuspaperi.com/fi/item/1/`.
+### Edit existing item
 
-### Item specifications
+1. Item title is in
+    * `content/portfolio/branding/1/index.md` 
+    * `content/portfolio/branding/1/index.fi.md`
+2. Item thumbnail is in `content/portfolio/branding/1/thumbnail.jpg` 
+    * Thumbnail is shown when listing items of a category
+3. Item full image is in `content/portfolio/branding/1/full.jpg` 
+    * Full image is shown on item page
 
-Example item file:
-```
-+++
-title = "my card"
-+++
-```
+### Add new item
 
-* **title** item title (shown as *Item number* in the table on the item page)
-
-### Item images
-
-Item images are in `static/images/item/` folder.
-
-### How to add a new item
-
-1. Copy any existing file in `content/item/`
-2. And save it with a desired item name
-3. Then edit item by modifying the contents of that file
-
-Remember to create item files for both English and Finnish versions.
-
-### How to edit an exisiting item
-
-1. Just edit item file according to item specifications
+1. Create new directory e.g `content/portfolio/branding/2`
+2. Copy `index.md` and `index.fi.md` from another item to `2` directory and edit those files accordingly.
+3. Add a thumbnail to `content/portfolio/branding/2/thumbnail.jpg`
+4. Add a thumbnail to `content/portfolio/branding/2/full.jpg`
 
 
 ## Main configuration file
 
-You can edit:
+Common information is in the main configuration file `config.toml`.
 
-* phone number
-* email address
-* company id
-* description on the home page
-* facebook page
-* instagram username
-* home page slider images
-
-in the main configuration file `config.toml`.
-
-
-## Top menu
+### Top menu
 
 You can edit menu in `config.toml` file.
 
 
-## Home page slider
+### Home page slider
 
 Add/remove images from the `home_slider_images` list in `config.toml` file.
-Images should be placed under `static/images/home/slider/` folder.
+Images should be placed under `content/` folder.
 
 
-## Translations
+### Translations
 
-Some texts are translated though translation files located in `i18n/en.toml`
-and `i18n/fi.toml`.
-
-
-## Static Pages (Distinct Pages)
-
-### How to add a new page
-
-1. Add page layout to `themes/crocuspaperi/layouts/page/<new-page>.html`
-2. Add page content to `content/page/<new-page>.html`
-   (keep the same date as on other pages)
-3. Add page content in Finnish to `content/page/<new-page>.fi.html`
+There are translations in the configuration file for some pages.
 
 
 ## Calculator
 
-Calculator configuration can be found in `data/calculator.toml` file.
-
-### Translations
-
-Calculator translations can be found in `i18n/en.toml` and
-`i18n/fi.toml` files.
+Calculator configuration can be found in `content/calculator/data.en.toml` and `content/calculator/data.fi.toml` files.
