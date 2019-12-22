@@ -26,7 +26,7 @@ languages = [
 # =============================
 
 # Page title (sets ending of a browser tab title)
-title = "Crocus Paperi | Illustration, graphic design, logos, wedding stationery"
+title = "Crocus Paperi | Illustrations, graphic design, logos, wedding stationery"
 
 [extra]
 
@@ -67,6 +67,7 @@ home_slider_images = [
   "slider-1.jpg",
   "slider-2.jpg",
   "slider-3.jpg",
+  "slider-4.jpg"
 ]
 
 
@@ -101,8 +102,8 @@ fi = [
 [translations.en]
 
 # Home
-shop_now = "Shop now"
-home_text = "Crocus Paperi is a graphic design and illustration company. I'm Irina, the person behind the designs. I offer a wide range of creative services: logos and branding for businesses, wedding and party invitations, save the date cards and other paper products. Also, I create postcards and stickers with my illustrations, which are availabe in my online shop and in shops around Helsinki. On my website you can see my portfolio, check pre-designed collection of wedding invitations as well as order custom design."
+shop_now = "Shop"
+home_text = "Illustrations  |  graphic design  |  branding  |  wedding stationery"
 
 # Contact
 name = "Name"
@@ -156,8 +157,8 @@ calculator_printing_price = "Printing price"
 [translations.fi]
 
 # Home
-shop_now = "Osta nyt"
-home_text = "Crocus Paperi on graafinen suunnittelu ja kuvitus yritys. Nimeni on Irina ja olen Crocus Paperin perustaja. Tarjoan laajan valikoiman palveluita: logot, käyntikortit ja brändäysmateriaalit, hää- ja juhlakutsut, save the date- kortit ja muut paperitarvikkeet. Suunnittelen myös postikortteja ja tarroja, jotka ovat saatavilla verkkokaupastani ja muutamista kaupoista ympäri Helsinkiä."
+shop_now = "Shop"
+home_text = "Kuvituksia  |  graafinen suunnittelu  |  logoja  |  paperituotteita häihin"
 
 # Contact
 name = "Nimesi"
