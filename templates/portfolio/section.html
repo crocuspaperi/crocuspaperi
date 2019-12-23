@@ -41,7 +41,8 @@
                         {% endfor %}
 
                         {% for thumbnail in thumbnails %}
-                        <img src="{{ get_url(path=thumbnail) }}" alt="{{ page.title }} item thumbnail" class="u-max-full-width" />
+                        {% set original = resize_image(path=thumbnail, width=700, op='fit_width') %}
+                        <img data-src="{{ original }}" alt="{{ page.title }} item thumbnail" class="u-max-full-width lazyload" />
                         {% break %}
                         {% else %}
                         <p style="color: #c00">Missing thumbnail</p>

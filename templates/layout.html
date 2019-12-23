@@ -20,7 +20,7 @@
         <link rel="icon" href="/favicon.png" />
 
         {% block stylesheets %}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,300,600&display=swap">
         <link rel="stylesheet" href="/css/normalize.css">
         <link rel="stylesheet" href="/css/skeleton.css">
         <link rel="stylesheet" href="/css/main.css">
@@ -47,7 +47,7 @@
             </div>
 
             <div class="five offset-by-one columns menu-box">
-                <div class="languages-switch">
+                <ul class="languages-switch">
                     <li>
                         <span>{{ lang }}</span>
                     </li>
@@ -78,7 +78,7 @@
                         |<a href="{{ translation.permalink }}">{{ translation.lang }}</a>
                     </li>
                     {% endfor %}
-                </div>
+                </ul>
                 <nav class="top-menu">
                     <ul>
                         {% set current_menu = '/' ~ current_path %}
@@ -236,6 +236,8 @@
          ga('send', 'pageview');
         </script>
         {% endif %}
+
+        <script src="/js/lazysizes.min.js" async></script>
 
         {# Debug: #}
         {# <hr style="margin-top: 200px;" /> #}

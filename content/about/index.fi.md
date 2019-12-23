@@ -3,7 +3,7 @@ title = "Minusta"
 +++
 
 <div class="home-image-box">
-  <img src="./main.jpg" alt="Irina" class="u-max-full-width" />
+  <img data-src="./main.jpg" alt="Irina" class="u-max-full-width lazyload" />
 </div>
 
 <p>

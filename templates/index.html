@@ -40,7 +40,14 @@
             <ul>
                 {% for image in images %}
                 <li>
-                    <img src="{{ resize_image(path=image, width=2000, height=1500, op='fit') }}" class="u-max-full-width" />
+                    {% set image_1000 = resize_image(path=image, width=1000, op='fit_width') %}
+                    {% set original = resize_image(path=image, width=2000, op='fit_width') %}
+                    <img
+                        data-srcset="{{ image_1000 }} 1000w, {{ original }} 2000w"
+                        data-sizes="(max-width: 1000px) 100vw, 90vw"
+                        data-src="{{ original }}"
+                        class="u-max-full-width lazyload"
+                        alt="slider image #{{ loop.index }}" />
                     {% if loop.first %}
                     <div class="shop">
                         <a href="{{ config.extra.shop }}" target="_blank">{{ trans(key="shop_now", lang=lang) }}</a>

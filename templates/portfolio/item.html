@@ -38,7 +38,14 @@
             {% endfor %}
 
             {% for picture in pictures %}
-            <img src="{{ get_url(path=picture) }}" alt="{{ page.title }} item" class="u-max-full-width" />
+            {% set image_1000 = resize_image(path=picture, width=1000, op='fit_width') %}
+            {% set original = resize_image(path=picture, width=2000, op='fit_width') %}
+            <img
+                data-srcset="{{ image_1000 }} 1000w, {{ original }} 2000w"
+                data-sizes="(max-width: 1000px) 100vw, 70vw"
+                data-src="{{ original }}"
+                alt="{{ page.title }} item"
+                class="u-max-full-width lazyload" />
             {% break %}
             {% else %}
             <p style="color: #c00">Missing full image</p>

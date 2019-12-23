@@ -16,7 +16,13 @@
                     {% endfor %}
 
                     {% for thumbnail in thumbnails %}
-                    <div class="image" style="background-image: url('{{ get_url(path='/' ~ thumbnail) }}"')"></div>
+                    {% set path = thumbnail %}
+                    {% if path is starting_with(lang ~ '/') %}
+                    {# Remove language prefix from image path #}
+                    {% set path = thumbnail | split(pat='/') | slice(start=1) | join(sep='/') %}
+                    {% endif %}
+                    {% set original = resize_image(path=path, width=1000, op='fit_width') %}
+                    <div class="image" style="background-image: url('{{ original }}')"></div>
                     {% break %}
                     {% else %}
                     <p style="color: #c00">Missing thumbnail</p>
