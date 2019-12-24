@@ -4,7 +4,13 @@ template = "contact.html"
 [extra]
 form_success = "Kiitos viestistäsi. Sen lähettäminen onnistui."
 form_error = "Anteeksi, emme voineet lähettää viestiäsi. Ole hyvä ja yritä uudelleen."
-terms = "Tarvitsen sähköpostiosoitteesi ainoastaan vastaamaan pyyntöösi. Et saa mainoksia tai roskapostia. Kaikki lähettämänne tiedot pidetään luottamuksellisena. Lomakkeen tarjoaja on Formspree."
+terms = """
+Tarvitsen sähköpostiosoitteesi ainoastaan vastaamaan pyyntöösi. Et saa mainoksia tai roskapostia. Kaikki lähettämänne tiedot pidetään luottamuksellisena. Lomakkeen tarjoaja on Formspree.
+"""
+name = "Nimesi"
+email = "Email"
+message = "Viestisi"
+send = "Lähetä viesti"
 +++
 
 <p>

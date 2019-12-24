@@ -9,55 +9,55 @@
 
 <section class="landing row">
     <div class="ten offset-by-one columns calculator" id="calculator">
-        <h2>{{ trans(key="calculator_title", lang=lang) }}</h2>
+        <h2>{{ page.extra.title }}</h2>
 
         <div class="description">
-            {{ trans(key="calculator_desc", lang=lang) | safe }}
+            {{ page.extra.desc | safe }}
         </div>
 
         <ul>
             <li>
                 <radio-picker
-                    label="{{ trans(key="calculator_design_type_title", lang=lang) }}"
+                    label="{{ page.extra.design_type_title }}"
                     index="1"
                     :options="designTypes.options"
-                    description="{{ trans(key="calculator_design_type_desc", lang=lang) }}"
+                    description="{{ page.extra.design_type_desc }}"
                     v-model="designTypes.picked">
                 </radio-picker>
             </li>
 
             <li>
                 <products
-                    label="{{ trans(key="calculator_products_title", lang=lang) }}"
+                    label="{{ page.extra.products_title }}"
                     index="2"
                     :options="products.options"
                     :design-price-total="designPriceTotal"
-                    description="{{ trans(key="calculator_products_desc", lang=lang) }}"
+                    description="{{ page.extra.products_desc }}"
                     @input="toggleProduct($event)">
                 </products>
             </li>
 
             <li>
                 <variants
-                    label="{{ trans(key="calculator_variants_title", lang=lang) }}"
+                    label="{{ page.extra.variants_title }}"
                     index="3"
                     :picked-products="products.picked"
                     :price="printingPrice"
                     :price-total="printingPriceTotal"
-                    description="{{ trans(key="calculator_variants_desc", lang=lang) }}"
-                    price-text="{{ trans(key="calculator_printing_price", lang=lang) }}"
+                    description="{{ page.extra.variants_desc }}"
+                    price-text="{{ page.extra.printing_price }}"
                     @input="chooseVariant($event)">
                 </variants>
             </li>
 
             <li>
                 <variants
-                    label="{{ trans(key="calculator_additional_products_title", lang=lang) }}"
+                    label="{{ page.extra.additional_products_title }}"
                     index="4"
                     :picked-products="additionalProducts.options"
                     :price="additionalProductsPrice"
                     :price-total="additionalProductsPriceTotal"
-                    price-text="{{ trans(key="calculator_additional_products_price", lang=lang) }}"
+                    price-text="{{ page.extra.additional_products_price }}"
                     :additional="true"
                     @input="chooseAdditionalProduct($event)">
                 </variants>
@@ -65,23 +65,23 @@
 
             <li>
                 <radio-picker
-                    label="{{ trans(key="calculator_delivery_title", lang=lang) }}"
+                    label="{{ page.extra.delivery_title }}"
                     index="5"
                     :options="delivery.options"
                     :total-price="deliveryPriceTotal"
-                    price-text="{{ trans(key="calculator_delivery_price", lang=lang) }}"
-                    description="{{ trans(key="calculator_delivery_desc", lang=lang) }}"
+                    price-text="{{ page.extra.delivery_price }}"
+                    description="{{ page.extra.delivery_desc }}"
                     v-model="delivery.picked">
                 </radio-picker>
             </li>
         </ul>
 
         <div class="calculator-total-price">
-            <b>{{ trans(key="calculator_total_price", lang=lang) }}: ~${totalPrice} EUR</b>
+            <b>{{ page.extra.total_price }}: ~${totalPrice} EUR</b>
         </div>
 
         <div class="calculator-price-description">
-            {{ trans(key="calculator_total_price_desc", lang=lang) }}
+            {{ page.extra.total_price_desc }}
         </div>
 
         <transcript
@@ -150,7 +150,7 @@
         </table>
 
         <div class="calculator-total-price">
-            <b>{{ trans(key="calculator_design_price", lang=lang) }}: ${ designPriceTotal } EUR</b>
+            <b>{{ page.extra.design_price }}: ${ designPriceTotal } EUR</b>
         </div>
     </div>
 </script>
@@ -191,16 +191,16 @@
 <script type="text/x-template" id="transcript-template">
     <div class="transcript">
         <div class="transcript-description">
-            {{ trans(key="calculator_transcript_title", lang=lang )}}
+            {{ page.extra.transcript_title}}
         </div>
 
         <div class="transcript-details" v-on:click="selectText">
             <div>
-                <b>{{ trans(key="calculator_design_type_title", lang=lang) }}:</b> ${ pickedDesign }
+                <b>{{ page.extra.design_type_title }}:</b> ${ pickedDesign }
             </div>
 
             <div>
-                <b>{{ trans(key="calculator_products_title", lang=lang) }}:</b> (${ designPriceTotal } EUR)
+                <b>{{ page.extra.products_title }}:</b> (${ designPriceTotal } EUR)
                 <ul>
                     <li v-for="product in pickedProducts">
                         ${ product }
@@ -209,7 +209,7 @@
             </div>
 
             <div>
-                <b>{{ trans(key="calculator_variants_title", lang=lang) }}:</b> (${ printingPriceTotal } EUR)
+                <b>{{ page.extra.variants_title }}:</b> (${ printingPriceTotal } EUR)
                 <ul>
                     <li v-for="variant in pickedVariants">
                         <i>(${ variant.value })</i>
@@ -221,7 +221,7 @@
             </div>
 
             <div>
-                <b>{{ trans(key="calculator_additional_products_title", lang=lang) }}:</b> (${ additionalProductsPriceTotal } EUR)
+                <b>{{ page.extra.additional_products_title }}:</b> (${ additionalProductsPriceTotal } EUR)
                 <ul>
                     <li v-for="variant in additionalProducts">
                         <i>(${ variant.value })</i>
@@ -233,11 +233,11 @@
             </div>
 
             <div>
-                <b>{{ trans(key="calculator_delivery_title", lang=lang) }}:</b> ${ pickedDelivery } (${ deliveryPriceTotal } EUR)
+                <b>{{ page.extra.delivery_title }}:</b> ${ pickedDelivery } (${ deliveryPriceTotal } EUR)
             </div>
 
             <p>
-                <b>{{ trans(key="calculator_total_price", lang=lang) }}:</b> ${ totalPrice } EUR
+                <b>{{ page.extra.total_price }}:</b> ${ totalPrice } EUR
             </p>
         </div>
     </div>
