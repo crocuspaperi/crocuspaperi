@@ -117,34 +117,17 @@ body {
   display: flex;
   align-items: stretch;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .categories .main-flex > div {
   box-sizing: border-box;
-  width: 50%;
-  padding-bottom: 0.5rem;
+  padding-bottom: 1rem;
 }
 
-.categories .main-flex > div:nth-child(2n+1) {
-  padding-right: 0.5rem;
-}
-
-.categories .main-flex > div:nth-child(2n) {
-  padding-left: 0.5rem;
-}
-
-@media (max-width: 550px) {
-  .categories .main-flex > div {
-    width: 100%;
-  }
-}
-
-.categories .image {
-  width: 100%;
-  height: 300px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+.categories .image-box > img {
+  display: block;
+  margin: 0 auto;
 }
 
 .categories a {

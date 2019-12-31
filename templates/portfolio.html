@@ -21,8 +21,14 @@
                     {# Remove language prefix from image path #}
                     {% set path = thumbnail | split(pat='/') | slice(start=1) | join(sep='/') %}
                     {% endif %}
-                    {% set original = resize_image(path=path, width=1000, op='fit_width') %}
-                    <div class="image" style="background-image: url('{{ original }}')"></div>
+                    {% set image_700 = resize_image(path=path, width=700, op='fit_width') %}
+                    {% set original = resize_image(path=path, width=1500, op='fit_width') %}
+                    <img
+                        data-srcset="{{ image_700 }} 700w, {{ original }} 1500w"
+                        data-sizes="(max-width: 700px) 100vw, 90vw"
+                        data-src="{{ original }}"
+                        alt="{{ subsection.title }}"
+                        class="u-max-full-width lazyload" />
                     {% break %}
                     {% else %}
                     <p style="color: #c00">Missing thumbnail</p>
