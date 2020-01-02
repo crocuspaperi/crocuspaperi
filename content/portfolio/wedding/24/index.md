@@ -1,4 +1,4 @@
 +++
-title = "Wedding invitation with watercolor illustration"
+title = "minimalist stationery set, custom design"
 
 +++

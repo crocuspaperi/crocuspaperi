@@ -1,4 +1,4 @@
 +++
-title = "watercolor and calligraphy hand made invitation"
+title = "minimalist invitation and menu, semi-custom design"
 
 +++

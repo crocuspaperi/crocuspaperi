@@ -1,4 +1,4 @@
 +++
-title = "Classic menu template, ready-made collection"
+title = "A2 size seating chart poster"
 
 +++

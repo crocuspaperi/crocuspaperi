@@ -1,4 +1,4 @@
 +++
-title = "hand - made watercolor place card and envelope"
+title = "semi-custom minimalist menu design"
 
 +++

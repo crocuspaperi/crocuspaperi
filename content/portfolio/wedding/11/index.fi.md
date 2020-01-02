@@ -1,4 +1,4 @@
 +++
-title = "menu with hand-made golden decoration, photo by Marissa Tammisalo"
+title = "custom menu cards with guests' names"
 
 +++
