@@ -30,43 +30,58 @@ stepPrice = 40
 #       Use: price = [20, 40, 61, 77]
 
 [products."Save the Date kortti".variants."Yksipuolinen"]
-price = [20, 40, 61, 77]
+price = [25, 45, 66, 82]
 
 [products."Save the Date kortti".variants."Kaksipuolinen"]
-price = [30, 50, 71, 87]
+price = [35, 55, 76, 92]
 
 [products."Save the Date kortti".variants."Taitettu"]
-price = [40, 60, 81, 97]
+price = [45, 65, 86, 102]
+
+[products."Save the Date kortti".variants."Vellum/läpinäkyva paperi"]
+price = [35, 55, 76, 92]
 
 [products."Kutsu".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Kutsu".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Kutsu".variants."Taitettu"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Kutsu".variants."Kolmiosainen"]
-price = [60, 80, 100, 110]
+price = [65, 85, 105, 115]
+
+[products."Kutsu".variants."Vellum/läpinäkyva paperi"]
+price = [45, 65, 85, 100]
+
+[products."Kutsu + info kortti".variants."Kaksipuolinen"]
+price = [45, 65, 85, 100]
+
+[products."Kutsu + info kortti".variants."Taitettu"]
+price = [58, 78, 98, 113]
+
+[products."Kutsu + info kortti".variants."Kolmiosainen"]
+price = [65, 85, 105, 115]
 
 [products."Info kortti".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Info kortti".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Info kortti".variants."Taitettu"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Info kortti + kartta".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Info kortti + kartta".variants."Taitettu"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Kartta".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Pöytänumerot".variants."Yksipuolinen"]
 price = [15, 31, 51, 71]
@@ -75,94 +90,100 @@ price = [15, 31, 51, 71]
 price = [19, 35, 55, 75]
 
 [products."Nimikortti".variants."Yksipuolinen"]
-price = [20, 35, 55, 75]
+price = [27, 47, 67, 87]
 
 [products."Nimikortti".variants."Taitettu"]
-price = [25, 45, 65, 85]
+price = [30, 50, 70, 90]
 
 [products."Nimikortti".variants."Tuotelappu/reiällä"]
-price = [25, 45, 65, 85]
+price = [29, 49, 69, 89]
 
 [products."Nimikortti".variants."Pyöristetyt kulmat"]
-price = [25, 45, 65, 85]
+price = [29, 49, 69, 89]
+
+[products."Nimikortti".variants."Vellum/läpinäkyva paperi"]
+price = [29, 49, 69, 89]
 
 [products."Menu".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Menu".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Menu".variants."Taitettu"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
+
+[products."Menu".variants."Vellum/läpinäkyva paperi"]
+price = [45, 65, 85, 100]
 
 [products."Ohjelma".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Ohjelma".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Ohjelma".variants."Taitettu"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Menu + ohjelma".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Menu + ohjelma".variants."Taitettu"]
-price = [53, 73, 93, 108]
-
-[products."Ohjelma".variants."Kaksipuolinen (ex. menun kanssa)"]
-price = [40, 60, 80, 95]
-
-[products."Ohjelma".variants."Taitettu (ex. menun kanssa)"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Kirkko - ohjelma".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Kirkko - ohjelma".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Kirkko - ohjelma".variants."Taitettu"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Morsian tai sulhanen peli".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Bingo".variants."Yksipuolinen"]
-price = [30, 55, 75, 90]
+price = [35, 60, 80, 95]
 
 [products."Tarrat".variants."Neliö/suorakulmio"]
-price = [20, 40, 61, 77]
+price = [25, 45, 65, 75]
 
 [products."Tarrat".variants."Ympyrä"]
-price = [25, 45, 65, 80]
+price = [30, 50, 70, 85]
 
-[products."Tarrat".variants."Osoitetarrat, valkoiset"]
-price = [25, 45, 65, 80]
+[products."Tarrat".variants."Osoitetarrat, värilliset tai valkoiset"]
+price = [30, 50, 70, 85]
 
-[products."Tarrat".variants."Osoitetarrat, transparent"]
-price = [25, 45, 65, 80]
+[products."Tarrat".variants."Osoitetarrat, läpinäkyvat"]
+price = [30, 50, 70, 85]
 
 [products."Juliste/kyltti".variants."A4"]
 price = 8
 
 [products."Juliste/kyltti".variants."A3"]
-price = 17
+price = 18
 
 [products."Juliste/kyltti".variants."A2"]
-price = 21
+price = 22
 
 [products."Juliste/kyltti".variants."50x70"]
-price = 27
+price = 28
+
+[products."Juliste/kyltti".variants."A1"]
+price = 34
 
 [products."Istumajärjestys".variants."A3"]
-price = 17
+price = 18
 
 [products."Istumajärjestys".variants."A2"]
-price = 21
+price = 22
 
 [products."Istumajärjestys".variants."50x70"]
-price = 27
+price = 28
+
+[products."Istumajärjestys".variants."A1"]
+price = 34
 
 [products."Vieraskirja".variants."30x20, 30 sivua"]
 price = 75
@@ -179,26 +200,26 @@ price = 69
 [products."Terveiset hääpärille lappuset".variants."Yksipuolinen"]
 price = [20, 40, 61, 77]
 
-[products."Kiitos kortti".variants."Yksipuolinen"]
-price = [25, 45, 65, 80]
-
-[products."Kiitos kortti".variants."Kaksipuolinen"]
+[products."Kiitos kortti".variants."Yksipuolinen, omasta kuvasta"]
 price = [35, 55, 75, 90]
 
-[products."Kiitos kortti".variants."Taitettu"]
+[products."Kiitos kortti".variants."Kaksipuolinen, omasta kuvasta"]
 price = [45, 65, 85, 100]
 
+[products."Kiitos kortti".variants."Taitettu, omasta kuvasta"]
+price = [58, 78, 98, 113]
+
 [products."Muut kortit".variants."Yksipuolinen"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Muut kortit".variants."Kaksipuolinen"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Muut kortit".variants."Taitettu"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Muut kortit".variants."Kolmiosainen"]
-price = [60, 80, 100, 110]
+price = [65, 85, 105, 115]
 
 
 #####################################################################

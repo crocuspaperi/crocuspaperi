@@ -30,139 +30,160 @@ stepPrice = 40
 #       Use: price = [20, 40, 61, 77]
 
 [products."Save the Date card".variants."One-sided"]
-price = [20, 40, 61, 77]
+price = [25, 45, 66, 82]
 
 [products."Save the Date card".variants."Double-sided"]
-price = [30, 50, 71, 87]
+price = [35, 55, 76, 92]
 
 [products."Save the Date card".variants."Folded"]
-price = [40, 60, 81, 97]
+price = [45, 65, 86, 102]
+
+[products."Save the Date card".variants."Vellum paper"]
+price = [35, 55, 76, 92]
 
 [products."Invitation".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Invitation".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Invitation".variants."Folded"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Invitation".variants."Trifold"]
-price = [60, 80, 100, 110]
+price = [65, 85, 105, 115]
+
+[products."Invitation".variants."Vellum paper"]
+price = [45, 65, 85, 100]
+
+[products."Invitation + info".variants."Double-sided"]
+price = [45, 65, 85, 100]
+
+[products."Invitation + info".variants."Folded"]
+price = [58, 78, 98, 113]
+
+[products."Invitation + info".variants."Trifold"]
+price = [65, 85, 105, 115]
 
 [products."Info card".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Info card".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Info card".variants."Folded"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Info card + map".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Info card + map".variants."Folded"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Map".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Table numbers".variants."One-sided"]
-price = [15, 31, 51, 71]
+price = [16, 31, 51, 71]
 
 [products."Table numbers".variants."Double-sided"]
-price = [19, 35, 55, 75]
+price = [20, 35, 55, 75]
 
 [products."Name card".variants."One-sided"]
-price = [25, 45, 65, 85]
+price = [27, 47, 67, 87]
 
-[products."Name card".variants."Folded"]
-price = [25, 45, 65, 85]
+[products."Name card".variants."Folded/standing"]
+price = [30, 50, 70, 90]
 
 [products."Name card".variants."Tag"]
-price = [25, 45, 65, 85]
+price = [29, 49, 69, 89]
 
 [products."Name card".variants."Round corners"]
-price = [16, 33, 52, 72]
+price = [29, 49, 69, 89]
+
+[products."Name card".variants."Vellum paper"]
+price = [29, 49, 69, 89]
 
 [products."Menu".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Menu".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Menu".variants."Folded"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
+
+[products."Menu".variants."Vellum paper"]
+price = [45, 65, 85, 100]
 
 [products."Program".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Program".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Program".variants."Folded"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Menu + program".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Menu + program".variants."Folded"]
-price = [53, 73, 93, 108]
-
-[products."Program".variants."Double-sided (ex. with menu)"]
-price = [40, 60, 80, 95]
-
-[products."Program".variants."Folded (ex. with menu & other info)"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Church program".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Church program".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Church program".variants."Folded"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Bride or Groom game".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Bingo".variants."One-sided"]
-price = [30, 55, 75, 90]
+price = [35, 60, 80, 95]
 
 [products."Stickers".variants."Square/rectangular"]
-price = [20, 40, 61, 77]
+price = [25, 45, 65, 75]
 
 [products."Stickers".variants."Round"]
-price = [25, 45, 65, 80]
+price = [30, 50, 70, 85]
 
-[products."Stickers".variants."Address labels, white"]
-price = [25, 45, 65, 80]
+[products."Stickers".variants."Address labels, white or any other color"]
+price = [30, 50, 70, 85]
 
 [products."Stickers".variants."Address labels, transparent"]
-price = [25, 45, 65, 80]
+price = [30, 50, 70, 85]
 
 [products."Poster/sign".variants."A4"]
 price = 8
 
 [products."Poster/sign".variants."A3"]
-price = 17
+price = 18
 
 [products."Poster/sign".variants."A2"]
-price = 21
+price = 22
 
 [products."Poster/sign".variants."50x70"]
-price = 27
+price = 28
+
+[products."Poster/sign".variants."A1"]
+price = 34
 
 [products."Seating chart".variants."A3"]
-price = 17
+price = 18
 
 [products."Seating chart".variants."A2"]
-price = 21
+price = 22
 
 [products."Seating chart".variants."50x70"]
-price = 27
+price = 28
+
+[products."Seating chart".variants."A1"]
+price = 34
 
 [products."Guestbook".variants."30x20, 30 pages"]
 price = 75
@@ -179,26 +200,26 @@ price = 69
 [products."Wedding wishes cards".variants."One-sided"]
 price = [20, 40, 61, 77]
 
-[products."Thank you card".variants."One-sided"]
-price = [25, 45, 65, 80]
+[products."Thank you card".variants."One-sided with photo"]
+price = [35, 55, 75, 90]
 
-[products."Thank you card".variants."Double-sided"]
-price = [35, 55, 75, 95]
-
-[products."Thank you card".variants."Folded"]
+[products."Thank you card".variants."Double-sided with photo"]
 price = [45, 65, 85, 100]
 
+[products."Thank you card".variants."Folded with photo"]
+price = [58, 78, 98, 113]
+
 [products."Any other card".variants."One-sided"]
-price = [30, 50, 70, 85]
+price = [35, 55, 75, 90]
 
 [products."Any other card".variants."Double-sided"]
-price = [40, 60, 80, 95]
+price = [45, 65, 85, 100]
 
 [products."Any other card".variants."Folded"]
-price = [53, 73, 93, 108]
+price = [58, 78, 98, 113]
 
 [products."Any other card".variants."Trifold"]
-price = [60, 80, 100, 110]
+price = [65, 85, 105, 115]
 
 
 #####################################################################
