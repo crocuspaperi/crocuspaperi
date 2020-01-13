@@ -1,4 +1,4 @@
 +++
-title = "Floral watercolor seating chart, A2 size."
+title = "A4 seating chart, photo by ADLV photography"
 
 +++

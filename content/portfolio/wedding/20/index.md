@@ -1,4 +1,4 @@
 +++
-title = "customized table card from pre-designed collection. Photo by Ksenia Lopyreva.."
+title = "tag shaped place card, photo by Camilla Bloom"
 
 +++

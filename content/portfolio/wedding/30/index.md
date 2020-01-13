@@ -1,4 +1,4 @@
 +++
-title = "custom place card. Photo by Sampsa Kijaluoto."
+title = "custom place card, photo by Sampsa Kijaluoto."
 
 +++

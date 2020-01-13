@@ -1,4 +1,4 @@
 +++
-title = "Botanical watercolor set. Pre-designed collection. Available for order."
+title = "guestbook, 30 pages, photo by ADLV photography"
 
 +++

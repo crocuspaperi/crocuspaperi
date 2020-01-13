@@ -1,4 +1,4 @@
 +++
-title = "minimalist menu, pre-designed collection"
+title = "minimalist menu, pre-designed collection, photo by Studiohappymoment"
 
 +++
