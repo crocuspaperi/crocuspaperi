@@ -57,8 +57,7 @@ shop = "https://crocuspaperi.bigcartel.com/"
 
 # Announcement
 announcement = """
-<div>Now booking spring/summer season 2020</div>
-<div>20.1.2020 - 29.1.2020 - unavailable</div>
+<div>Currently not taking orders until 1.2.2020</div>
 <div>23.3.2020 - 29.3.2020 - unavailable</div>
 """
 
