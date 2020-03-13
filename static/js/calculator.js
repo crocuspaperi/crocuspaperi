@@ -1,8 +1,5 @@
 ;(function (w, d) {
 
-  // TODO:
-  // 2. Add descriptions to each step and every option
-
   // Don't collide with hugo template delimiters
   Vue.options.delimiters = ['${', '}'];
 

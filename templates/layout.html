@@ -52,31 +52,20 @@
                         <span>{{ lang }}</span>
                     </li>
 
-                    {# TODO: this is a temporary solution until next zola release #}
-                    {% if lang == 'en' %}
-                    {# If current lang is en then prepend fi/ to the path #}
-                    {% set translation_link = ['/fi/' ~ current_path, 'fi'] %}
-                    {% else %}
-                    {# Otherwise drop fi/ from the path #}
-                    {% set tmp = current_path | split(pat='/') | slice(start=1) | join(sep='/') %}
-                    {% set translation_link = ['/' ~ tmp, 'en'] %}
-                    {% endif %}
-                    <li>
-                        |<a href="{{ translation_link[0] }}">{{ translation_link[1] }}</a>
-                    </li>
-
                     {% if section %}
-                    {% set translations = section.translations %}
+                    {# Home page (section) somehow has two translations. #}
+                    {% set translations = section.translations | unique(attribute="lang") %}
                     {% else %}
                     {% set translations = page.translations %}
                     {% endif %}
 
-                    {# Translations are fixed in the next Zola release: https://github.com/getzola/zola/issues/854 #}
                     {% for translation in translations %}
-                    {% break %}
+                    {# Home page somehow has two translations. #}
+                    {% if translation.lang != lang %}
                     <li>
                         |<a href="{{ translation.permalink }}">{{ translation.lang }}</a>
                     </li>
+                    {% endif %}
                     {% endfor %}
                 </ul>
                 <nav class="top-menu">
@@ -237,6 +226,7 @@
         </script>
         {% endif %}
 
+        {# Source: https://github.com/aFarkas/lazysizes #}
         <script src="/js/lazysizes.min.js" async></script>
 
         {# Debug: #}
