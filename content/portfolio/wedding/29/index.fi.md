@@ -1,3 +1,3 @@
 +++
-title = "A4 seating chart, photo by ADLV photography"
+title = "semi-custom classic folded menu card, photo by Josefin West Photography"
 +++

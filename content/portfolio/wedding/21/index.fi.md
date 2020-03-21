@@ -1,3 +1,3 @@
 +++
-title = "floral set from pre+designed collection, photo by ADLV photography"
+title = "semi-custom classic seating chart, photo by Josefin West Photography"
 +++

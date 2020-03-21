@@ -1,4 +1,4 @@
 +++
-title = "minimalist menu, pre-designed collection, photo by Studiohappymoment"
+title = "semi-custom floral invitation & custom map"
 
 +++
