@@ -23,7 +23,7 @@ I create <b>wedding stationery, postcards and greeting cards, logos, business ca
 </ul>
 
 <p>
-Visit <a href="http://www.crocuspaperi.com/pricing">Pricing</a> to find out more.
+Visit <a href="https://www.crocuspaperi.com/calculator/">Pricing</a> to find out more.
 </p>
 
 <h4>Appeared in</h4>

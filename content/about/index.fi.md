@@ -23,7 +23,7 @@ Suunnittelen <b>paperitarvikkeita häihin, postikortteja ja onnittelukortteja, l
 </ul>
 
 <p>
-Klikkaa <a href="https://www.crocuspaperi.com/fi/pricing">hinnasto</a> saadaksesi lisätietoja.
+Klikkaa <a href="https://www.crocuspaperi.com/fi/calculator/">hinnasto</a> saadaksesi lisätietoja.
 </p>
 
 <h4>Appeared in</h4>
