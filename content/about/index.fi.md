@@ -19,7 +19,7 @@ Suunnittelen <b>paperitarvikkeita häihin, postikortteja ja onnittelukortteja, l
 <ul>
   <li>valmiit mallit</li>
   <li>yksilölliset mallit</li>
-  <li>vahasinetit ja kirkekuoret <a href="http://shop.crocuspaperi.com/">verkkokaupassa</a></li>
+  <li>vahasinetit ja kirkekuoret <a href="https://store.crocuspaperi.com/">verkkokaupassa</a></li>
 </ul>
 
 <p>

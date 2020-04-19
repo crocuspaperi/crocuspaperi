@@ -53,7 +53,7 @@ behance = "malinovoevino"
 freepik = "irikul"
 
 # Shop link
-shop = "https://crocuspaperi.bigcartel.com/"
+shop = "https://store.crocuspaperi.com/"
 
 # Announcement
 announcement = """
@@ -78,7 +78,7 @@ home_slider_images = [
 [extra.menu]
 en = [
   { name = "Home", url = "/" },
-  { name = "Shop", url = "https://crocuspaperi.bigcartel.com/" },
+  { name = "Shop", url = "https://store.crocuspaperi.com/" },
   { name = "Portfolio", url = "/portfolio/" },
   { name = "Pricing", url = "/calculator/" },
   { name = "About", url = "/about/" },
@@ -87,7 +87,7 @@ en = [
 
 fi = [
   { name = "Etusivu", url = "/fi/" },
-  { name = "Kauppa", url = "https://crocuspaperi.bigcartel.com/" },
+  { name = "Kauppa", url = "https://store.crocuspaperi.com/" },
   { name = "Portfolio", url = "/fi/portfolio/" },
   { name = "Hinnasto", url = "/fi/calculator/" },
   { name = "Minusta", url = "/fi/about/" },

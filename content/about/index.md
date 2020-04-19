@@ -19,7 +19,7 @@ I create <b>wedding stationery, postcards and greeting cards, logos, business ca
 <ul>
   <li>ready - made designs</li>
   <li>custom designs</li>
-  <li>wax seals and envelopes in my <a href="http://shop.crocuspaperi.com/">online shop</a></li>
+  <li>wax seals and envelopes in my <a href="https://store.crocuspaperi.com/">online shop</a></li>
 </ul>
 
 <p>
