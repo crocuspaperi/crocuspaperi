@@ -9,7 +9,7 @@ Tällä hintalaskurilla saa laskea hääpaperitarvikkeiden design- ja tulostusku
 design_type_title = "Design"
 design_type_desc = """
 <ul>
-  <li>* Semi-custom (Valmis design suunnitellaan <a href="https://drive.google.com/drive/folders/1WFxmNyXOYInq_zHhyKfos6tiRd3rrwkh?usp=sharing">valmiista kokoelmistani</a> mallin pohjalta. Fontteja, fonttien värejä sekä kukkien ja lehtien värejä on mahdollista sovittaa toiveidenne mukaan. Mikäli tilaatte useita tuotteita, jokaisen tuotteen ulkoasu voidaan suunnitella erilaiseksi tekstien ja kuvien asettelulla.)</li>
+  <li>* Semi-custom (Valmis design suunnitellaan <a href="https://drive.google.com/open?id=1zmPT06x_9zZ6RO24O71Dj2fiubAQDyOA">valmiista kokoelmistani</a> mallin pohjalta. Fontteja, fonttien värejä sekä kukkien ja lehtien värejä on mahdollista sovittaa toiveidenne mukaan. Mikäli tilaatte useita tuotteita, jokaisen tuotteen ulkoasu voidaan suunnitella erilaiseksi tekstien ja kuvien asettelulla.)</li>
   <li>* Custom (Täysin uusi design uudenlaisilla piirustuksilla. Mikäli tilaatte useita tuotteita, jokaisen tuotteen ulkoasu voidaan suunnitella erilaiseksi tekstien ja kuvien asettelulla.)</li>
 </ul>
 """
