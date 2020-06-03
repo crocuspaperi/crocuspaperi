@@ -26,7 +26,7 @@ languages = [
 # =============================
 
 # Page title (sets ending of a browser tab title)
-title = "Crocus Paperi | Illustrations, graphic design, logos, wedding stationery"
+title = "Crocus Paperi | Illustrations, graphic design, branding"
 
 [extra]
 
@@ -55,18 +55,11 @@ freepik = "irikul"
 # Shop link
 shop = "https://store.crocuspaperi.com/"
 
-# Announcement
-announcement = """
-<div>Currently not taking any new wedding orders.</div>
-"""
 
 # List of images to be displayed on the home page in slider
 # Images should be placed under 'content/' folder
 home_slider_images = [
   "slider-1.jpg",
-  "slider-2.jpg",
-  "slider-3.jpg",
-  "slider-4.jpg"
 ]
 
 
@@ -102,7 +95,7 @@ fi = [
 
 # Home
 shop_now = "Shop"
-home_text = "Illustrations  |  graphic design  |  branding  |  wedding stationery"
+home_text = "Illustrations  |  graphic design  |  branding"
 
 
 # ===========================
@@ -112,4 +105,4 @@ home_text = "Illustrations  |  graphic design  |  branding  |  wedding stationer
 
 # Home
 shop_now = "Shop"
-home_text = "Kuvituksia  |  graafinen suunnittelu  |  logoja  |  paperituotteita häihin"
+home_text = "Kuvituksia  |  graafinen suunnittelu  |  logoja"
