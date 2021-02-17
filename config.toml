@@ -69,19 +69,19 @@ home_slider_images = [
 [extra.menu]
 en = [
   { name = "Home", url = "/" },
-  { name = "Shop", url = "https://store.crocuspaperi.com/" },
-  { name = "Portfolio", url = "/portfolio/" },
-  { name = "Pricing", url = "/calculator/" },
-  { name = "About", url = "/about/" },
+  # { name = "Shop", url = "https://store.crocuspaperi.com/" },
+  # { name = "Portfolio", url = "/portfolio/" },
+  # { name = "Pricing", url = "/calculator/" },
+  # { name = "About", url = "/about/" },
   { name = "Contact", url = "/contact/" },
 ]
 
 fi = [
   { name = "Etusivu", url = "/fi/" },
-  { name = "Kauppa", url = "https://store.crocuspaperi.com/" },
-  { name = "Portfolio", url = "/fi/portfolio/" },
-  { name = "Hinnasto", url = "/fi/calculator/" },
-  { name = "Minusta", url = "/fi/about/" },
+  # { name = "Kauppa", url = "https://store.crocuspaperi.com/" },
+  # { name = "Portfolio", url = "/fi/portfolio/" },
+  # { name = "Hinnasto", url = "/fi/calculator/" },
+  # { name = "Minusta", url = "/fi/about/" },
   { name = "Yhteys", url = "/fi/contact/" },
 ]
 
