@@ -279,5 +279,5 @@ price = 0.95
 [delivery."Post"]
 price =  9
 
-[delivery."Pick-up (currently unavailable due to Corona)"]
+[delivery."Pick-up"]
 price =  0

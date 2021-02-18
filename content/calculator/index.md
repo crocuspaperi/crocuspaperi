@@ -34,7 +34,7 @@ additional_products_price = "Additional products price"
 delivery_title = "Delivery"
 delivery_desc = """
 <ul>
-  <li>* Pick up (from Kukkakauppa Floranna, Runeberginkatu 30, Helsinki. Work hours & details <a href="http://floranna.fi/yhteystiedot/">here</a>)</li>
+  <li>* Pick up (Currently unavailable due to Corona)</li>
   <li>* Post</li>
 </ul>
 """

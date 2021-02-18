@@ -30,7 +30,7 @@ additional_products_price = "Lisätuotteiden hinta"
 delivery_title = "Toimitus"
 delivery_desc = """
 <ul>
-  <li>* Noutopiste (Kukkakauppa Floranna, Runeberginkatu 30, Helsinki. <a href="http://floranna.fi/yhteystiedot/">Aukioloajat</a>.)</li>
+  <li>* Noutopiste (Currently unavailable due to Corona)</li>
   <li>* Posti</li>
 </ul>
 """

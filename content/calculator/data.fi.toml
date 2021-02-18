@@ -278,5 +278,5 @@ price = 0.95
 [delivery."Posti"]
 price =  9
 
-[delivery."Noutopiste (currently unavailable due to Corona)"]
+[delivery."Noutopiste"]
 price =  0
