@@ -4,7 +4,7 @@ template = "calculator.html"
 [extra]
 title = "Hintalaskuri"
 desc = """
-Tällä hintalaskurilla saa laskea hääpaperitarvikkeiden design- ja tulostuskustannusarviot. <a href=\"https://www.dropbox.com/s/x3uqqhlgtime6cl/logo_pricing_hinnasto.pdf?dl=0here\">Täältä</a> löytyy myös logojen, käyntikorttien ja muita hintoja.
+Tällä hintalaskurilla saa laskea hääpaperitarvikkeiden design- ja tulostuskustannusarviot. <a href="https://www.dropbox.com/s/q7qqjlxd5dliab5/logo%20packages%20price%20and%20process.pdf?dl=0">Täältä</a> löytyy myös logojen, käyntikorttien ja muita hintoja.
 """
 design_type_title = "Design"
 design_type_desc = """
@@ -18,7 +18,7 @@ products_title = "Tuotteet"
 products_desc = "Minkälaisia tuotteita kaipaisitte? Valitsekaa tuote niin näette DESIGN HINNAN."
 variants_title = "Tulostus"
 variants_desc = """
-<p>Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://www.crocuspaperi.com/contact/">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne.</p>
+<p>Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://crocuspaperi.com/contacts">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne.</p>
 <p>FOLIO
 <br>Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä löytyy myös foliota).
 <a href="https://www.dropbox.com/sh/2r7pfcbnq2wtjh2/AABuotZqj5wIhCVAujXa-OrAa?dl=0">Folio näytteet</a>. </br>
