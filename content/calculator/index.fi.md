@@ -18,7 +18,7 @@ products_title = "Tuotteet"
 products_desc = "Minkälaisia tuotteita kaipaisitte? Valitsekaa tuote niin näette DESIGN HINNAN."
 variants_title = "Tulostus"
 variants_desc = """
-<p>Montako tuotekappaletta toivotte? Tulostuspapereiden vaihtoehdot ovat seuraavia: valkoinen, norsunluinen ja kermanvärinen tekstuuripapereita. Tulostushinta on sama kaikille paperityypille sekä värille. Halutessanne voitte pyytää paperinäytteitä <a href="https://crocuspaperi.com/contacts">postitse</a> tai voimme sovita tapaamisen ja tuon näytteitä nähdäksenne.</p>
+<p>Montako tuotekappaletta toivotte?</p>
 <p>FOLIO
 <br>Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä löytyy myös foliota).
 <a href="https://www.dropbox.com/sh/2r7pfcbnq2wtjh2/AABuotZqj5wIhCVAujXa-OrAa?dl=0">Folio näytteet</a>. </br>

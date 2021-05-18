@@ -18,9 +18,7 @@ products_title = "Products"
 products_desc = "Which products do you need? After you choose the products you will see DESIGN PRICE."
 variants_title = "Printing"
 variants_desc = """
-<p>How many copies are we printing? There is a variety of papers to choose from.
-Printing price is the same for all papers. You can request to receive paper samples
-<a href="https://www.crocuspaperi.com/contact/">by post</a> or see them at a personal meeting.
+<p>How many copies are we printing?
 </p>
 <p>FOIL PRINTING <br>
 Foil can be printed only on glossy paper (foil samples are included in the paper samples packs).
