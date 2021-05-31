@@ -20,8 +20,8 @@ variants_title = "Tulostus"
 variants_desc = """
 <p>Montako tuotekappaletta toivotte?</p>
 <p>FOLIO
-<br>Folio käytetään vain kiiltävällä (glossy) paperilla (paperinäytteistä löytyy myös foliota).
-<a href="https://www.dropbox.com/sh/2r7pfcbnq2wtjh2/AABuotZqj5wIhCVAujXa-OrAa?dl=0">Folio näytteet</a>. </br>
+<br>Folio käytetään vain kiiltävällä (glossy) paperilla.
+</br>
 </p>
 <li>+ 50 EUR/tuote (folio on etupuolella)</li> <li>+ 70 EUR/tuote (folio on etupuolella ja takapuolella)</li>
 """
@@ -30,7 +30,7 @@ additional_products_price = "Lisätuotteiden hinta"
 delivery_title = "Toimitus"
 delivery_desc = """
 <ul>
-  <li>* Noutopiste (Currently unavailable due to Corona)</li>
+  <li>* Noutopiste (Leppävaarankatu 12, currently unavailable due to Corona)</li>
   <li>* Posti</li>
 </ul>
 """

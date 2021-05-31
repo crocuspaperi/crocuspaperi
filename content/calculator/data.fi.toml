@@ -17,7 +17,7 @@ price = 165
 stepPrice = 40
 
 [designTypes."Custom"]
-price = 280
+price = 290
 stepPrice = 40
 
 
@@ -45,40 +45,40 @@ price = [40, 60, 80, 95]
 price = [45, 65, 85, 100]
 
 [products."Kutsu".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Kutsu".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Kutsu".variants."Kolmiosainen"]
-price = [70, 90, 110, 120]
+price = [80, 100, 120, 140]
 
 [products."Kutsu".variants."Vellum/läpinäkyva paperi"]
 price = [50, 70, 90, 105]
 
 [products."Kutsu + info kortti".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Kutsu + info kortti".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Kutsu + info kortti".variants."Kolmiosainen"]
-price = [70, 90, 110, 120]
+price = [80, 100, 120, 140]
 
 [products."Info kortti".variants."Yksipuolinen"]
 price = [45, 65, 85, 100]
 
 [products."Info kortti".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Info kortti".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Info kortti + kartta".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Info kortti + kartta".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Kartta".variants."Yksipuolinen"]
 price = [45, 65, 85, 100]
@@ -108,10 +108,10 @@ price = [35, 55, 75, 95]
 price = [45, 65, 85, 100]
 
 [products."Menu".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Menu".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Menu".variants."Vellum/läpinäkyva paperi"]
 price = [50, 70, 90, 105]
@@ -120,25 +120,25 @@ price = [50, 70, 90, 105]
 price = [50, 70, 90, 105]
 
 [products."Ohjelma".variants."Kaksipuolinen"]
-price = [65, 85, 105, 115]
+price = [55, 75, 95, 105]
 
 [products."Ohjelma".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Menu + ohjelma".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Menu + ohjelma".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Kirkko - ohjelma".variants."Yksipuolinen"]
 price = [45, 65, 85, 100]
 
 [products."Kirkko - ohjelma".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Kirkko - ohjelma".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Morsian tai sulhanen peli".variants."Yksipuolinen"]
 price = [45, 65, 85, 100]
@@ -204,22 +204,22 @@ price = [20, 40, 61, 77]
 price = [45, 65, 85, 100]
 
 [products."Kiitos kortti".variants."Kaksipuolinen, omasta kuvasta"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Kiitos kortti".variants."Taitettu, omasta kuvasta"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Muut kortit".variants."Yksipuolinen"]
 price = [45, 65, 85, 100]
 
 [products."Muut kortit".variants."Kaksipuolinen"]
-price = [50, 70, 90, 105]
+price = [55, 75, 95, 105]
 
 [products."Muut kortit".variants."Taitettu"]
-price = [65, 85, 105, 115]
+price = [70, 90, 110, 120]
 
 [products."Muut kortit".variants."Kolmiosainen"]
-price = [70, 90, 110, 120]
+price = [80, 100, 120, 140]
 
 
 #####################################################################
@@ -237,37 +237,37 @@ weight = 99
 price = 0.60
 
 [additionalProducts."Kirjekuori".variants."90x140, tekstuurinen"]
-price = 0.55
+price = 0.50
 
 [additionalProducts."Kirjekuori".variants."125x175, värillinen"]
-price = 0.80
+price = 0.70
 
 [additionalProducts."Kirjekuori".variants."120x180, tekstuurinen"]
-price = 0.80
+price = 0.70
 
 [additionalProducts."Vahasinetti".variants."Pronssi"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Vihreä"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Valkoinen"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Vaaleanpunainen"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Kultainen"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Hopeinen"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Laivastonsininen"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Viininpunainen"]
-price = 0.90
+price = 0.95
 
 [additionalProducts."Vahasinetti".variants."Custom colour"]
 price = 0.95
